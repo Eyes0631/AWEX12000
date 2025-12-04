@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Version="V2" CreateTime="20200813164104" LastTime="">
+  <Fields>
+    <FDryRun Type="Boolean" Value="False" />
+    <F機台速率 Type="Int" Value="50" />
+    <FCommProtocol Type="Int" Value="0" />
+  </Fields>
+</Table>

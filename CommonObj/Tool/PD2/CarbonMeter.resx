@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="chart1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chart1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="chart1.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Name" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chart2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 3</value>
+  </data>
+  <data name="chart2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <data name="chart2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="chart2.Text" xml:space="preserve">
+    <value>chart2</value>
+  </data>
+  <data name="&gt;&gt;chart2.Name" xml:space="preserve">
+    <value>chart2</value>
+  </data>
+  <data name="&gt;&gt;chart2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chart3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 170</value>
+  </data>
+  <data name="chart3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <data name="chart3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chart3.Text" xml:space="preserve">
+    <value>chart3</value>
+  </data>
+  <data name="&gt;&gt;chart3.Name" xml:space="preserve">
+    <value>chart3</value>
+  </data>
+  <data name="&gt;&gt;chart3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart3.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chart4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 170</value>
+  </data>
+  <data name="chart4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <data name="chart4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="chart4.Text" xml:space="preserve">
+    <value>chart4</value>
+  </data>
+  <data name="&gt;&gt;chart4.Name" xml:space="preserve">
+    <value>chart4</value>
+  </data>
+  <data name="&gt;&gt;chart4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart4.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chart5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 337</value>
+  </data>
+  <data name="chart5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <data name="chart5.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="chart5.Text" xml:space="preserve">
+    <value>chart5</value>
+  </data>
+  <data name="&gt;&gt;chart5.Name" xml:space="preserve">
+    <value>chart5</value>
+  </data>
+  <data name="&gt;&gt;chart5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart5.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="chart6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 337</value>
+  </data>
+  <data name="chart6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 161</value>
+  </data>
+  <data name="chart6.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="chart6.Text" xml:space="preserve">
+    <value>chart6</value>
+  </data>
+  <data name="&gt;&gt;chart6.Name" xml:space="preserve">
+    <value>chart6</value>
+  </data>
+  <data name="&gt;&gt;chart6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart6.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;chart6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bt_Summary.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bt_Summary.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bt_Summary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 504</value>
+  </data>
+  <data name="bt_Summary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 36</value>
+  </data>
+  <data name="bt_Summary.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="bt_Summary.Text" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="&gt;&gt;bt_Summary.Name" xml:space="preserve">
+    <value>bt_Summary</value>
+  </data>
+  <data name="&gt;&gt;bt_Summary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_Summary.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;bt_Summary.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 556</value>
+  </data>
+  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bt_ReadPower.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_ReadPower.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="bt_ReadPower.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_ReadPower.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="bt_ReadPower.Text" xml:space="preserve">
+    <value>ReadPower</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadPower.Name" xml:space="preserve">
+    <value>bt_ReadPower</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadPower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadPower.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadPower.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bt_ReadAirFlowRate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_ReadAirFlowRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="bt_ReadAirFlowRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_ReadAirFlowRate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="bt_ReadAirFlowRate.Text" xml:space="preserve">
+    <value>ReadAirFlowRate</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirFlowRate.Name" xml:space="preserve">
+    <value>bt_ReadAirFlowRate</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirFlowRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirFlowRate.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirFlowRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bt_ReadAirPressure.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_ReadAirPressure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="bt_ReadAirPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_ReadAirPressure.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="bt_ReadAirPressure.Text" xml:space="preserve">
+    <value>ReadAirPressure</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirPressure.Name" xml:space="preserve">
+    <value>bt_ReadAirPressure</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirPressure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirPressure.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;bt_ReadAirPressure.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 3</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 216</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bt_Connect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_Connect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 213</value>
+  </data>
+  <data name="bt_Connect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_Connect.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="bt_Connect.Text" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="&gt;&gt;bt_Connect.Name" xml:space="preserve">
+    <value>bt_Connect</value>
+  </data>
+  <data name="&gt;&gt;bt_Connect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_Connect.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_Connect.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bt_ead_Start.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_ead_Start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 129</value>
+  </data>
+  <data name="bt_ead_Start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_ead_Start.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="bt_ead_Start.Text" xml:space="preserve">
+    <value>Read Start</value>
+  </data>
+  <data name="&gt;&gt;bt_ead_Start.Name" xml:space="preserve">
+    <value>bt_ead_Start</value>
+  </data>
+  <data name="&gt;&gt;bt_ead_Start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_ead_Start.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_ead_Start.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bt_Read_Stop.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_Read_Stop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="bt_Read_Stop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_Read_Stop.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="bt_Read_Stop.Text" xml:space="preserve">
+    <value>Read Stop</value>
+  </data>
+  <data name="&gt;&gt;bt_Read_Stop.Name" xml:space="preserve">
+    <value>bt_Read_Stop</value>
+  </data>
+  <data name="&gt;&gt;bt_Read_Stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_Read_Stop.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_Read_Stop.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bt_OpenAir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_OpenAir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="bt_OpenAir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_OpenAir.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="bt_OpenAir.Text" xml:space="preserve">
+    <value>Open Air</value>
+  </data>
+  <data name="&gt;&gt;bt_OpenAir.Name" xml:space="preserve">
+    <value>bt_OpenAir</value>
+  </data>
+  <data name="&gt;&gt;bt_OpenAir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_OpenAir.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_OpenAir.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bt_CloseAir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_CloseAir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="bt_CloseAir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_CloseAir.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="bt_CloseAir.Text" xml:space="preserve">
+    <value>Close Air</value>
+  </data>
+  <data name="&gt;&gt;bt_CloseAir.Name" xml:space="preserve">
+    <value>bt_CloseAir</value>
+  </data>
+  <data name="&gt;&gt;bt_CloseAir.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_CloseAir.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_CloseAir.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bt_Disconnect.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 18pt, style=Bold</value>
+  </data>
+  <data name="bt_Disconnect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 171</value>
+  </data>
+  <data name="bt_Disconnect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 36</value>
+  </data>
+  <data name="bt_Disconnect.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="bt_Disconnect.Text" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="&gt;&gt;bt_Disconnect.Name" xml:space="preserve">
+    <value>bt_Disconnect</value>
+  </data>
+  <data name="&gt;&gt;bt_Disconnect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_Disconnect.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;bt_Disconnect.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cb_IsReading.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="cb_IsReading.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cb_IsReading.Font" type="System.Drawing.Font, System.Drawing">
+    <value>新細明體, 26.25pt, style=Bold</value>
+  </data>
+  <data name="cb_IsReading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 255</value>
+  </data>
+  <data name="cb_IsReading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 45</value>
+  </data>
+  <data name="cb_IsReading.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cb_IsReading.Text" xml:space="preserve">
+    <value>    DISCONNECT  </value>
+  </data>
+  <data name="&gt;&gt;cb_IsReading.Name" xml:space="preserve">
+    <value>cb_IsReading</value>
+  </data>
+  <data name="&gt;&gt;cb_IsReading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_IsReading.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;cb_IsReading.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="flowLayoutPanel3.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 225</value>
+  </data>
+  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 334</value>
+  </data>
+  <data name="flowLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 568</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CarbonMeter</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

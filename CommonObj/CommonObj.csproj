@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6454511F-87C1-4893-B3CF-A58F0479D24C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonObj</RootNamespace>
+    <AssemblyName>CommonObj</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ProVDLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\ProVDLL\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KCSDK, Version=1.0.0.6, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\KCSDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\PaeLib\DLL\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PaeLibGeneral">
+      <HintPath>..\PaeLib\DLL\PaeLibGeneral.dll</HintPath>
+    </Reference>
+    <Reference Include="PaeLibProVSDKEx">
+      <HintPath>..\PaeLib\DLL\PaeLibProVSDKEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ProVIFM, Version=1.0.0.15, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\ProVIFM.dll</HintPath>
+    </Reference>
+    <Reference Include="ProVSDK, Version=1.1.6.7, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\ProVSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ProVSocketLib, Version=1.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\ProVSocketLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ProVTool, Version=1.0.0.134, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProVDLL\ProVTool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonObj.cs" />
+    <Compile Include="JMemoryMapped.cs" />
+    <Compile Include="Mapping.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Aligner\RobotParser_SANWA_Aligner.cs" />
+    <Compile Include="Tool\Aligner\SANWA_Aligner_Enum.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_DataLayer.cs" />
+    <Compile Include="Tool\KeyBoardEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool\KeyBoardEx.designer.cs">
+      <DependentUpon>KeyBoardEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\MiniKeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool\MiniKeyBoard.designer.cs">
+      <DependentUpon>MiniKeyBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_ActionMode.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_Cassette.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_ConveyorMotor.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_CPanel.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_CWafer.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_FlagDefine.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_Interface.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_MISEunm.cs" />
+    <Compile Include="Tool\CommonObj\CommonObj_MotionRecord.cs" />
+    <Compile Include="Tool\CommonObj\WindowsEmbed.cs" />
+    <Compile Include="Tool\Robot\Robot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool\Robot\Robot.designer.cs">
+      <DependentUpon>Robot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Robot\RobotParser.cs" />
+    <Compile Include="Tool\Robot\RobotParser_SANWA_Robot.cs" />
+    <Compile Include="Tool\Robot\SANWA_Robot_Enum.cs" />
+    <Compile Include="TrayDataSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tool\PD2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tool\KeyBoardEx.resx">
+      <DependentUpon>KeyBoardEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\MiniKeyBoard.resx">
+      <DependentUpon>MiniKeyBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool\Robot\Robot.resx">
+      <DependentUpon>Robot.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

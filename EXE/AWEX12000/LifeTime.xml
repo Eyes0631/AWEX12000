@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<LifeTimeSet>
+  <xs:schema id="LifeTimeSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="LifeTimeSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="LifeTimeTable">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LifeName" type="xs:string" minOccurs="0" />
+                <xs:element name="LifeIOPort" type="xs:string" minOccurs="0" />
+                <xs:element name="Mileage" type="xs:float" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</LifeTimeSet>

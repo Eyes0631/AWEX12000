@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Settings>
+  <Paths>
+    <Path>
+      <Index>0</Index>
+      <Name>D:\Log\</Name>
+      <TimeLimit>1</TimeLimit>
+    </Path>
+  </Paths>
+  <Filters>
+    <Filter>
+      <Index>0</Index>
+      <Name>csv</Name>
+    </Filter>
+    <Filter>
+      <Index>1</Index>
+      <Name>png</Name>
+    </Filter>
+    <Filter>
+      <Index>2</Index>
+      <Name>log</Name>
+    </Filter>
+    <Filter>
+      <Index>3</Index>
+      <Name>txt</Name>
+    </Filter>
+  </Filters>
+</Settings>
