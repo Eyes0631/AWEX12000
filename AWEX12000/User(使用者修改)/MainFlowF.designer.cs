@@ -249,28 +249,51 @@
             this.FC_Auto_WTRMain_WTRWorkDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WTRMain_Start = new ProVLib.FlowChart();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.FC_Auto_WTR_A_Next2 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next3 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next4 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next5 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next6 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next7 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next4 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next3 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next1 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_AlignementDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_UnloadActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_LoadActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_ReceiveActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_SendActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_ResetUnloadAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_ResetLoadAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_ResetReceiveAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_ResetSendAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_IsNeedSendToAligner = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_FlagIsDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_IsNeedSendToAligner = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next1 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_ResetUnloadAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_UnloadActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_ResetLoadAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_LoadActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_ResetReceiveAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_ReceiveActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_ResetSendAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_SendActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_AlignementDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Action_Start = new ProVLib.FlowChart();
             this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.FC_Auto_WTR_B_Next7 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next5 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next4 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next3 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next1 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next2 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_FlagIsDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_IsNeedSendToAligner = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Next6 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_ResetUnloadAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_UnloadActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_ResetLoadAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_LoadActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_ResetReceiveAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_ReceiveActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_ResetSendAction = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_SendActionDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_AlignementDoIt = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_B_Action_Start = new ProVLib.FlowChart();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage15 = new System.Windows.Forms.TabPage();
@@ -328,29 +351,7 @@
             this.FC_Auto_WOI_BB_AlignDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WOI_BB_Done = new ProVLib.FlowChart();
             this.OptionDS = new KCSDK.DataManagement(this.components);
-            this.FC_Auto_WTR_A_Next2 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next7 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next5 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next4 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next3 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next1 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next2 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_FlagIsDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_IsNeedSendToAligner = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Next6 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_ResetUnloadAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_UnloadActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_ResetLoadAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_LoadActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_ResetReceiveAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_ReceiveActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_ResetSendAction = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_SendActionDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_AlignementDoIt = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_B_Action_Start = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_AlignementIsDone = new ProVLib.FlowChart();
             this.TabFlow.SuspendLayout();
             this.tpHome.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1017,10 +1018,10 @@
             // tap_Initial_WTR
             // 
             this.tap_Initial_WTR.Controls.Add(this.tabControl10);
-            this.tap_Initial_WTR.Location = new System.Drawing.Point(4, 35);
+            this.tap_Initial_WTR.Location = new System.Drawing.Point(4, 22);
             this.tap_Initial_WTR.Name = "tap_Initial_WTR";
             this.tap_Initial_WTR.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WTR.Size = new System.Drawing.Size(1348, 788);
+            this.tap_Initial_WTR.Size = new System.Drawing.Size(1348, 801);
             this.tap_Initial_WTR.TabIndex = 7;
             this.tap_Initial_WTR.Text = "WTR";
             this.tap_Initial_WTR.UseVisualStyleBackColor = true;
@@ -1033,7 +1034,7 @@
             this.tabControl10.Location = new System.Drawing.Point(3, 3);
             this.tabControl10.Name = "tabControl10";
             this.tabControl10.SelectedIndex = 0;
-            this.tabControl10.Size = new System.Drawing.Size(1342, 782);
+            this.tabControl10.Size = new System.Drawing.Size(1342, 795);
             this.tabControl10.TabIndex = 5;
             // 
             // tap_Initial_WTR_A
@@ -1046,7 +1047,7 @@
             this.tap_Initial_WTR_A.Location = new System.Drawing.Point(4, 35);
             this.tap_Initial_WTR_A.Name = "tap_Initial_WTR_A";
             this.tap_Initial_WTR_A.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WTR_A.Size = new System.Drawing.Size(1334, 743);
+            this.tap_Initial_WTR_A.Size = new System.Drawing.Size(1334, 756);
             this.tap_Initial_WTR_A.TabIndex = 0;
             this.tap_Initial_WTR_A.Text = "WTR_A";
             this.tap_Initial_WTR_A.UseVisualStyleBackColor = true;
@@ -6692,6 +6693,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.FC_Auto_WTR_A_AlignementIsDone);
             this.tabPage8.Controls.Add(this.FC_Auto_WTR_A_Next2);
             this.tabPage8.Controls.Add(this.FC_Auto_WTR_A_Next5);
             this.tabPage8.Controls.Add(this.FC_Auto_WTR_A_Next6);
@@ -6722,6 +6724,99 @@
             this.tabPage8.Text = "WTR_A";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // FC_Auto_WTR_A_Next2
+            // 
+            this.FC_Auto_WTR_A_Next2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next2.CASE1 = null;
+            this.FC_Auto_WTR_A_Next2.CASE2 = null;
+            this.FC_Auto_WTR_A_Next2.CASE3 = null;
+            this.FC_Auto_WTR_A_Next2.CASE4 = null;
+            this.FC_Auto_WTR_A_Next2.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next2.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next2.EndFC = null;
+            this.FC_Auto_WTR_A_Next2.ErrID = 0;
+            this.FC_Auto_WTR_A_Next2.InAlarm = false;
+            this.FC_Auto_WTR_A_Next2.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next2.Location = new System.Drawing.Point(1237, 283);
+            this.FC_Auto_WTR_A_Next2.LockUI = false;
+            this.FC_Auto_WTR_A_Next2.Message = null;
+            this.FC_Auto_WTR_A_Next2.MsgID = 0;
+            this.FC_Auto_WTR_A_Next2.Name = "FC_Auto_WTR_A_Next2";
+            this.FC_Auto_WTR_A_Next2.NEXT = this.FC_Auto_WTR_A_Next3;
+            this.FC_Auto_WTR_A_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next2.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next2.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next2.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next2.Running = false;
+            this.FC_Auto_WTR_A_Next2.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next2.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next2.StartFC = null;
+            this.FC_Auto_WTR_A_Next2.Text = "Next";
+            this.FC_Auto_WTR_A_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next2_Run);
+            // 
+            // FC_Auto_WTR_A_Next3
+            // 
+            this.FC_Auto_WTR_A_Next3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next3.CASE1 = null;
+            this.FC_Auto_WTR_A_Next3.CASE2 = null;
+            this.FC_Auto_WTR_A_Next3.CASE3 = null;
+            this.FC_Auto_WTR_A_Next3.CASE4 = null;
+            this.FC_Auto_WTR_A_Next3.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next3.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next3.EndFC = null;
+            this.FC_Auto_WTR_A_Next3.ErrID = 0;
+            this.FC_Auto_WTR_A_Next3.InAlarm = false;
+            this.FC_Auto_WTR_A_Next3.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next3.Location = new System.Drawing.Point(1237, 237);
+            this.FC_Auto_WTR_A_Next3.LockUI = false;
+            this.FC_Auto_WTR_A_Next3.Message = null;
+            this.FC_Auto_WTR_A_Next3.MsgID = 0;
+            this.FC_Auto_WTR_A_Next3.Name = "FC_Auto_WTR_A_Next3";
+            this.FC_Auto_WTR_A_Next3.NEXT = this.FC_Auto_WTR_A_Next4;
+            this.FC_Auto_WTR_A_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next3.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next3.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next3.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next3.Running = false;
+            this.FC_Auto_WTR_A_Next3.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next3.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next3.StartFC = null;
+            this.FC_Auto_WTR_A_Next3.Text = "Next";
+            this.FC_Auto_WTR_A_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next3_Run);
+            // 
+            // FC_Auto_WTR_A_Next4
+            // 
+            this.FC_Auto_WTR_A_Next4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next4.CASE1 = null;
+            this.FC_Auto_WTR_A_Next4.CASE2 = null;
+            this.FC_Auto_WTR_A_Next4.CASE3 = null;
+            this.FC_Auto_WTR_A_Next4.CASE4 = null;
+            this.FC_Auto_WTR_A_Next4.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next4.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next4.EndFC = null;
+            this.FC_Auto_WTR_A_Next4.ErrID = 0;
+            this.FC_Auto_WTR_A_Next4.InAlarm = false;
+            this.FC_Auto_WTR_A_Next4.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next4.Location = new System.Drawing.Point(1237, 191);
+            this.FC_Auto_WTR_A_Next4.LockUI = false;
+            this.FC_Auto_WTR_A_Next4.Message = null;
+            this.FC_Auto_WTR_A_Next4.MsgID = 0;
+            this.FC_Auto_WTR_A_Next4.Name = "FC_Auto_WTR_A_Next4";
+            this.FC_Auto_WTR_A_Next4.NEXT = this.FC_Auto_WTR_A_Next5;
+            this.FC_Auto_WTR_A_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next4.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next4.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next4.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next4.Running = false;
+            this.FC_Auto_WTR_A_Next4.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next4.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next4.StartFC = null;
+            this.FC_Auto_WTR_A_Next4.Text = "Next";
+            this.FC_Auto_WTR_A_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next4_Run);
+            // 
             // FC_Auto_WTR_A_Next5
             // 
             this.FC_Auto_WTR_A_Next5.BackColor = System.Drawing.Color.RoyalBlue;
@@ -6736,7 +6831,7 @@
             this.FC_Auto_WTR_A_Next5.ErrID = 0;
             this.FC_Auto_WTR_A_Next5.InAlarm = false;
             this.FC_Auto_WTR_A_Next5.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next5.Location = new System.Drawing.Point(1016, 145);
+            this.FC_Auto_WTR_A_Next5.Location = new System.Drawing.Point(1237, 145);
             this.FC_Auto_WTR_A_Next5.LockUI = false;
             this.FC_Auto_WTR_A_Next5.Message = null;
             this.FC_Auto_WTR_A_Next5.MsgID = 0;
@@ -6767,7 +6862,7 @@
             this.FC_Auto_WTR_A_Next6.ErrID = 0;
             this.FC_Auto_WTR_A_Next6.InAlarm = false;
             this.FC_Auto_WTR_A_Next6.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next6.Location = new System.Drawing.Point(1016, 99);
+            this.FC_Auto_WTR_A_Next6.Location = new System.Drawing.Point(1237, 99);
             this.FC_Auto_WTR_A_Next6.LockUI = false;
             this.FC_Auto_WTR_A_Next6.Message = null;
             this.FC_Auto_WTR_A_Next6.MsgID = 0;
@@ -6798,7 +6893,7 @@
             this.FC_Auto_WTR_A_Next7.ErrID = 0;
             this.FC_Auto_WTR_A_Next7.InAlarm = false;
             this.FC_Auto_WTR_A_Next7.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next7.Location = new System.Drawing.Point(1016, 53);
+            this.FC_Auto_WTR_A_Next7.Location = new System.Drawing.Point(1237, 53);
             this.FC_Auto_WTR_A_Next7.LockUI = false;
             this.FC_Auto_WTR_A_Next7.Message = null;
             this.FC_Auto_WTR_A_Next7.MsgID = 0;
@@ -6815,470 +6910,36 @@
             this.FC_Auto_WTR_A_Next7.Text = "Next";
             this.FC_Auto_WTR_A_Next7.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next7_Run);
             // 
-            // FC_Auto_WTR_A_Next4
+            // FC_Auto_WTR_A_FlagIsDoIt
             // 
-            this.FC_Auto_WTR_A_Next4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next4.CASE1 = null;
-            this.FC_Auto_WTR_A_Next4.CASE2 = null;
-            this.FC_Auto_WTR_A_Next4.CASE3 = null;
-            this.FC_Auto_WTR_A_Next4.CASE4 = null;
-            this.FC_Auto_WTR_A_Next4.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next4.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next4.EndFC = null;
-            this.FC_Auto_WTR_A_Next4.ErrID = 0;
-            this.FC_Auto_WTR_A_Next4.InAlarm = false;
-            this.FC_Auto_WTR_A_Next4.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next4.Location = new System.Drawing.Point(1016, 191);
-            this.FC_Auto_WTR_A_Next4.LockUI = false;
-            this.FC_Auto_WTR_A_Next4.Message = null;
-            this.FC_Auto_WTR_A_Next4.MsgID = 0;
-            this.FC_Auto_WTR_A_Next4.Name = "FC_Auto_WTR_A_Next4";
-            this.FC_Auto_WTR_A_Next4.NEXT = this.FC_Auto_WTR_A_Next5;
-            this.FC_Auto_WTR_A_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next4.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next4.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next4.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next4.Running = false;
-            this.FC_Auto_WTR_A_Next4.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next4.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next4.StartFC = null;
-            this.FC_Auto_WTR_A_Next4.Text = "Next";
-            this.FC_Auto_WTR_A_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next4_Run);
-            // 
-            // FC_Auto_WTR_A_Next3
-            // 
-            this.FC_Auto_WTR_A_Next3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next3.CASE1 = null;
-            this.FC_Auto_WTR_A_Next3.CASE2 = null;
-            this.FC_Auto_WTR_A_Next3.CASE3 = null;
-            this.FC_Auto_WTR_A_Next3.CASE4 = null;
-            this.FC_Auto_WTR_A_Next3.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next3.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next3.EndFC = null;
-            this.FC_Auto_WTR_A_Next3.ErrID = 0;
-            this.FC_Auto_WTR_A_Next3.InAlarm = false;
-            this.FC_Auto_WTR_A_Next3.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next3.Location = new System.Drawing.Point(1016, 237);
-            this.FC_Auto_WTR_A_Next3.LockUI = false;
-            this.FC_Auto_WTR_A_Next3.Message = null;
-            this.FC_Auto_WTR_A_Next3.MsgID = 0;
-            this.FC_Auto_WTR_A_Next3.Name = "FC_Auto_WTR_A_Next3";
-            this.FC_Auto_WTR_A_Next3.NEXT = this.FC_Auto_WTR_A_Next4;
-            this.FC_Auto_WTR_A_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next3.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next3.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next3.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next3.Running = false;
-            this.FC_Auto_WTR_A_Next3.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next3.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next3.StartFC = null;
-            this.FC_Auto_WTR_A_Next3.Text = "Next";
-            this.FC_Auto_WTR_A_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next3_Run);
-            // 
-            // FC_Auto_WTR_A_Next1
-            // 
-            this.FC_Auto_WTR_A_Next1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next1.CASE1 = null;
-            this.FC_Auto_WTR_A_Next1.CASE2 = null;
-            this.FC_Auto_WTR_A_Next1.CASE3 = null;
-            this.FC_Auto_WTR_A_Next1.CASE4 = null;
-            this.FC_Auto_WTR_A_Next1.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next1.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next1.EndFC = null;
-            this.FC_Auto_WTR_A_Next1.ErrID = 0;
-            this.FC_Auto_WTR_A_Next1.InAlarm = false;
-            this.FC_Auto_WTR_A_Next1.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next1.Location = new System.Drawing.Point(172, 283);
-            this.FC_Auto_WTR_A_Next1.LockUI = false;
-            this.FC_Auto_WTR_A_Next1.Message = null;
-            this.FC_Auto_WTR_A_Next1.MsgID = 0;
-            this.FC_Auto_WTR_A_Next1.Name = "FC_Auto_WTR_A_Next1";
-            this.FC_Auto_WTR_A_Next1.NEXT = this.FC_Auto_WTR_A_Next2;
-            this.FC_Auto_WTR_A_Next1.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next1.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next1.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next1.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next1.Running = false;
-            this.FC_Auto_WTR_A_Next1.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next1.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next1.StartFC = null;
-            this.FC_Auto_WTR_A_Next1.Text = "Next";
-            this.FC_Auto_WTR_A_Next1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next1_Run);
-            // 
-            // FC_Auto_WTR_A_AlignementDoIt
-            // 
-            this.FC_Auto_WTR_A_AlignementDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_AlignementDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_AlignementDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_AlignementDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.Location = new System.Drawing.Point(780, 99);
-            this.FC_Auto_WTR_A_AlignementDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.Message = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_AlignementDoIt.Name = "FC_Auto_WTR_A_AlignementDoIt";
-            this.FC_Auto_WTR_A_AlignementDoIt.NEXT = this.FC_Auto_WTR_A_Next6;
-            this.FC_Auto_WTR_A_AlignementDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_AlignementDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_AlignementDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_AlignementDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_AlignementDoIt.Running = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_AlignementDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_AlignementDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_AlignementDoIt.Text = "Alignement DoIt";
-            this.FC_Auto_WTR_A_AlignementDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_AlignementDoIt_Run);
-            // 
-            // FC_Auto_WTR_A_UnloadActionDoIt
-            // 
-            this.FC_Auto_WTR_A_UnloadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Location = new System.Drawing.Point(555, 237);
-            this.FC_Auto_WTR_A_UnloadActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Message = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Name = "FC_Auto_WTR_A_UnloadActionDoIt";
-            this.FC_Auto_WTR_A_UnloadActionDoIt.NEXT = this.FC_Auto_WTR_A_Next3;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_UnloadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_UnloadActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Running = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_UnloadActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Text = "Unload Action DoIt";
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_UnloadActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_A_LoadActionDoIt
-            // 
-            this.FC_Auto_WTR_A_LoadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_LoadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_LoadActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_LoadActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Location = new System.Drawing.Point(555, 191);
-            this.FC_Auto_WTR_A_LoadActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Message = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Name = "FC_Auto_WTR_A_LoadActionDoIt";
-            this.FC_Auto_WTR_A_LoadActionDoIt.NEXT = this.FC_Auto_WTR_A_Next4;
-            this.FC_Auto_WTR_A_LoadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_LoadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_LoadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_LoadActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Running = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_LoadActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_LoadActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Text = "Load Action DoIt";
-            this.FC_Auto_WTR_A_LoadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_LoadActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_A_ReceiveActionDoIt
-            // 
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Location = new System.Drawing.Point(555, 145);
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Message = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Name = "FC_Auto_WTR_A_ReceiveActionDoIt";
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.NEXT = this.FC_Auto_WTR_A_Next5;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Running = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Text = "Receive Action DoIt";
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ReceiveActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_A_SendActionDoIt
-            // 
-            this.FC_Auto_WTR_A_SendActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_SendActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_SendActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_SendActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.Location = new System.Drawing.Point(555, 99);
-            this.FC_Auto_WTR_A_SendActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.Message = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_SendActionDoIt.Name = "FC_Auto_WTR_A_SendActionDoIt";
-            this.FC_Auto_WTR_A_SendActionDoIt.NEXT = this.FC_Auto_WTR_A_AlignementDoIt;
-            this.FC_Auto_WTR_A_SendActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_SendActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_SendActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_SendActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_SendActionDoIt.Running = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_SendActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_SendActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_SendActionDoIt.Text = "Send Action DoIt";
-            this.FC_Auto_WTR_A_SendActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_SendActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_A_ResetUnloadAction
-            // 
-            this.FC_Auto_WTR_A_ResetUnloadAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_ResetUnloadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_ResetUnloadAction.CASE1 = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.CASE2 = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.CASE3 = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.CASE4 = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.ContinueRun = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.EndFC = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.ErrID = 0;
-            this.FC_Auto_WTR_A_ResetUnloadAction.InAlarm = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Location = new System.Drawing.Point(334, 237);
-            this.FC_Auto_WTR_A_ResetUnloadAction.LockUI = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Message = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.MsgID = 0;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Name = "FC_Auto_WTR_A_ResetUnloadAction";
-            this.FC_Auto_WTR_A_ResetUnloadAction.NEXT = this.FC_Auto_WTR_A_UnloadActionDoIt;
-            this.FC_Auto_WTR_A_ResetUnloadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_ResetUnloadAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_ResetUnloadAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_ResetUnloadAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Running = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_ResetUnloadAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_ResetUnloadAction.StartFC = null;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Text = "Reset Unload Action";
-            this.FC_Auto_WTR_A_ResetUnloadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetUnloadAction_Run);
-            // 
-            // FC_Auto_WTR_A_ResetLoadAction
-            // 
-            this.FC_Auto_WTR_A_ResetLoadAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_ResetLoadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_ResetLoadAction.CASE1 = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.CASE2 = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.CASE3 = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.CASE4 = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.ContinueRun = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.EndFC = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.ErrID = 0;
-            this.FC_Auto_WTR_A_ResetLoadAction.InAlarm = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.Location = new System.Drawing.Point(334, 191);
-            this.FC_Auto_WTR_A_ResetLoadAction.LockUI = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.Message = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.MsgID = 0;
-            this.FC_Auto_WTR_A_ResetLoadAction.Name = "FC_Auto_WTR_A_ResetLoadAction";
-            this.FC_Auto_WTR_A_ResetLoadAction.NEXT = this.FC_Auto_WTR_A_LoadActionDoIt;
-            this.FC_Auto_WTR_A_ResetLoadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_ResetLoadAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_ResetLoadAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_ResetLoadAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_ResetLoadAction.Running = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_ResetLoadAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_ResetLoadAction.StartFC = null;
-            this.FC_Auto_WTR_A_ResetLoadAction.Text = "Reset Load Action";
-            this.FC_Auto_WTR_A_ResetLoadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetLoadAction_Run);
-            // 
-            // FC_Auto_WTR_A_ResetReceiveAction
-            // 
-            this.FC_Auto_WTR_A_ResetReceiveAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_ResetReceiveAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_ResetReceiveAction.CASE1 = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.CASE2 = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.CASE3 = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.CASE4 = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.ContinueRun = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.EndFC = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.ErrID = 0;
-            this.FC_Auto_WTR_A_ResetReceiveAction.InAlarm = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Location = new System.Drawing.Point(334, 145);
-            this.FC_Auto_WTR_A_ResetReceiveAction.LockUI = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Message = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.MsgID = 0;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Name = "FC_Auto_WTR_A_ResetReceiveAction";
-            this.FC_Auto_WTR_A_ResetReceiveAction.NEXT = this.FC_Auto_WTR_A_ReceiveActionDoIt;
-            this.FC_Auto_WTR_A_ResetReceiveAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_ResetReceiveAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_ResetReceiveAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_ResetReceiveAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Running = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_ResetReceiveAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_ResetReceiveAction.StartFC = null;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Text = "Reset Receive Action";
-            this.FC_Auto_WTR_A_ResetReceiveAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetReceiveAction_Run);
-            // 
-            // FC_Auto_WTR_A_ResetSendAction
-            // 
-            this.FC_Auto_WTR_A_ResetSendAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_ResetSendAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_ResetSendAction.CASE1 = null;
-            this.FC_Auto_WTR_A_ResetSendAction.CASE2 = null;
-            this.FC_Auto_WTR_A_ResetSendAction.CASE3 = null;
-            this.FC_Auto_WTR_A_ResetSendAction.CASE4 = null;
-            this.FC_Auto_WTR_A_ResetSendAction.ContinueRun = false;
-            this.FC_Auto_WTR_A_ResetSendAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_ResetSendAction.EndFC = null;
-            this.FC_Auto_WTR_A_ResetSendAction.ErrID = 0;
-            this.FC_Auto_WTR_A_ResetSendAction.InAlarm = false;
-            this.FC_Auto_WTR_A_ResetSendAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetSendAction.Location = new System.Drawing.Point(334, 99);
-            this.FC_Auto_WTR_A_ResetSendAction.LockUI = false;
-            this.FC_Auto_WTR_A_ResetSendAction.Message = null;
-            this.FC_Auto_WTR_A_ResetSendAction.MsgID = 0;
-            this.FC_Auto_WTR_A_ResetSendAction.Name = "FC_Auto_WTR_A_ResetSendAction";
-            this.FC_Auto_WTR_A_ResetSendAction.NEXT = this.FC_Auto_WTR_A_SendActionDoIt;
-            this.FC_Auto_WTR_A_ResetSendAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_ResetSendAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_ResetSendAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_ResetSendAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_ResetSendAction.Running = false;
-            this.FC_Auto_WTR_A_ResetSendAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_ResetSendAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_ResetSendAction.StartFC = null;
-            this.FC_Auto_WTR_A_ResetSendAction.Text = "Reset Send Action";
-            this.FC_Auto_WTR_A_ResetSendAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetSendAction_Run);
-            // 
-            // FC_Auto_WTR_A_IsNeedUnloadToPort
-            // 
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE1 = this.FC_Auto_WTR_A_Next1;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE2 = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE3 = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE4 = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ContinueRun = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.EndFC = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ErrID = 0;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.InAlarm = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Location = new System.Drawing.Point(100, 237);
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.LockUI = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Message = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.MsgID = 0;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Name = "FC_Auto_WTR_A_IsNeedUnloadToPort";
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.NEXT = this.FC_Auto_WTR_A_ResetUnloadAction;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Running = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.StartFC = null;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Text = "Is Need Unload To Port";
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedUnloadToPort_Run);
-            // 
-            // FC_Auto_WTR_A_IsNeedLoadFromPort
-            // 
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE1 = this.FC_Auto_WTR_A_IsNeedUnloadToPort;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE2 = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE3 = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE4 = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ContinueRun = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.EndFC = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ErrID = 0;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.InAlarm = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Location = new System.Drawing.Point(100, 191);
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.LockUI = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Message = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.MsgID = 0;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Name = "FC_Auto_WTR_A_IsNeedLoadFromPort";
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.NEXT = this.FC_Auto_WTR_A_ResetLoadAction;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Running = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.StartFC = null;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Text = "Is Need Load From Port";
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedLoadFromPort_Run);
-            // 
-            // FC_Auto_WTR_A_IsNeedReceiveFromAligner
-            // 
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE1 = this.FC_Auto_WTR_A_IsNeedLoadFromPort;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE2 = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE3 = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE4 = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ContinueRun = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.EndFC = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ErrID = 0;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.InAlarm = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(100, 145);
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.LockUI = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Message = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.MsgID = 0;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Name = "FC_Auto_WTR_A_IsNeedReceiveFromAligner";
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.NEXT = this.FC_Auto_WTR_A_ResetReceiveAction;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Running = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.StartFC = null;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Text = "Is Need Receive From Aligner";
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedReceiveFromAligner_Run);
+            this.FC_Auto_WTR_A_FlagIsDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_FlagIsDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_FlagIsDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_FlagIsDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_FlagIsDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_FlagIsDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Location = new System.Drawing.Point(100, 53);
+            this.FC_Auto_WTR_A_FlagIsDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Message = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Name = "FC_Auto_WTR_A_FlagIsDoIt";
+            this.FC_Auto_WTR_A_FlagIsDoIt.NEXT = this.FC_Auto_WTR_A_IsNeedSendToAligner;
+            this.FC_Auto_WTR_A_FlagIsDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_FlagIsDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_FlagIsDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_FlagIsDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Running = false;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_FlagIsDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_FlagIsDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_FlagIsDoIt.Text = "Flag IsDoIt";
+            this.FC_Auto_WTR_A_FlagIsDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_FlagIsDoIt_Run);
             // 
             // FC_Auto_WTR_A_IsNeedSendToAligner
             // 
@@ -7311,36 +6972,408 @@
             this.FC_Auto_WTR_A_IsNeedSendToAligner.Text = "Is Need Send To Aligner";
             this.FC_Auto_WTR_A_IsNeedSendToAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedSendToAligner_Run);
             // 
-            // FC_Auto_WTR_A_FlagIsDoIt
+            // FC_Auto_WTR_A_IsNeedReceiveFromAligner
             // 
-            this.FC_Auto_WTR_A_FlagIsDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_FlagIsDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_FlagIsDoIt.CASE1 = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.CASE2 = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.CASE3 = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.CASE4 = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.EndFC = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.ErrID = 0;
-            this.FC_Auto_WTR_A_FlagIsDoIt.InAlarm = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Location = new System.Drawing.Point(100, 53);
-            this.FC_Auto_WTR_A_FlagIsDoIt.LockUI = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Message = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.MsgID = 0;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Name = "FC_Auto_WTR_A_FlagIsDoIt";
-            this.FC_Auto_WTR_A_FlagIsDoIt.NEXT = this.FC_Auto_WTR_A_IsNeedSendToAligner;
-            this.FC_Auto_WTR_A_FlagIsDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_FlagIsDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_FlagIsDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_FlagIsDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Running = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_FlagIsDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_FlagIsDoIt.StartFC = null;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Text = "Flag IsDoIt";
-            this.FC_Auto_WTR_A_FlagIsDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_FlagIsDoIt_Run);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE1 = this.FC_Auto_WTR_A_IsNeedLoadFromPort;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE2 = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE3 = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.CASE4 = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ContinueRun = false;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.EndFC = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ErrID = 0;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.InAlarm = false;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.IsFlowHead = false;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(100, 145);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.LockUI = false;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Message = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.MsgID = 0;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Name = "FC_Auto_WTR_A_IsNeedReceiveFromAligner";
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.NEXT = this.FC_Auto_WTR_A_ResetReceiveAction;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Running = false;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.StartFC = null;
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Text = "Is Need Receive From Aligner";
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedReceiveFromAligner_Run);
+            // 
+            // FC_Auto_WTR_A_IsNeedLoadFromPort
+            // 
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE1 = this.FC_Auto_WTR_A_IsNeedUnloadToPort;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE2 = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE3 = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.CASE4 = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ContinueRun = false;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.EndFC = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ErrID = 0;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.InAlarm = false;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.IsFlowHead = false;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Location = new System.Drawing.Point(100, 191);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.LockUI = false;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Message = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.MsgID = 0;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Name = "FC_Auto_WTR_A_IsNeedLoadFromPort";
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.NEXT = this.FC_Auto_WTR_A_ResetLoadAction;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Running = false;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.StartFC = null;
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Text = "Is Need Load From Port";
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedLoadFromPort_Run);
+            // 
+            // FC_Auto_WTR_A_IsNeedUnloadToPort
+            // 
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE1 = this.FC_Auto_WTR_A_Next1;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE2 = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE3 = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.CASE4 = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ContinueRun = false;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.EndFC = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ErrID = 0;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.InAlarm = false;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.IsFlowHead = false;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Location = new System.Drawing.Point(100, 237);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.LockUI = false;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Message = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.MsgID = 0;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Name = "FC_Auto_WTR_A_IsNeedUnloadToPort";
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.NEXT = this.FC_Auto_WTR_A_ResetUnloadAction;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Running = false;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.StartFC = null;
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Text = "Is Need Unload To Port";
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_IsNeedUnloadToPort_Run);
+            // 
+            // FC_Auto_WTR_A_Next1
+            // 
+            this.FC_Auto_WTR_A_Next1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next1.CASE1 = null;
+            this.FC_Auto_WTR_A_Next1.CASE2 = null;
+            this.FC_Auto_WTR_A_Next1.CASE3 = null;
+            this.FC_Auto_WTR_A_Next1.CASE4 = null;
+            this.FC_Auto_WTR_A_Next1.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next1.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next1.EndFC = null;
+            this.FC_Auto_WTR_A_Next1.ErrID = 0;
+            this.FC_Auto_WTR_A_Next1.InAlarm = false;
+            this.FC_Auto_WTR_A_Next1.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next1.Location = new System.Drawing.Point(172, 283);
+            this.FC_Auto_WTR_A_Next1.LockUI = false;
+            this.FC_Auto_WTR_A_Next1.Message = null;
+            this.FC_Auto_WTR_A_Next1.MsgID = 0;
+            this.FC_Auto_WTR_A_Next1.Name = "FC_Auto_WTR_A_Next1";
+            this.FC_Auto_WTR_A_Next1.NEXT = this.FC_Auto_WTR_A_Next2;
+            this.FC_Auto_WTR_A_Next1.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next1.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next1.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next1.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next1.Running = false;
+            this.FC_Auto_WTR_A_Next1.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next1.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next1.StartFC = null;
+            this.FC_Auto_WTR_A_Next1.Text = "Next";
+            this.FC_Auto_WTR_A_Next1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next1_Run);
+            // 
+            // FC_Auto_WTR_A_ResetUnloadAction
+            // 
+            this.FC_Auto_WTR_A_ResetUnloadAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_ResetUnloadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_ResetUnloadAction.CASE1 = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.CASE2 = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.CASE3 = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.CASE4 = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.ContinueRun = false;
+            this.FC_Auto_WTR_A_ResetUnloadAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.EndFC = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.ErrID = 0;
+            this.FC_Auto_WTR_A_ResetUnloadAction.InAlarm = false;
+            this.FC_Auto_WTR_A_ResetUnloadAction.IsFlowHead = false;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Location = new System.Drawing.Point(334, 237);
+            this.FC_Auto_WTR_A_ResetUnloadAction.LockUI = false;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Message = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.MsgID = 0;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Name = "FC_Auto_WTR_A_ResetUnloadAction";
+            this.FC_Auto_WTR_A_ResetUnloadAction.NEXT = this.FC_Auto_WTR_A_UnloadActionDoIt;
+            this.FC_Auto_WTR_A_ResetUnloadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_ResetUnloadAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_ResetUnloadAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_ResetUnloadAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Running = false;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_ResetUnloadAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_ResetUnloadAction.StartFC = null;
+            this.FC_Auto_WTR_A_ResetUnloadAction.Text = "Reset Unload Action";
+            this.FC_Auto_WTR_A_ResetUnloadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetUnloadAction_Run);
+            // 
+            // FC_Auto_WTR_A_UnloadActionDoIt
+            // 
+            this.FC_Auto_WTR_A_UnloadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Location = new System.Drawing.Point(555, 237);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Message = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Name = "FC_Auto_WTR_A_UnloadActionDoIt";
+            this.FC_Auto_WTR_A_UnloadActionDoIt.NEXT = this.FC_Auto_WTR_A_Next3;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Running = false;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Text = "Unload Action DoIt";
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_UnloadActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_A_ResetLoadAction
+            // 
+            this.FC_Auto_WTR_A_ResetLoadAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_ResetLoadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_ResetLoadAction.CASE1 = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.CASE2 = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.CASE3 = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.CASE4 = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.ContinueRun = false;
+            this.FC_Auto_WTR_A_ResetLoadAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.EndFC = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.ErrID = 0;
+            this.FC_Auto_WTR_A_ResetLoadAction.InAlarm = false;
+            this.FC_Auto_WTR_A_ResetLoadAction.IsFlowHead = false;
+            this.FC_Auto_WTR_A_ResetLoadAction.Location = new System.Drawing.Point(334, 191);
+            this.FC_Auto_WTR_A_ResetLoadAction.LockUI = false;
+            this.FC_Auto_WTR_A_ResetLoadAction.Message = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.MsgID = 0;
+            this.FC_Auto_WTR_A_ResetLoadAction.Name = "FC_Auto_WTR_A_ResetLoadAction";
+            this.FC_Auto_WTR_A_ResetLoadAction.NEXT = this.FC_Auto_WTR_A_LoadActionDoIt;
+            this.FC_Auto_WTR_A_ResetLoadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_ResetLoadAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_ResetLoadAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_ResetLoadAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_ResetLoadAction.Running = false;
+            this.FC_Auto_WTR_A_ResetLoadAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_ResetLoadAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_ResetLoadAction.StartFC = null;
+            this.FC_Auto_WTR_A_ResetLoadAction.Text = "Reset Load Action";
+            this.FC_Auto_WTR_A_ResetLoadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetLoadAction_Run);
+            // 
+            // FC_Auto_WTR_A_LoadActionDoIt
+            // 
+            this.FC_Auto_WTR_A_LoadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_LoadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_LoadActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_LoadActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_LoadActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_LoadActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Location = new System.Drawing.Point(555, 191);
+            this.FC_Auto_WTR_A_LoadActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Message = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Name = "FC_Auto_WTR_A_LoadActionDoIt";
+            this.FC_Auto_WTR_A_LoadActionDoIt.NEXT = this.FC_Auto_WTR_A_Next4;
+            this.FC_Auto_WTR_A_LoadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_LoadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_LoadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_LoadActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Running = false;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_LoadActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_LoadActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_LoadActionDoIt.Text = "Load Action DoIt";
+            this.FC_Auto_WTR_A_LoadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_LoadActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_A_ResetReceiveAction
+            // 
+            this.FC_Auto_WTR_A_ResetReceiveAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_ResetReceiveAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_ResetReceiveAction.CASE1 = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.CASE2 = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.CASE3 = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.CASE4 = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.ContinueRun = false;
+            this.FC_Auto_WTR_A_ResetReceiveAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.EndFC = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.ErrID = 0;
+            this.FC_Auto_WTR_A_ResetReceiveAction.InAlarm = false;
+            this.FC_Auto_WTR_A_ResetReceiveAction.IsFlowHead = false;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Location = new System.Drawing.Point(334, 145);
+            this.FC_Auto_WTR_A_ResetReceiveAction.LockUI = false;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Message = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.MsgID = 0;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Name = "FC_Auto_WTR_A_ResetReceiveAction";
+            this.FC_Auto_WTR_A_ResetReceiveAction.NEXT = this.FC_Auto_WTR_A_ReceiveActionDoIt;
+            this.FC_Auto_WTR_A_ResetReceiveAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_ResetReceiveAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_ResetReceiveAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_ResetReceiveAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Running = false;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_ResetReceiveAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_ResetReceiveAction.StartFC = null;
+            this.FC_Auto_WTR_A_ResetReceiveAction.Text = "Reset Receive Action";
+            this.FC_Auto_WTR_A_ResetReceiveAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetReceiveAction_Run);
+            // 
+            // FC_Auto_WTR_A_ReceiveActionDoIt
+            // 
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Location = new System.Drawing.Point(555, 145);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Message = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Name = "FC_Auto_WTR_A_ReceiveActionDoIt";
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.NEXT = this.FC_Auto_WTR_A_Next5;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Running = false;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Text = "Receive Action DoIt";
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ReceiveActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_A_ResetSendAction
+            // 
+            this.FC_Auto_WTR_A_ResetSendAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_ResetSendAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_ResetSendAction.CASE1 = null;
+            this.FC_Auto_WTR_A_ResetSendAction.CASE2 = null;
+            this.FC_Auto_WTR_A_ResetSendAction.CASE3 = null;
+            this.FC_Auto_WTR_A_ResetSendAction.CASE4 = null;
+            this.FC_Auto_WTR_A_ResetSendAction.ContinueRun = false;
+            this.FC_Auto_WTR_A_ResetSendAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_ResetSendAction.EndFC = null;
+            this.FC_Auto_WTR_A_ResetSendAction.ErrID = 0;
+            this.FC_Auto_WTR_A_ResetSendAction.InAlarm = false;
+            this.FC_Auto_WTR_A_ResetSendAction.IsFlowHead = false;
+            this.FC_Auto_WTR_A_ResetSendAction.Location = new System.Drawing.Point(334, 99);
+            this.FC_Auto_WTR_A_ResetSendAction.LockUI = false;
+            this.FC_Auto_WTR_A_ResetSendAction.Message = null;
+            this.FC_Auto_WTR_A_ResetSendAction.MsgID = 0;
+            this.FC_Auto_WTR_A_ResetSendAction.Name = "FC_Auto_WTR_A_ResetSendAction";
+            this.FC_Auto_WTR_A_ResetSendAction.NEXT = this.FC_Auto_WTR_A_SendActionDoIt;
+            this.FC_Auto_WTR_A_ResetSendAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_ResetSendAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_ResetSendAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_ResetSendAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_ResetSendAction.Running = false;
+            this.FC_Auto_WTR_A_ResetSendAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_ResetSendAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_ResetSendAction.StartFC = null;
+            this.FC_Auto_WTR_A_ResetSendAction.Text = "Reset Send Action";
+            this.FC_Auto_WTR_A_ResetSendAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_ResetSendAction_Run);
+            // 
+            // FC_Auto_WTR_A_SendActionDoIt
+            // 
+            this.FC_Auto_WTR_A_SendActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_SendActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_SendActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_SendActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_SendActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_SendActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_SendActionDoIt.Location = new System.Drawing.Point(555, 99);
+            this.FC_Auto_WTR_A_SendActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_SendActionDoIt.Message = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_SendActionDoIt.Name = "FC_Auto_WTR_A_SendActionDoIt";
+            this.FC_Auto_WTR_A_SendActionDoIt.NEXT = this.FC_Auto_WTR_A_AlignementDoIt;
+            this.FC_Auto_WTR_A_SendActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_SendActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_SendActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_SendActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_SendActionDoIt.Running = false;
+            this.FC_Auto_WTR_A_SendActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_SendActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_SendActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_SendActionDoIt.Text = "Send Action DoIt";
+            this.FC_Auto_WTR_A_SendActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_SendActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_A_AlignementDoIt
+            // 
+            this.FC_Auto_WTR_A_AlignementDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_AlignementDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_AlignementDoIt.CASE1 = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.CASE2 = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.CASE3 = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.CASE4 = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_A_AlignementDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.EndFC = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.ErrID = 0;
+            this.FC_Auto_WTR_A_AlignementDoIt.InAlarm = false;
+            this.FC_Auto_WTR_A_AlignementDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_A_AlignementDoIt.Location = new System.Drawing.Point(780, 99);
+            this.FC_Auto_WTR_A_AlignementDoIt.LockUI = false;
+            this.FC_Auto_WTR_A_AlignementDoIt.Message = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.MsgID = 0;
+            this.FC_Auto_WTR_A_AlignementDoIt.Name = "FC_Auto_WTR_A_AlignementDoIt";
+            this.FC_Auto_WTR_A_AlignementDoIt.NEXT = this.FC_Auto_WTR_A_AlignementIsDone;
+            this.FC_Auto_WTR_A_AlignementDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_AlignementDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_AlignementDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_AlignementDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_AlignementDoIt.Running = false;
+            this.FC_Auto_WTR_A_AlignementDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_AlignementDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_AlignementDoIt.StartFC = null;
+            this.FC_Auto_WTR_A_AlignementDoIt.Text = "Alignement DoIt";
+            this.FC_Auto_WTR_A_AlignementDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_AlignementDoIt_Run);
             // 
             // FC_Auto_WTR_A_Action_Start
             // 
@@ -7405,13 +7438,695 @@
             this.tabPage17.Text = "WTR_B";
             this.tabPage17.UseVisualStyleBackColor = true;
             // 
+            // FC_Auto_WTR_B_Next7
+            // 
+            this.FC_Auto_WTR_B_Next7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next7.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next7.CASE1 = null;
+            this.FC_Auto_WTR_B_Next7.CASE2 = null;
+            this.FC_Auto_WTR_B_Next7.CASE3 = null;
+            this.FC_Auto_WTR_B_Next7.CASE4 = null;
+            this.FC_Auto_WTR_B_Next7.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next7.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next7.EndFC = null;
+            this.FC_Auto_WTR_B_Next7.ErrID = 0;
+            this.FC_Auto_WTR_B_Next7.InAlarm = false;
+            this.FC_Auto_WTR_B_Next7.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next7.Location = new System.Drawing.Point(944, 283);
+            this.FC_Auto_WTR_B_Next7.LockUI = false;
+            this.FC_Auto_WTR_B_Next7.Message = null;
+            this.FC_Auto_WTR_B_Next7.MsgID = 0;
+            this.FC_Auto_WTR_B_Next7.Name = "FC_Auto_WTR_B_Next7";
+            this.FC_Auto_WTR_B_Next7.NEXT = this.FC_Auto_WTR_B_Next5;
+            this.FC_Auto_WTR_B_Next7.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next7.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next7.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next7.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next7.Running = false;
+            this.FC_Auto_WTR_B_Next7.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next7.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next7.StartFC = null;
+            this.FC_Auto_WTR_B_Next7.Text = "Next";
+            this.FC_Auto_WTR_B_Next7.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next7_Run);
+            // 
+            // FC_Auto_WTR_B_Next5
+            // 
+            this.FC_Auto_WTR_B_Next5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next5.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next5.CASE1 = null;
+            this.FC_Auto_WTR_B_Next5.CASE2 = null;
+            this.FC_Auto_WTR_B_Next5.CASE3 = null;
+            this.FC_Auto_WTR_B_Next5.CASE4 = null;
+            this.FC_Auto_WTR_B_Next5.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next5.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next5.EndFC = null;
+            this.FC_Auto_WTR_B_Next5.ErrID = 0;
+            this.FC_Auto_WTR_B_Next5.InAlarm = false;
+            this.FC_Auto_WTR_B_Next5.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next5.Location = new System.Drawing.Point(944, 237);
+            this.FC_Auto_WTR_B_Next5.LockUI = false;
+            this.FC_Auto_WTR_B_Next5.Message = null;
+            this.FC_Auto_WTR_B_Next5.MsgID = 0;
+            this.FC_Auto_WTR_B_Next5.Name = "FC_Auto_WTR_B_Next5";
+            this.FC_Auto_WTR_B_Next5.NEXT = this.FC_Auto_WTR_B_Next4;
+            this.FC_Auto_WTR_B_Next5.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next5.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next5.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next5.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next5.Running = false;
+            this.FC_Auto_WTR_B_Next5.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next5.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next5.StartFC = null;
+            this.FC_Auto_WTR_B_Next5.Text = "Next";
+            this.FC_Auto_WTR_B_Next5.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next5_Run);
+            // 
+            // FC_Auto_WTR_B_Next4
+            // 
+            this.FC_Auto_WTR_B_Next4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next4.CASE1 = null;
+            this.FC_Auto_WTR_B_Next4.CASE2 = null;
+            this.FC_Auto_WTR_B_Next4.CASE3 = null;
+            this.FC_Auto_WTR_B_Next4.CASE4 = null;
+            this.FC_Auto_WTR_B_Next4.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next4.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next4.EndFC = null;
+            this.FC_Auto_WTR_B_Next4.ErrID = 0;
+            this.FC_Auto_WTR_B_Next4.InAlarm = false;
+            this.FC_Auto_WTR_B_Next4.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next4.Location = new System.Drawing.Point(944, 191);
+            this.FC_Auto_WTR_B_Next4.LockUI = false;
+            this.FC_Auto_WTR_B_Next4.Message = null;
+            this.FC_Auto_WTR_B_Next4.MsgID = 0;
+            this.FC_Auto_WTR_B_Next4.Name = "FC_Auto_WTR_B_Next4";
+            this.FC_Auto_WTR_B_Next4.NEXT = this.FC_Auto_WTR_B_Next3;
+            this.FC_Auto_WTR_B_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next4.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next4.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next4.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next4.Running = false;
+            this.FC_Auto_WTR_B_Next4.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next4.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next4.StartFC = null;
+            this.FC_Auto_WTR_B_Next4.Text = "Next";
+            this.FC_Auto_WTR_B_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next4_Run);
+            // 
+            // FC_Auto_WTR_B_Next3
+            // 
+            this.FC_Auto_WTR_B_Next3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next3.CASE1 = null;
+            this.FC_Auto_WTR_B_Next3.CASE2 = null;
+            this.FC_Auto_WTR_B_Next3.CASE3 = null;
+            this.FC_Auto_WTR_B_Next3.CASE4 = null;
+            this.FC_Auto_WTR_B_Next3.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next3.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next3.EndFC = null;
+            this.FC_Auto_WTR_B_Next3.ErrID = 0;
+            this.FC_Auto_WTR_B_Next3.InAlarm = false;
+            this.FC_Auto_WTR_B_Next3.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next3.Location = new System.Drawing.Point(944, 145);
+            this.FC_Auto_WTR_B_Next3.LockUI = false;
+            this.FC_Auto_WTR_B_Next3.Message = null;
+            this.FC_Auto_WTR_B_Next3.MsgID = 0;
+            this.FC_Auto_WTR_B_Next3.Name = "FC_Auto_WTR_B_Next3";
+            this.FC_Auto_WTR_B_Next3.NEXT = this.FC_Auto_WTR_B_Next1;
+            this.FC_Auto_WTR_B_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next3.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next3.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next3.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next3.Running = false;
+            this.FC_Auto_WTR_B_Next3.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next3.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next3.StartFC = null;
+            this.FC_Auto_WTR_B_Next3.Text = "Next";
+            this.FC_Auto_WTR_B_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next3_Run);
+            // 
+            // FC_Auto_WTR_B_Next1
+            // 
+            this.FC_Auto_WTR_B_Next1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next1.CASE1 = null;
+            this.FC_Auto_WTR_B_Next1.CASE2 = null;
+            this.FC_Auto_WTR_B_Next1.CASE3 = null;
+            this.FC_Auto_WTR_B_Next1.CASE4 = null;
+            this.FC_Auto_WTR_B_Next1.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next1.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next1.EndFC = null;
+            this.FC_Auto_WTR_B_Next1.ErrID = 0;
+            this.FC_Auto_WTR_B_Next1.InAlarm = false;
+            this.FC_Auto_WTR_B_Next1.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next1.Location = new System.Drawing.Point(944, 99);
+            this.FC_Auto_WTR_B_Next1.LockUI = false;
+            this.FC_Auto_WTR_B_Next1.Message = null;
+            this.FC_Auto_WTR_B_Next1.MsgID = 0;
+            this.FC_Auto_WTR_B_Next1.Name = "FC_Auto_WTR_B_Next1";
+            this.FC_Auto_WTR_B_Next1.NEXT = this.FC_Auto_WTR_B_Next2;
+            this.FC_Auto_WTR_B_Next1.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next1.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next1.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next1.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next1.Running = false;
+            this.FC_Auto_WTR_B_Next1.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next1.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next1.StartFC = null;
+            this.FC_Auto_WTR_B_Next1.Text = "Next";
+            this.FC_Auto_WTR_B_Next1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next1_Run);
+            // 
+            // FC_Auto_WTR_B_Next2
+            // 
+            this.FC_Auto_WTR_B_Next2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next2.CASE1 = null;
+            this.FC_Auto_WTR_B_Next2.CASE2 = null;
+            this.FC_Auto_WTR_B_Next2.CASE3 = null;
+            this.FC_Auto_WTR_B_Next2.CASE4 = null;
+            this.FC_Auto_WTR_B_Next2.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next2.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next2.EndFC = null;
+            this.FC_Auto_WTR_B_Next2.ErrID = 0;
+            this.FC_Auto_WTR_B_Next2.InAlarm = false;
+            this.FC_Auto_WTR_B_Next2.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next2.Location = new System.Drawing.Point(944, 53);
+            this.FC_Auto_WTR_B_Next2.LockUI = false;
+            this.FC_Auto_WTR_B_Next2.Message = null;
+            this.FC_Auto_WTR_B_Next2.MsgID = 0;
+            this.FC_Auto_WTR_B_Next2.Name = "FC_Auto_WTR_B_Next2";
+            this.FC_Auto_WTR_B_Next2.NEXT = this.FC_Auto_WTR_B_FlagIsDoIt;
+            this.FC_Auto_WTR_B_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next2.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next2.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next2.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next2.Running = false;
+            this.FC_Auto_WTR_B_Next2.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next2.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next2.StartFC = null;
+            this.FC_Auto_WTR_B_Next2.Text = "Next";
+            this.FC_Auto_WTR_B_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next2_Run);
+            // 
+            // FC_Auto_WTR_B_FlagIsDoIt
+            // 
+            this.FC_Auto_WTR_B_FlagIsDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_FlagIsDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_FlagIsDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_FlagIsDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_FlagIsDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_FlagIsDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Location = new System.Drawing.Point(28, 53);
+            this.FC_Auto_WTR_B_FlagIsDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Message = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Name = "FC_Auto_WTR_B_FlagIsDoIt";
+            this.FC_Auto_WTR_B_FlagIsDoIt.NEXT = this.FC_Auto_WTR_B_IsNeedSendToAligner;
+            this.FC_Auto_WTR_B_FlagIsDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_FlagIsDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_FlagIsDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_FlagIsDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Running = false;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_FlagIsDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_FlagIsDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_FlagIsDoIt.Text = "Flag IsDoIt";
+            this.FC_Auto_WTR_B_FlagIsDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_FlagIsDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_IsNeedSendToAligner
+            // 
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE1 = this.FC_Auto_WTR_B_IsNeedReceiveFromAligner;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE2 = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE3 = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE4 = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.ContinueRun = false;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.EndFC = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.ErrID = 0;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.InAlarm = false;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.IsFlowHead = false;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Location = new System.Drawing.Point(28, 99);
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.LockUI = false;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Message = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.MsgID = 0;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Name = "FC_Auto_WTR_B_IsNeedSendToAligner";
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.NEXT = this.FC_Auto_WTR_B_ResetSendAction;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Running = false;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.StartFC = null;
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Text = "Is Need Send To Aligner";
+            this.FC_Auto_WTR_B_IsNeedSendToAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedSendToAligner_Run);
+            // 
+            // FC_Auto_WTR_B_IsNeedReceiveFromAligner
+            // 
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE1 = this.FC_Auto_WTR_B_IsNeedLoadFromPort;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE2 = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE3 = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE4 = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ContinueRun = false;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.EndFC = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ErrID = 0;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.InAlarm = false;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.IsFlowHead = false;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(28, 145);
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.LockUI = false;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Message = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.MsgID = 0;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Name = "FC_Auto_WTR_B_IsNeedReceiveFromAligner";
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.NEXT = this.FC_Auto_WTR_B_ResetReceiveAction;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Running = false;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.StartFC = null;
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Text = "Is Need Receive From Aligner";
+            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedReceiveFromAligner_Run);
+            // 
+            // FC_Auto_WTR_B_IsNeedLoadFromPort
+            // 
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE1 = this.FC_Auto_WTR_B_IsNeedUnloadToPort;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE2 = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE3 = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE4 = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ContinueRun = false;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.EndFC = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ErrID = 0;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.InAlarm = false;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.IsFlowHead = false;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Location = new System.Drawing.Point(28, 191);
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.LockUI = false;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Message = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.MsgID = 0;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Name = "FC_Auto_WTR_B_IsNeedLoadFromPort";
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.NEXT = this.FC_Auto_WTR_B_ResetLoadAction;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Running = false;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.StartFC = null;
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Text = "Is Need Load From Port";
+            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedLoadFromPort_Run);
+            // 
+            // FC_Auto_WTR_B_IsNeedUnloadToPort
+            // 
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE1 = this.FC_Auto_WTR_B_Next6;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE2 = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE3 = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE4 = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ContinueRun = false;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.EndFC = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ErrID = 0;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.InAlarm = false;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.IsFlowHead = false;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Location = new System.Drawing.Point(28, 237);
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.LockUI = false;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Message = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.MsgID = 0;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Name = "FC_Auto_WTR_B_IsNeedUnloadToPort";
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.NEXT = this.FC_Auto_WTR_B_ResetUnloadAction;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Running = false;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.StartFC = null;
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Text = "Is Need Unload To Port";
+            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedUnloadToPort_Run);
+            // 
+            // FC_Auto_WTR_B_Next6
+            // 
+            this.FC_Auto_WTR_B_Next6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Next6.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Next6.CASE1 = null;
+            this.FC_Auto_WTR_B_Next6.CASE2 = null;
+            this.FC_Auto_WTR_B_Next6.CASE3 = null;
+            this.FC_Auto_WTR_B_Next6.CASE4 = null;
+            this.FC_Auto_WTR_B_Next6.ContinueRun = false;
+            this.FC_Auto_WTR_B_Next6.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Next6.EndFC = null;
+            this.FC_Auto_WTR_B_Next6.ErrID = 0;
+            this.FC_Auto_WTR_B_Next6.InAlarm = false;
+            this.FC_Auto_WTR_B_Next6.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Next6.Location = new System.Drawing.Point(100, 283);
+            this.FC_Auto_WTR_B_Next6.LockUI = false;
+            this.FC_Auto_WTR_B_Next6.Message = null;
+            this.FC_Auto_WTR_B_Next6.MsgID = 0;
+            this.FC_Auto_WTR_B_Next6.Name = "FC_Auto_WTR_B_Next6";
+            this.FC_Auto_WTR_B_Next6.NEXT = this.FC_Auto_WTR_B_Next7;
+            this.FC_Auto_WTR_B_Next6.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Next6.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Next6.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Next6.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Next6.Running = false;
+            this.FC_Auto_WTR_B_Next6.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_B_Next6.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Next6.StartFC = null;
+            this.FC_Auto_WTR_B_Next6.Text = "Next";
+            this.FC_Auto_WTR_B_Next6.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next6_Run);
+            // 
+            // FC_Auto_WTR_B_ResetUnloadAction
+            // 
+            this.FC_Auto_WTR_B_ResetUnloadAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_ResetUnloadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_ResetUnloadAction.CASE1 = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.CASE2 = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.CASE3 = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.CASE4 = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.ContinueRun = false;
+            this.FC_Auto_WTR_B_ResetUnloadAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.EndFC = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.ErrID = 0;
+            this.FC_Auto_WTR_B_ResetUnloadAction.InAlarm = false;
+            this.FC_Auto_WTR_B_ResetUnloadAction.IsFlowHead = false;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Location = new System.Drawing.Point(262, 237);
+            this.FC_Auto_WTR_B_ResetUnloadAction.LockUI = false;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Message = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.MsgID = 0;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Name = "FC_Auto_WTR_B_ResetUnloadAction";
+            this.FC_Auto_WTR_B_ResetUnloadAction.NEXT = this.FC_Auto_WTR_B_UnloadActionDoIt;
+            this.FC_Auto_WTR_B_ResetUnloadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_ResetUnloadAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_ResetUnloadAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_ResetUnloadAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Running = false;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_ResetUnloadAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_ResetUnloadAction.StartFC = null;
+            this.FC_Auto_WTR_B_ResetUnloadAction.Text = "Reset Unload Action";
+            this.FC_Auto_WTR_B_ResetUnloadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetUnloadAction_Run);
+            // 
+            // FC_Auto_WTR_B_UnloadActionDoIt
+            // 
+            this.FC_Auto_WTR_B_UnloadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Location = new System.Drawing.Point(483, 237);
+            this.FC_Auto_WTR_B_UnloadActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Message = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Name = "FC_Auto_WTR_B_UnloadActionDoIt";
+            this.FC_Auto_WTR_B_UnloadActionDoIt.NEXT = this.FC_Auto_WTR_B_Next5;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_UnloadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_UnloadActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Running = false;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_UnloadActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Text = "Unload Action DoIt";
+            this.FC_Auto_WTR_B_UnloadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_UnloadActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_ResetLoadAction
+            // 
+            this.FC_Auto_WTR_B_ResetLoadAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_ResetLoadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_ResetLoadAction.CASE1 = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.CASE2 = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.CASE3 = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.CASE4 = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.ContinueRun = false;
+            this.FC_Auto_WTR_B_ResetLoadAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.EndFC = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.ErrID = 0;
+            this.FC_Auto_WTR_B_ResetLoadAction.InAlarm = false;
+            this.FC_Auto_WTR_B_ResetLoadAction.IsFlowHead = false;
+            this.FC_Auto_WTR_B_ResetLoadAction.Location = new System.Drawing.Point(262, 191);
+            this.FC_Auto_WTR_B_ResetLoadAction.LockUI = false;
+            this.FC_Auto_WTR_B_ResetLoadAction.Message = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.MsgID = 0;
+            this.FC_Auto_WTR_B_ResetLoadAction.Name = "FC_Auto_WTR_B_ResetLoadAction";
+            this.FC_Auto_WTR_B_ResetLoadAction.NEXT = this.FC_Auto_WTR_B_LoadActionDoIt;
+            this.FC_Auto_WTR_B_ResetLoadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_ResetLoadAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_ResetLoadAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_ResetLoadAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_ResetLoadAction.Running = false;
+            this.FC_Auto_WTR_B_ResetLoadAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_ResetLoadAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_ResetLoadAction.StartFC = null;
+            this.FC_Auto_WTR_B_ResetLoadAction.Text = "Reset Load Action";
+            this.FC_Auto_WTR_B_ResetLoadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetLoadAction_Run);
+            // 
+            // FC_Auto_WTR_B_LoadActionDoIt
+            // 
+            this.FC_Auto_WTR_B_LoadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_LoadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_LoadActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_LoadActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_LoadActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_LoadActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Location = new System.Drawing.Point(483, 191);
+            this.FC_Auto_WTR_B_LoadActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Message = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Name = "FC_Auto_WTR_B_LoadActionDoIt";
+            this.FC_Auto_WTR_B_LoadActionDoIt.NEXT = this.FC_Auto_WTR_B_Next4;
+            this.FC_Auto_WTR_B_LoadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_LoadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_LoadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_LoadActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Running = false;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_LoadActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_LoadActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_LoadActionDoIt.Text = "Load Action DoIt";
+            this.FC_Auto_WTR_B_LoadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_LoadActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_ResetReceiveAction
+            // 
+            this.FC_Auto_WTR_B_ResetReceiveAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_ResetReceiveAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_ResetReceiveAction.CASE1 = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.CASE2 = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.CASE3 = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.CASE4 = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.ContinueRun = false;
+            this.FC_Auto_WTR_B_ResetReceiveAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.EndFC = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.ErrID = 0;
+            this.FC_Auto_WTR_B_ResetReceiveAction.InAlarm = false;
+            this.FC_Auto_WTR_B_ResetReceiveAction.IsFlowHead = false;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Location = new System.Drawing.Point(262, 145);
+            this.FC_Auto_WTR_B_ResetReceiveAction.LockUI = false;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Message = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.MsgID = 0;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Name = "FC_Auto_WTR_B_ResetReceiveAction";
+            this.FC_Auto_WTR_B_ResetReceiveAction.NEXT = this.FC_Auto_WTR_B_ReceiveActionDoIt;
+            this.FC_Auto_WTR_B_ResetReceiveAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_ResetReceiveAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_ResetReceiveAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_ResetReceiveAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Running = false;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_ResetReceiveAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_ResetReceiveAction.StartFC = null;
+            this.FC_Auto_WTR_B_ResetReceiveAction.Text = "Reset Receive Action";
+            this.FC_Auto_WTR_B_ResetReceiveAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetReceiveAction_Run);
+            // 
+            // FC_Auto_WTR_B_ReceiveActionDoIt
+            // 
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Location = new System.Drawing.Point(483, 145);
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Message = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Name = "FC_Auto_WTR_B_ReceiveActionDoIt";
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.NEXT = this.FC_Auto_WTR_B_Next3;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Running = false;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Text = "Receive Action DoIt";
+            this.FC_Auto_WTR_B_ReceiveActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ReceiveActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_ResetSendAction
+            // 
+            this.FC_Auto_WTR_B_ResetSendAction.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_ResetSendAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_ResetSendAction.CASE1 = null;
+            this.FC_Auto_WTR_B_ResetSendAction.CASE2 = null;
+            this.FC_Auto_WTR_B_ResetSendAction.CASE3 = null;
+            this.FC_Auto_WTR_B_ResetSendAction.CASE4 = null;
+            this.FC_Auto_WTR_B_ResetSendAction.ContinueRun = false;
+            this.FC_Auto_WTR_B_ResetSendAction.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_ResetSendAction.EndFC = null;
+            this.FC_Auto_WTR_B_ResetSendAction.ErrID = 0;
+            this.FC_Auto_WTR_B_ResetSendAction.InAlarm = false;
+            this.FC_Auto_WTR_B_ResetSendAction.IsFlowHead = false;
+            this.FC_Auto_WTR_B_ResetSendAction.Location = new System.Drawing.Point(262, 99);
+            this.FC_Auto_WTR_B_ResetSendAction.LockUI = false;
+            this.FC_Auto_WTR_B_ResetSendAction.Message = null;
+            this.FC_Auto_WTR_B_ResetSendAction.MsgID = 0;
+            this.FC_Auto_WTR_B_ResetSendAction.Name = "FC_Auto_WTR_B_ResetSendAction";
+            this.FC_Auto_WTR_B_ResetSendAction.NEXT = this.FC_Auto_WTR_B_SendActionDoIt;
+            this.FC_Auto_WTR_B_ResetSendAction.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_ResetSendAction.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_ResetSendAction.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_ResetSendAction.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_ResetSendAction.Running = false;
+            this.FC_Auto_WTR_B_ResetSendAction.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_ResetSendAction.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_ResetSendAction.StartFC = null;
+            this.FC_Auto_WTR_B_ResetSendAction.Text = "Reset Send Action";
+            this.FC_Auto_WTR_B_ResetSendAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetSendAction_Run);
+            // 
+            // FC_Auto_WTR_B_SendActionDoIt
+            // 
+            this.FC_Auto_WTR_B_SendActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_SendActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_SendActionDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_SendActionDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_SendActionDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_SendActionDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_SendActionDoIt.Location = new System.Drawing.Point(483, 99);
+            this.FC_Auto_WTR_B_SendActionDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_SendActionDoIt.Message = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_SendActionDoIt.Name = "FC_Auto_WTR_B_SendActionDoIt";
+            this.FC_Auto_WTR_B_SendActionDoIt.NEXT = this.FC_Auto_WTR_B_AlignementDoIt;
+            this.FC_Auto_WTR_B_SendActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_SendActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_SendActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_SendActionDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_SendActionDoIt.Running = false;
+            this.FC_Auto_WTR_B_SendActionDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_SendActionDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_SendActionDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_SendActionDoIt.Text = "Send Action DoIt";
+            this.FC_Auto_WTR_B_SendActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_SendActionDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_AlignementDoIt
+            // 
+            this.FC_Auto_WTR_B_AlignementDoIt.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_AlignementDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_AlignementDoIt.CASE1 = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.CASE2 = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.CASE3 = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.CASE4 = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.ContinueRun = false;
+            this.FC_Auto_WTR_B_AlignementDoIt.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.EndFC = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.ErrID = 0;
+            this.FC_Auto_WTR_B_AlignementDoIt.InAlarm = false;
+            this.FC_Auto_WTR_B_AlignementDoIt.IsFlowHead = false;
+            this.FC_Auto_WTR_B_AlignementDoIt.Location = new System.Drawing.Point(708, 99);
+            this.FC_Auto_WTR_B_AlignementDoIt.LockUI = false;
+            this.FC_Auto_WTR_B_AlignementDoIt.Message = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.MsgID = 0;
+            this.FC_Auto_WTR_B_AlignementDoIt.Name = "FC_Auto_WTR_B_AlignementDoIt";
+            this.FC_Auto_WTR_B_AlignementDoIt.NEXT = this.FC_Auto_WTR_B_Next1;
+            this.FC_Auto_WTR_B_AlignementDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_AlignementDoIt.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_AlignementDoIt.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_AlignementDoIt.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_AlignementDoIt.Running = false;
+            this.FC_Auto_WTR_B_AlignementDoIt.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_AlignementDoIt.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_AlignementDoIt.StartFC = null;
+            this.FC_Auto_WTR_B_AlignementDoIt.Text = "Alignement DoIt";
+            this.FC_Auto_WTR_B_AlignementDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_AlignementDoIt_Run);
+            // 
+            // FC_Auto_WTR_B_Action_Start
+            // 
+            this.FC_Auto_WTR_B_Action_Start.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_B_Action_Start.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_B_Action_Start.CASE1 = null;
+            this.FC_Auto_WTR_B_Action_Start.CASE2 = null;
+            this.FC_Auto_WTR_B_Action_Start.CASE3 = null;
+            this.FC_Auto_WTR_B_Action_Start.CASE4 = null;
+            this.FC_Auto_WTR_B_Action_Start.ContinueRun = false;
+            this.FC_Auto_WTR_B_Action_Start.DesignTimeParent = null;
+            this.FC_Auto_WTR_B_Action_Start.EndFC = null;
+            this.FC_Auto_WTR_B_Action_Start.ErrID = 0;
+            this.FC_Auto_WTR_B_Action_Start.InAlarm = false;
+            this.FC_Auto_WTR_B_Action_Start.IsFlowHead = false;
+            this.FC_Auto_WTR_B_Action_Start.Location = new System.Drawing.Point(28, 7);
+            this.FC_Auto_WTR_B_Action_Start.LockUI = false;
+            this.FC_Auto_WTR_B_Action_Start.Message = null;
+            this.FC_Auto_WTR_B_Action_Start.MsgID = 0;
+            this.FC_Auto_WTR_B_Action_Start.Name = "FC_Auto_WTR_B_Action_Start";
+            this.FC_Auto_WTR_B_Action_Start.NEXT = this.FC_Auto_WTR_B_FlagIsDoIt;
+            this.FC_Auto_WTR_B_Action_Start.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_B_Action_Start.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_B_Action_Start.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_B_Action_Start.OverTimeSpec = 100;
+            this.FC_Auto_WTR_B_Action_Start.Running = false;
+            this.FC_Auto_WTR_B_Action_Start.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_B_Action_Start.SlowRunCycle = -1;
+            this.FC_Auto_WTR_B_Action_Start.StartFC = null;
+            this.FC_Auto_WTR_B_Action_Start.Text = "Action Start";
+            this.FC_Auto_WTR_B_Action_Start.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Action_Start_Run);
+            // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.tabControl6);
-            this.tabPage9.Location = new System.Drawing.Point(4, 35);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1348, 788);
+            this.tabPage9.Size = new System.Drawing.Size(1348, 801);
             this.tabPage9.TabIndex = 2;
             this.tabPage9.Text = "WAS";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -7424,7 +8139,7 @@
             this.tabControl6.Location = new System.Drawing.Point(3, 3);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(1342, 782);
+            this.tabControl6.Size = new System.Drawing.Size(1342, 795);
             this.tabControl6.TabIndex = 0;
             // 
             // tabPage15
@@ -7447,7 +8162,7 @@
             this.tabPage15.Location = new System.Drawing.Point(4, 35);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(1334, 743);
+            this.tabPage15.Size = new System.Drawing.Size(1334, 756);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "WAS_A";
             this.tabPage15.UseVisualStyleBackColor = true;
@@ -7937,7 +8652,7 @@
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage16.Size = new System.Drawing.Size(1334, 769);
             this.tabPage16.TabIndex = 1;
             this.tabPage16.Text = "WAS_B";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -8988,718 +9703,36 @@
             this.OptionDS.ModifiedLog = false;
             this.OptionDS.ModifiedLogToDB = true;
             // 
-            // FC_Auto_WTR_A_Next2
+            // FC_Auto_WTR_A_AlignementIsDone
             // 
-            this.FC_Auto_WTR_A_Next2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next2.CASE1 = null;
-            this.FC_Auto_WTR_A_Next2.CASE2 = null;
-            this.FC_Auto_WTR_A_Next2.CASE3 = null;
-            this.FC_Auto_WTR_A_Next2.CASE4 = null;
-            this.FC_Auto_WTR_A_Next2.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next2.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next2.EndFC = null;
-            this.FC_Auto_WTR_A_Next2.ErrID = 0;
-            this.FC_Auto_WTR_A_Next2.InAlarm = false;
-            this.FC_Auto_WTR_A_Next2.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next2.Location = new System.Drawing.Point(1016, 283);
-            this.FC_Auto_WTR_A_Next2.LockUI = false;
-            this.FC_Auto_WTR_A_Next2.Message = null;
-            this.FC_Auto_WTR_A_Next2.MsgID = 0;
-            this.FC_Auto_WTR_A_Next2.Name = "FC_Auto_WTR_A_Next2";
-            this.FC_Auto_WTR_A_Next2.NEXT = this.FC_Auto_WTR_A_Next3;
-            this.FC_Auto_WTR_A_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next2.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next2.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next2.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next2.Running = false;
-            this.FC_Auto_WTR_A_Next2.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next2.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next2.StartFC = null;
-            this.FC_Auto_WTR_A_Next2.Text = "Next";
-            this.FC_Auto_WTR_A_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next2_Run);
-            // 
-            // FC_Auto_WTR_B_Next7
-            // 
-            this.FC_Auto_WTR_B_Next7.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next7.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next7.CASE1 = null;
-            this.FC_Auto_WTR_B_Next7.CASE2 = null;
-            this.FC_Auto_WTR_B_Next7.CASE3 = null;
-            this.FC_Auto_WTR_B_Next7.CASE4 = null;
-            this.FC_Auto_WTR_B_Next7.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next7.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next7.EndFC = null;
-            this.FC_Auto_WTR_B_Next7.ErrID = 0;
-            this.FC_Auto_WTR_B_Next7.InAlarm = false;
-            this.FC_Auto_WTR_B_Next7.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next7.Location = new System.Drawing.Point(944, 283);
-            this.FC_Auto_WTR_B_Next7.LockUI = false;
-            this.FC_Auto_WTR_B_Next7.Message = null;
-            this.FC_Auto_WTR_B_Next7.MsgID = 0;
-            this.FC_Auto_WTR_B_Next7.Name = "FC_Auto_WTR_B_Next7";
-            this.FC_Auto_WTR_B_Next7.NEXT = this.FC_Auto_WTR_B_Next5;
-            this.FC_Auto_WTR_B_Next7.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next7.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next7.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next7.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next7.Running = false;
-            this.FC_Auto_WTR_B_Next7.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next7.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next7.StartFC = null;
-            this.FC_Auto_WTR_B_Next7.Text = "Next";
-            this.FC_Auto_WTR_B_Next7.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next7_Run);
-            // 
-            // FC_Auto_WTR_B_Next5
-            // 
-            this.FC_Auto_WTR_B_Next5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next5.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next5.CASE1 = null;
-            this.FC_Auto_WTR_B_Next5.CASE2 = null;
-            this.FC_Auto_WTR_B_Next5.CASE3 = null;
-            this.FC_Auto_WTR_B_Next5.CASE4 = null;
-            this.FC_Auto_WTR_B_Next5.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next5.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next5.EndFC = null;
-            this.FC_Auto_WTR_B_Next5.ErrID = 0;
-            this.FC_Auto_WTR_B_Next5.InAlarm = false;
-            this.FC_Auto_WTR_B_Next5.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next5.Location = new System.Drawing.Point(944, 237);
-            this.FC_Auto_WTR_B_Next5.LockUI = false;
-            this.FC_Auto_WTR_B_Next5.Message = null;
-            this.FC_Auto_WTR_B_Next5.MsgID = 0;
-            this.FC_Auto_WTR_B_Next5.Name = "FC_Auto_WTR_B_Next5";
-            this.FC_Auto_WTR_B_Next5.NEXT = this.FC_Auto_WTR_B_Next4;
-            this.FC_Auto_WTR_B_Next5.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next5.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next5.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next5.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next5.Running = false;
-            this.FC_Auto_WTR_B_Next5.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next5.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next5.StartFC = null;
-            this.FC_Auto_WTR_B_Next5.Text = "Next";
-            this.FC_Auto_WTR_B_Next5.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next5_Run);
-            // 
-            // FC_Auto_WTR_B_Next4
-            // 
-            this.FC_Auto_WTR_B_Next4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next4.CASE1 = null;
-            this.FC_Auto_WTR_B_Next4.CASE2 = null;
-            this.FC_Auto_WTR_B_Next4.CASE3 = null;
-            this.FC_Auto_WTR_B_Next4.CASE4 = null;
-            this.FC_Auto_WTR_B_Next4.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next4.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next4.EndFC = null;
-            this.FC_Auto_WTR_B_Next4.ErrID = 0;
-            this.FC_Auto_WTR_B_Next4.InAlarm = false;
-            this.FC_Auto_WTR_B_Next4.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next4.Location = new System.Drawing.Point(944, 191);
-            this.FC_Auto_WTR_B_Next4.LockUI = false;
-            this.FC_Auto_WTR_B_Next4.Message = null;
-            this.FC_Auto_WTR_B_Next4.MsgID = 0;
-            this.FC_Auto_WTR_B_Next4.Name = "FC_Auto_WTR_B_Next4";
-            this.FC_Auto_WTR_B_Next4.NEXT = this.FC_Auto_WTR_B_Next3;
-            this.FC_Auto_WTR_B_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next4.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next4.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next4.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next4.Running = false;
-            this.FC_Auto_WTR_B_Next4.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next4.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next4.StartFC = null;
-            this.FC_Auto_WTR_B_Next4.Text = "Next";
-            this.FC_Auto_WTR_B_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next4_Run);
-            // 
-            // FC_Auto_WTR_B_Next3
-            // 
-            this.FC_Auto_WTR_B_Next3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next3.CASE1 = null;
-            this.FC_Auto_WTR_B_Next3.CASE2 = null;
-            this.FC_Auto_WTR_B_Next3.CASE3 = null;
-            this.FC_Auto_WTR_B_Next3.CASE4 = null;
-            this.FC_Auto_WTR_B_Next3.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next3.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next3.EndFC = null;
-            this.FC_Auto_WTR_B_Next3.ErrID = 0;
-            this.FC_Auto_WTR_B_Next3.InAlarm = false;
-            this.FC_Auto_WTR_B_Next3.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next3.Location = new System.Drawing.Point(944, 145);
-            this.FC_Auto_WTR_B_Next3.LockUI = false;
-            this.FC_Auto_WTR_B_Next3.Message = null;
-            this.FC_Auto_WTR_B_Next3.MsgID = 0;
-            this.FC_Auto_WTR_B_Next3.Name = "FC_Auto_WTR_B_Next3";
-            this.FC_Auto_WTR_B_Next3.NEXT = this.FC_Auto_WTR_B_Next1;
-            this.FC_Auto_WTR_B_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next3.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next3.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next3.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next3.Running = false;
-            this.FC_Auto_WTR_B_Next3.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next3.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next3.StartFC = null;
-            this.FC_Auto_WTR_B_Next3.Text = "Next";
-            this.FC_Auto_WTR_B_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next3_Run);
-            // 
-            // FC_Auto_WTR_B_Next1
-            // 
-            this.FC_Auto_WTR_B_Next1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next1.CASE1 = null;
-            this.FC_Auto_WTR_B_Next1.CASE2 = null;
-            this.FC_Auto_WTR_B_Next1.CASE3 = null;
-            this.FC_Auto_WTR_B_Next1.CASE4 = null;
-            this.FC_Auto_WTR_B_Next1.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next1.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next1.EndFC = null;
-            this.FC_Auto_WTR_B_Next1.ErrID = 0;
-            this.FC_Auto_WTR_B_Next1.InAlarm = false;
-            this.FC_Auto_WTR_B_Next1.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next1.Location = new System.Drawing.Point(944, 99);
-            this.FC_Auto_WTR_B_Next1.LockUI = false;
-            this.FC_Auto_WTR_B_Next1.Message = null;
-            this.FC_Auto_WTR_B_Next1.MsgID = 0;
-            this.FC_Auto_WTR_B_Next1.Name = "FC_Auto_WTR_B_Next1";
-            this.FC_Auto_WTR_B_Next1.NEXT = this.FC_Auto_WTR_B_Next2;
-            this.FC_Auto_WTR_B_Next1.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next1.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next1.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next1.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next1.Running = false;
-            this.FC_Auto_WTR_B_Next1.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next1.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next1.StartFC = null;
-            this.FC_Auto_WTR_B_Next1.Text = "Next";
-            this.FC_Auto_WTR_B_Next1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next1_Run);
-            // 
-            // FC_Auto_WTR_B_Next2
-            // 
-            this.FC_Auto_WTR_B_Next2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next2.CASE1 = null;
-            this.FC_Auto_WTR_B_Next2.CASE2 = null;
-            this.FC_Auto_WTR_B_Next2.CASE3 = null;
-            this.FC_Auto_WTR_B_Next2.CASE4 = null;
-            this.FC_Auto_WTR_B_Next2.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next2.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next2.EndFC = null;
-            this.FC_Auto_WTR_B_Next2.ErrID = 0;
-            this.FC_Auto_WTR_B_Next2.InAlarm = false;
-            this.FC_Auto_WTR_B_Next2.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next2.Location = new System.Drawing.Point(944, 53);
-            this.FC_Auto_WTR_B_Next2.LockUI = false;
-            this.FC_Auto_WTR_B_Next2.Message = null;
-            this.FC_Auto_WTR_B_Next2.MsgID = 0;
-            this.FC_Auto_WTR_B_Next2.Name = "FC_Auto_WTR_B_Next2";
-            this.FC_Auto_WTR_B_Next2.NEXT = this.FC_Auto_WTR_B_FlagIsDoIt;
-            this.FC_Auto_WTR_B_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next2.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next2.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next2.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next2.Running = false;
-            this.FC_Auto_WTR_B_Next2.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next2.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next2.StartFC = null;
-            this.FC_Auto_WTR_B_Next2.Text = "Next";
-            this.FC_Auto_WTR_B_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next2_Run);
-            // 
-            // FC_Auto_WTR_B_FlagIsDoIt
-            // 
-            this.FC_Auto_WTR_B_FlagIsDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_FlagIsDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_FlagIsDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_FlagIsDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_FlagIsDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_FlagIsDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Location = new System.Drawing.Point(28, 53);
-            this.FC_Auto_WTR_B_FlagIsDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Message = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Name = "FC_Auto_WTR_B_FlagIsDoIt";
-            this.FC_Auto_WTR_B_FlagIsDoIt.NEXT = this.FC_Auto_WTR_B_IsNeedSendToAligner;
-            this.FC_Auto_WTR_B_FlagIsDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_FlagIsDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_FlagIsDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_FlagIsDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Running = false;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_FlagIsDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_FlagIsDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_FlagIsDoIt.Text = "Flag IsDoIt";
-            this.FC_Auto_WTR_B_FlagIsDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_FlagIsDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_IsNeedSendToAligner
-            // 
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE1 = this.FC_Auto_WTR_B_IsNeedReceiveFromAligner;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE2 = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE3 = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.CASE4 = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.ContinueRun = false;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.EndFC = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.ErrID = 0;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.InAlarm = false;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.IsFlowHead = false;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Location = new System.Drawing.Point(28, 99);
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.LockUI = false;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Message = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.MsgID = 0;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Name = "FC_Auto_WTR_B_IsNeedSendToAligner";
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.NEXT = this.FC_Auto_WTR_B_ResetSendAction;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Running = false;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.StartFC = null;
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Text = "Is Need Send To Aligner";
-            this.FC_Auto_WTR_B_IsNeedSendToAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedSendToAligner_Run);
-            // 
-            // FC_Auto_WTR_B_IsNeedReceiveFromAligner
-            // 
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE1 = this.FC_Auto_WTR_B_IsNeedLoadFromPort;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE2 = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE3 = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.CASE4 = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ContinueRun = false;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.EndFC = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ErrID = 0;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.InAlarm = false;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.IsFlowHead = false;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(28, 145);
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.LockUI = false;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Message = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.MsgID = 0;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Name = "FC_Auto_WTR_B_IsNeedReceiveFromAligner";
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.NEXT = this.FC_Auto_WTR_B_ResetReceiveAction;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Running = false;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.StartFC = null;
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Text = "Is Need Receive From Aligner";
-            this.FC_Auto_WTR_B_IsNeedReceiveFromAligner.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedReceiveFromAligner_Run);
-            // 
-            // FC_Auto_WTR_B_IsNeedLoadFromPort
-            // 
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE1 = this.FC_Auto_WTR_B_IsNeedUnloadToPort;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE2 = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE3 = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.CASE4 = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ContinueRun = false;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.EndFC = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ErrID = 0;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.InAlarm = false;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.IsFlowHead = false;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Location = new System.Drawing.Point(28, 191);
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.LockUI = false;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Message = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.MsgID = 0;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Name = "FC_Auto_WTR_B_IsNeedLoadFromPort";
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.NEXT = this.FC_Auto_WTR_B_ResetLoadAction;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Running = false;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.StartFC = null;
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Text = "Is Need Load From Port";
-            this.FC_Auto_WTR_B_IsNeedLoadFromPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedLoadFromPort_Run);
-            // 
-            // FC_Auto_WTR_B_IsNeedUnloadToPort
-            // 
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE1 = this.FC_Auto_WTR_B_Next6;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE2 = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE3 = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.CASE4 = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ContinueRun = false;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.EndFC = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ErrID = 0;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.InAlarm = false;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.IsFlowHead = false;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Location = new System.Drawing.Point(28, 237);
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.LockUI = false;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Message = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.MsgID = 0;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Name = "FC_Auto_WTR_B_IsNeedUnloadToPort";
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.NEXT = this.FC_Auto_WTR_B_ResetUnloadAction;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Running = false;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.StartFC = null;
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Text = "Is Need Unload To Port";
-            this.FC_Auto_WTR_B_IsNeedUnloadToPort.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_IsNeedUnloadToPort_Run);
-            // 
-            // FC_Auto_WTR_B_Next6
-            // 
-            this.FC_Auto_WTR_B_Next6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Next6.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Next6.CASE1 = null;
-            this.FC_Auto_WTR_B_Next6.CASE2 = null;
-            this.FC_Auto_WTR_B_Next6.CASE3 = null;
-            this.FC_Auto_WTR_B_Next6.CASE4 = null;
-            this.FC_Auto_WTR_B_Next6.ContinueRun = false;
-            this.FC_Auto_WTR_B_Next6.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Next6.EndFC = null;
-            this.FC_Auto_WTR_B_Next6.ErrID = 0;
-            this.FC_Auto_WTR_B_Next6.InAlarm = false;
-            this.FC_Auto_WTR_B_Next6.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Next6.Location = new System.Drawing.Point(100, 283);
-            this.FC_Auto_WTR_B_Next6.LockUI = false;
-            this.FC_Auto_WTR_B_Next6.Message = null;
-            this.FC_Auto_WTR_B_Next6.MsgID = 0;
-            this.FC_Auto_WTR_B_Next6.Name = "FC_Auto_WTR_B_Next6";
-            this.FC_Auto_WTR_B_Next6.NEXT = this.FC_Auto_WTR_B_Next7;
-            this.FC_Auto_WTR_B_Next6.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Next6.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Next6.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Next6.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Next6.Running = false;
-            this.FC_Auto_WTR_B_Next6.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_B_Next6.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Next6.StartFC = null;
-            this.FC_Auto_WTR_B_Next6.Text = "Next";
-            this.FC_Auto_WTR_B_Next6.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Next6_Run);
-            // 
-            // FC_Auto_WTR_B_ResetUnloadAction
-            // 
-            this.FC_Auto_WTR_B_ResetUnloadAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_ResetUnloadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_ResetUnloadAction.CASE1 = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.CASE2 = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.CASE3 = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.CASE4 = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.ContinueRun = false;
-            this.FC_Auto_WTR_B_ResetUnloadAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.EndFC = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.ErrID = 0;
-            this.FC_Auto_WTR_B_ResetUnloadAction.InAlarm = false;
-            this.FC_Auto_WTR_B_ResetUnloadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Location = new System.Drawing.Point(262, 237);
-            this.FC_Auto_WTR_B_ResetUnloadAction.LockUI = false;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Message = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.MsgID = 0;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Name = "FC_Auto_WTR_B_ResetUnloadAction";
-            this.FC_Auto_WTR_B_ResetUnloadAction.NEXT = this.FC_Auto_WTR_B_UnloadActionDoIt;
-            this.FC_Auto_WTR_B_ResetUnloadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_ResetUnloadAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_ResetUnloadAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_ResetUnloadAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Running = false;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_ResetUnloadAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_ResetUnloadAction.StartFC = null;
-            this.FC_Auto_WTR_B_ResetUnloadAction.Text = "Reset Unload Action";
-            this.FC_Auto_WTR_B_ResetUnloadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetUnloadAction_Run);
-            // 
-            // FC_Auto_WTR_B_UnloadActionDoIt
-            // 
-            this.FC_Auto_WTR_B_UnloadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Location = new System.Drawing.Point(483, 237);
-            this.FC_Auto_WTR_B_UnloadActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Message = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Name = "FC_Auto_WTR_B_UnloadActionDoIt";
-            this.FC_Auto_WTR_B_UnloadActionDoIt.NEXT = this.FC_Auto_WTR_B_Next5;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_UnloadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_UnloadActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Running = false;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_UnloadActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Text = "Unload Action DoIt";
-            this.FC_Auto_WTR_B_UnloadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_UnloadActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_ResetLoadAction
-            // 
-            this.FC_Auto_WTR_B_ResetLoadAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_ResetLoadAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_ResetLoadAction.CASE1 = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.CASE2 = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.CASE3 = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.CASE4 = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.ContinueRun = false;
-            this.FC_Auto_WTR_B_ResetLoadAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.EndFC = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.ErrID = 0;
-            this.FC_Auto_WTR_B_ResetLoadAction.InAlarm = false;
-            this.FC_Auto_WTR_B_ResetLoadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_B_ResetLoadAction.Location = new System.Drawing.Point(262, 191);
-            this.FC_Auto_WTR_B_ResetLoadAction.LockUI = false;
-            this.FC_Auto_WTR_B_ResetLoadAction.Message = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.MsgID = 0;
-            this.FC_Auto_WTR_B_ResetLoadAction.Name = "FC_Auto_WTR_B_ResetLoadAction";
-            this.FC_Auto_WTR_B_ResetLoadAction.NEXT = this.FC_Auto_WTR_B_LoadActionDoIt;
-            this.FC_Auto_WTR_B_ResetLoadAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_ResetLoadAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_ResetLoadAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_ResetLoadAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_ResetLoadAction.Running = false;
-            this.FC_Auto_WTR_B_ResetLoadAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_ResetLoadAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_ResetLoadAction.StartFC = null;
-            this.FC_Auto_WTR_B_ResetLoadAction.Text = "Reset Load Action";
-            this.FC_Auto_WTR_B_ResetLoadAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetLoadAction_Run);
-            // 
-            // FC_Auto_WTR_B_LoadActionDoIt
-            // 
-            this.FC_Auto_WTR_B_LoadActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_LoadActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_LoadActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_LoadActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_LoadActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_LoadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Location = new System.Drawing.Point(483, 191);
-            this.FC_Auto_WTR_B_LoadActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Message = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Name = "FC_Auto_WTR_B_LoadActionDoIt";
-            this.FC_Auto_WTR_B_LoadActionDoIt.NEXT = this.FC_Auto_WTR_B_Next4;
-            this.FC_Auto_WTR_B_LoadActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_LoadActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_LoadActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_LoadActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Running = false;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_LoadActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_LoadActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_LoadActionDoIt.Text = "Load Action DoIt";
-            this.FC_Auto_WTR_B_LoadActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_LoadActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_ResetReceiveAction
-            // 
-            this.FC_Auto_WTR_B_ResetReceiveAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_ResetReceiveAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_ResetReceiveAction.CASE1 = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.CASE2 = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.CASE3 = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.CASE4 = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.ContinueRun = false;
-            this.FC_Auto_WTR_B_ResetReceiveAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.EndFC = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.ErrID = 0;
-            this.FC_Auto_WTR_B_ResetReceiveAction.InAlarm = false;
-            this.FC_Auto_WTR_B_ResetReceiveAction.IsFlowHead = false;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Location = new System.Drawing.Point(262, 145);
-            this.FC_Auto_WTR_B_ResetReceiveAction.LockUI = false;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Message = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.MsgID = 0;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Name = "FC_Auto_WTR_B_ResetReceiveAction";
-            this.FC_Auto_WTR_B_ResetReceiveAction.NEXT = this.FC_Auto_WTR_B_ReceiveActionDoIt;
-            this.FC_Auto_WTR_B_ResetReceiveAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_ResetReceiveAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_ResetReceiveAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_ResetReceiveAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Running = false;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_ResetReceiveAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_ResetReceiveAction.StartFC = null;
-            this.FC_Auto_WTR_B_ResetReceiveAction.Text = "Reset Receive Action";
-            this.FC_Auto_WTR_B_ResetReceiveAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetReceiveAction_Run);
-            // 
-            // FC_Auto_WTR_B_ReceiveActionDoIt
-            // 
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Location = new System.Drawing.Point(483, 145);
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Message = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Name = "FC_Auto_WTR_B_ReceiveActionDoIt";
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.NEXT = this.FC_Auto_WTR_B_Next3;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Running = false;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Text = "Receive Action DoIt";
-            this.FC_Auto_WTR_B_ReceiveActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ReceiveActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_ResetSendAction
-            // 
-            this.FC_Auto_WTR_B_ResetSendAction.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_ResetSendAction.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_ResetSendAction.CASE1 = null;
-            this.FC_Auto_WTR_B_ResetSendAction.CASE2 = null;
-            this.FC_Auto_WTR_B_ResetSendAction.CASE3 = null;
-            this.FC_Auto_WTR_B_ResetSendAction.CASE4 = null;
-            this.FC_Auto_WTR_B_ResetSendAction.ContinueRun = false;
-            this.FC_Auto_WTR_B_ResetSendAction.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_ResetSendAction.EndFC = null;
-            this.FC_Auto_WTR_B_ResetSendAction.ErrID = 0;
-            this.FC_Auto_WTR_B_ResetSendAction.InAlarm = false;
-            this.FC_Auto_WTR_B_ResetSendAction.IsFlowHead = false;
-            this.FC_Auto_WTR_B_ResetSendAction.Location = new System.Drawing.Point(262, 99);
-            this.FC_Auto_WTR_B_ResetSendAction.LockUI = false;
-            this.FC_Auto_WTR_B_ResetSendAction.Message = null;
-            this.FC_Auto_WTR_B_ResetSendAction.MsgID = 0;
-            this.FC_Auto_WTR_B_ResetSendAction.Name = "FC_Auto_WTR_B_ResetSendAction";
-            this.FC_Auto_WTR_B_ResetSendAction.NEXT = this.FC_Auto_WTR_B_SendActionDoIt;
-            this.FC_Auto_WTR_B_ResetSendAction.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_ResetSendAction.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_ResetSendAction.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_ResetSendAction.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_ResetSendAction.Running = false;
-            this.FC_Auto_WTR_B_ResetSendAction.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_ResetSendAction.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_ResetSendAction.StartFC = null;
-            this.FC_Auto_WTR_B_ResetSendAction.Text = "Reset Send Action";
-            this.FC_Auto_WTR_B_ResetSendAction.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_ResetSendAction_Run);
-            // 
-            // FC_Auto_WTR_B_SendActionDoIt
-            // 
-            this.FC_Auto_WTR_B_SendActionDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_SendActionDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_SendActionDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_SendActionDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_SendActionDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_SendActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_SendActionDoIt.Location = new System.Drawing.Point(483, 99);
-            this.FC_Auto_WTR_B_SendActionDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_SendActionDoIt.Message = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_SendActionDoIt.Name = "FC_Auto_WTR_B_SendActionDoIt";
-            this.FC_Auto_WTR_B_SendActionDoIt.NEXT = this.FC_Auto_WTR_B_AlignementDoIt;
-            this.FC_Auto_WTR_B_SendActionDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_SendActionDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_SendActionDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_SendActionDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_SendActionDoIt.Running = false;
-            this.FC_Auto_WTR_B_SendActionDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_SendActionDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_SendActionDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_SendActionDoIt.Text = "Send Action DoIt";
-            this.FC_Auto_WTR_B_SendActionDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_SendActionDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_AlignementDoIt
-            // 
-            this.FC_Auto_WTR_B_AlignementDoIt.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_AlignementDoIt.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_AlignementDoIt.CASE1 = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.CASE2 = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.CASE3 = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.CASE4 = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.ContinueRun = false;
-            this.FC_Auto_WTR_B_AlignementDoIt.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.EndFC = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.ErrID = 0;
-            this.FC_Auto_WTR_B_AlignementDoIt.InAlarm = false;
-            this.FC_Auto_WTR_B_AlignementDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_B_AlignementDoIt.Location = new System.Drawing.Point(708, 99);
-            this.FC_Auto_WTR_B_AlignementDoIt.LockUI = false;
-            this.FC_Auto_WTR_B_AlignementDoIt.Message = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.MsgID = 0;
-            this.FC_Auto_WTR_B_AlignementDoIt.Name = "FC_Auto_WTR_B_AlignementDoIt";
-            this.FC_Auto_WTR_B_AlignementDoIt.NEXT = this.FC_Auto_WTR_B_Next1;
-            this.FC_Auto_WTR_B_AlignementDoIt.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_AlignementDoIt.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_AlignementDoIt.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_AlignementDoIt.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_AlignementDoIt.Running = false;
-            this.FC_Auto_WTR_B_AlignementDoIt.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_AlignementDoIt.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_AlignementDoIt.StartFC = null;
-            this.FC_Auto_WTR_B_AlignementDoIt.Text = "Alignement DoIt";
-            this.FC_Auto_WTR_B_AlignementDoIt.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_AlignementDoIt_Run);
-            // 
-            // FC_Auto_WTR_B_Action_Start
-            // 
-            this.FC_Auto_WTR_B_Action_Start.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_B_Action_Start.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_B_Action_Start.CASE1 = null;
-            this.FC_Auto_WTR_B_Action_Start.CASE2 = null;
-            this.FC_Auto_WTR_B_Action_Start.CASE3 = null;
-            this.FC_Auto_WTR_B_Action_Start.CASE4 = null;
-            this.FC_Auto_WTR_B_Action_Start.ContinueRun = false;
-            this.FC_Auto_WTR_B_Action_Start.DesignTimeParent = null;
-            this.FC_Auto_WTR_B_Action_Start.EndFC = null;
-            this.FC_Auto_WTR_B_Action_Start.ErrID = 0;
-            this.FC_Auto_WTR_B_Action_Start.InAlarm = false;
-            this.FC_Auto_WTR_B_Action_Start.IsFlowHead = false;
-            this.FC_Auto_WTR_B_Action_Start.Location = new System.Drawing.Point(28, 7);
-            this.FC_Auto_WTR_B_Action_Start.LockUI = false;
-            this.FC_Auto_WTR_B_Action_Start.Message = null;
-            this.FC_Auto_WTR_B_Action_Start.MsgID = 0;
-            this.FC_Auto_WTR_B_Action_Start.Name = "FC_Auto_WTR_B_Action_Start";
-            this.FC_Auto_WTR_B_Action_Start.NEXT = this.FC_Auto_WTR_B_FlagIsDoIt;
-            this.FC_Auto_WTR_B_Action_Start.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_B_Action_Start.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_B_Action_Start.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_B_Action_Start.OverTimeSpec = 100;
-            this.FC_Auto_WTR_B_Action_Start.Running = false;
-            this.FC_Auto_WTR_B_Action_Start.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_B_Action_Start.SlowRunCycle = -1;
-            this.FC_Auto_WTR_B_Action_Start.StartFC = null;
-            this.FC_Auto_WTR_B_Action_Start.Text = "Action Start";
-            this.FC_Auto_WTR_B_Action_Start.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_B_Action_Start_Run);
+            this.FC_Auto_WTR_A_AlignementIsDone.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_AlignementIsDone.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE1 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE2 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE3 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE4 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.ContinueRun = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.EndFC = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.ErrID = 0;
+            this.FC_Auto_WTR_A_AlignementIsDone.InAlarm = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.IsFlowHead = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Location = new System.Drawing.Point(1011, 99);
+            this.FC_Auto_WTR_A_AlignementIsDone.LockUI = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Message = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.MsgID = 0;
+            this.FC_Auto_WTR_A_AlignementIsDone.Name = "FC_Auto_WTR_A_AlignementIsDone";
+            this.FC_Auto_WTR_A_AlignementIsDone.NEXT = this.FC_Auto_WTR_A_Next6;
+            this.FC_Auto_WTR_A_AlignementIsDone.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_AlignementIsDone.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_AlignementIsDone.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_AlignementIsDone.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_AlignementIsDone.Running = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_AlignementIsDone.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_AlignementIsDone.StartFC = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.Text = "Alignement IsDone?";
+            this.FC_Auto_WTR_A_AlignementIsDone.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_AlignementIsDone_Run);
             // 
             // MainFlowF
             // 
@@ -10084,6 +10117,7 @@
         private ProVLib.FlowChart FC_Auto_WTR_B_SendActionDoIt;
         private ProVLib.FlowChart FC_Auto_WTR_B_AlignementDoIt;
         private ProVLib.FlowChart FC_Auto_WTR_B_Action_Start;
+        private ProVLib.FlowChart FC_Auto_WTR_A_AlignementIsDone;
 
     }
 }

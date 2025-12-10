@@ -24,7 +24,9 @@ namespace CommonObj
         WaferPosError,          // 偵測到晶圓位置異常
         Error,
         NeedToDo,
+        Doing,
         Done,
+        Disable,
     }
 
     public class SlotState

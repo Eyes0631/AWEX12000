@@ -110,6 +110,8 @@ namespace AWEX12000
         private bool OCROnTop = true;
         private SlotMapping AlignerA_Job = new SlotMapping();
         private SlotMapping AlignerB_Job = new SlotMapping();
+        private SlotMapping LeftAligner_Job = new SlotMapping();
+        private SlotMapping RightAligner_Job = new SlotMapping();
         private SlotMapping LeftUpperArm_Job = new SlotMapping();
         private SlotMapping LeftLowerArm_Job = new SlotMapping();
         private SlotMapping LeftArm_Job = new SlotMapping();
@@ -523,6 +525,17 @@ namespace AWEX12000
 
             LoadOptionData();
             LoadPackageData();
+
+            LeftUpperArm_Job.Reset();
+            LeftLowerArm_Job.Reset();
+            LeftArm_Job.Reset();
+            RightUpperArm_Job.Reset();
+            RightLowerArm_Job.Reset();
+            RightArm_Job.Reset();
+            AlignerA_Job.Reset();
+            AlignerB_Job.Reset();
+            LeftAligner_Job.Reset();
+            RightAligner_Job.Reset();
             #endregion
 
         }
@@ -999,7 +1012,7 @@ namespace AWEX12000
                     }
                 break;
                 case 50://DataExchange
-                    bool bLeft = ArmMapping.arm == Arm.L ? true : false;
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
                     b1 = TrayDataExchange(ArmMapping.NowStation, ArmMapping.arm, bLeft, 1);
                     if (b1)
                     {
@@ -1058,7 +1071,7 @@ namespace AWEX12000
                     }
                 break;
                 case 30://Place Wafer to Alinger DoIt
-                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_PUT, ArmMapping.NowStation, 1, ArmMapping.arm, 0, 0);
+                    RobotCmd = GetRobotCommand_B(SANWA_Robot.CommDef.CMD_PUT, ArmMapping.NowStation, 1, ArmMapping.arm, 0, 0);
                     b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "SetCommand", WTR_ActionMode.Put, RobotCmd);
                     if (b1)
                     {
@@ -1074,7 +1087,7 @@ namespace AWEX12000
                     }
                 break;
                 case 50://DataExchange
-                    bool bLeft = ArmMapping.arm == Arm.L ? true : false;
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
                     b1 = TrayDataExchange(ArmMapping.NowStation, ArmMapping.arm, bLeft, 1);
                     if (b1)
                     {
@@ -1086,6 +1099,169 @@ namespace AWEX12000
                 break;
             }
             return bRet;
+        }
+        private bool WTR_A_ReceiveAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_A_ReceiveAction;
+            switch (task.Value)
+            {
+                case 0: //Initial
+                    task.Next(10);
+                    break;
+                case 10:    //Get Wafer From Alinger DoIt
+                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_GET, ArmMapping.NowStation, 1, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
+                    break;
+                case 20: //Get Wafer from Alinger IsDone
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30://DataExchange
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.NowStation, ArmMapping.arm, bLeft, 1);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99://Done
+                    bRet = true;
+                    break;
+
+            }
+            return bRet;
+        }
+        private bool WTR_B_ReceiveAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_B_ReceiveAction;
+            switch (task.Value)
+            {
+                case 0: //Initial
+                    task.Next(10);
+                    break;
+                case 10:    //Get Wafer From Alinger DoIt
+                    RobotCmd = GetRobotCommand_B(SANWA_Robot.CommDef.CMD_GET, ArmMapping.NowStation, 1, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
+                    break;
+                case 20: //Get Wafer from Alinger IsDone
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30://DataExchange
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.NowStation, ArmMapping.arm, bLeft, 1);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99://Done
+                    bRet = true;
+                    break;
+
+            }
+            return bRet;
+        }
+
+        private bool WTR_A_LoadAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_A_LoadAction;
+            switch (task.Value)
+            {
+                case 0://Initial
+                    break;
+                case 10://Get Wafer From Foup DoIt
+                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_GET, ArmMapping.SourceFoup, ArmMapping.SourceSlot, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    break;
+                case 20: //Get Wafer from Foup IsDone
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30://DataExchange
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.SourceFoup, ArmMapping.arm, bLeft, ArmMapping.SourceSlot);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99:
+                    bRet = true;
+                    break;
+            }
+            return bRet;
+        }
+        private bool WTR_B_LoadAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_A_LoadAction;
+            switch (task.Value)
+            {
+                case 0://Initial
+                    break;
+                case 10://Get Wafer From Foup DoIt
+                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_GET, ArmMapping.SourceFoup, ArmMapping.SourceSlot, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    break;
+                case 20: //Get Wafer from Foup IsDone
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30://DataExchange
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.SourceFoup, ArmMapping.arm, bLeft, ArmMapping.SourceSlot);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99:
+                    bRet = true;
+                    break;
+            }
+            return bRet;
+        }
+
+        private int GetLeftEmptyCount()
+        {
+            int iRet = 0;
+            if (LeftUpperArm_Job.State == (WaferState.None)) iRet++;
+            if (LeftLowerArm_Job.State == (WaferState.None)) iRet++;
+            if (AlignerA_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner1.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
+            if (AlignerB_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner2.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
+            return iRet;
         }
         #endregion
 
@@ -3453,8 +3629,8 @@ namespace AWEX12000
         private FlowChart.FCRESULT FC_Auto_WTR_A_IsNeedSendToAligner_Run()
         {
             //如果手臂的料、料的SlotMapping.State == NeedToDo 且 Aligner有空位則需要送去Aligner
-            bool b1 = TrayDataSetting.tdex_Aligner1.IsContain(GlobalBinDefine.NoWaferBin);
-            bool b2 = TrayDataSetting.tdex_Aligner2.IsContain(GlobalBinDefine.NoWaferBin);
+            bool b1 = TrayDataSetting.tdex_Aligner1.IsContain(GlobalBinDefine.NoWaferBin) && AlignerA_Job.State == (WaferState.None | WaferState.NoWafer);
+            bool b2 = TrayDataSetting.tdex_Aligner2.IsContain(GlobalBinDefine.NoWaferBin) && AlignerB_Job.State == (WaferState.None | WaferState.NoWafer);
             if (b1)
             {
                 if (LeftUpperArm_Job != null &&
@@ -3462,6 +3638,7 @@ namespace AWEX12000
                 {
                     LeftUpperArm_Job.NowStation = SANWA_Robot.DefStation.AlignerA;
                     LeftArm_Job = LeftUpperArm_Job;
+                    LeftArm_Job.arm = Arm.U;
                     return FlowChart.FCRESULT.NEXT;
                 }
                 else if (LeftLowerArm_Job != null &&
@@ -3469,6 +3646,7 @@ namespace AWEX12000
                 {
                     LeftLowerArm_Job.NowStation = SANWA_Robot.DefStation.AlignerA;
                     LeftArm_Job = LeftLowerArm_Job;
+                    LeftArm_Job.arm = Arm.L;
                     return FlowChart.FCRESULT.NEXT;
                 }
             }
@@ -3479,6 +3657,7 @@ namespace AWEX12000
                 {
                     LeftUpperArm_Job.NowStation = SANWA_Robot.DefStation.AlignerB;
                     LeftArm_Job = LeftUpperArm_Job;
+                    LeftArm_Job.arm = Arm.U;
                     return FlowChart.FCRESULT.NEXT;
                 }
                 else if (LeftLowerArm_Job != null &&
@@ -3486,6 +3665,7 @@ namespace AWEX12000
                 {
                     LeftLowerArm_Job.NowStation = SANWA_Robot.DefStation.AlignerB;
                     LeftArm_Job = LeftLowerArm_Job;
+                    LeftArm_Job.arm = Arm.L;
                     return FlowChart.FCRESULT.NEXT;
                 }
             }
@@ -3504,6 +3684,24 @@ namespace AWEX12000
             bool b1 = WTR_A_SendAction(LeftArm_Job);
             if (b1)
             {
+                //LeftArmJob clone to Aligner
+                switch (LeftArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job = LeftArm_Job.Clone();
+                        AlignerA_Job.arm = Arm.None;
+                        LeftAligner_Job = AlignerA_Job.Clone();
+                        break;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job = LeftArm_Job.Clone();
+                        AlignerB_Job.arm = Arm.None;
+                        LeftAligner_Job = AlignerB_Job.Clone();
+                        break;
+                    default:
+                        //TODO:ShowAlarm
+                        return FlowChart.FCRESULT.IDLE;
+                }
+                LeftArm_Job.Reset();
                 TM_Delay_WTR_A.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
@@ -3512,29 +3710,60 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_AlignementDoIt_Run()
         {
-            switch (LeftArm_Job.NowStation)
-            {
+            switch (LeftAligner_Job.NowStation)
+            { 
                 case SANWA_Robot.DefStation.AlignerA:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_A_Align.IsDoing() == false &&
+                        LeftAligner_Job.State == WaferState.NeedToDo)
                     {
-                        if (FlagDefine.Flag_WTR_Notify_WAS_A_Align.IsDoing() == false)
-                        {
-                            FlagDefine.Flag_WTR_Notify_WAS_A_Align.DoIt();
-                            return FlowChart.FCRESULT.NEXT;
-                        }
+                        FlagDefine.Flag_WTR_Notify_WAS_A_Align.DoIt();
+                        LeftAligner_Job.State = WaferState.Doing;
+                        AlignerA_Job = LeftAligner_Job.Clone();
+                        return FlowChart.FCRESULT.NEXT;
                     }
                     break;
                 case SANWA_Robot.DefStation.AlignerB:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_B_Align.IsDoing() == false &&
+                        LeftAligner_Job.State == WaferState.NeedToDo)
                     {
-                        if (FlagDefine.Flag_WTR_Notify_WAS_B_Align.IsDoing() == false)
-                        {
-                            FlagDefine.Flag_WTR_Notify_WAS_B_Align.DoIt();
-                            return FlowChart.FCRESULT.NEXT;
-                        }
+                        FlagDefine.Flag_WTR_Notify_WAS_B_Align.DoIt();
+                        LeftAligner_Job.State = WaferState.Doing;
+                        AlignerB_Job = LeftAligner_Job.Clone();
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                    break;
+                default:
+                    //TODO:ShowAlarm 不應該發生，如果發生就發Alarm 或記錄Log
+                    break;
+            }
+            return FlowChart.FCRESULT.IDLE;
+        }
+
+        private FlowChart.FCRESULT FC_Auto_WTR_A_AlignementIsDone_Run()
+        {
+            switch (LeftAligner_Job.NowStation)
+            {
+                case SANWA_Robot.DefStation.AlignerA:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_A_Align.IsDone())
+                    {
+                        LeftAligner_Job.State = WaferState.Done;
+                        AlignerA_Job = LeftAligner_Job.Clone();
+                        LeftAligner_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                    break;
+                case SANWA_Robot.DefStation.AlignerB:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_B_Align.IsDone())
+                    {
+                        LeftAligner_Job.State = WaferState.Done;
+                        AlignerB_Job = LeftAligner_Job.Clone();
+                        LeftAligner_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
                     }
                     break;
                 default:
                     break;
-            }   
+            }
             return FlowChart.FCRESULT.IDLE;
         }
 
@@ -3551,47 +3780,168 @@ namespace AWEX12000
         private FlowChart.FCRESULT FC_Auto_WTR_A_IsNeedReceiveFromAligner_Run()
         {
             //如果Aligner有料且手臂沒料則需要從Aligner收料
-            bool b1 = TrayDataSetting.tdex_Aligner1.IsContain(GlobalBinDefine.HasWaferBin);
-            bool b2 = TrayDataSetting.tdex_Aligner2.IsContain(GlobalBinDefine.HasWaferBin);
-            // bool b3 = TrayDataSetting.tdex_LeftUpperArm.IsContain(GlobalBinDefine.NoWaferBin);
-            // bool b4 = TrayDataSetting.tdex_LeftUpperArm.IsContain(GlobalBinDefine.NoWaferBin);
-            bool b3 = (LeftUpperArm_Job.State == WaferState.NoWafer);
-            bool b4 = (LeftLowerArm_Job.State == WaferState.NoWafer);
-            if (FlagDefine.Flag_WTR_Notify_WAS_A_Align.IsDone())
+            if (AlignerA_Job.State == WaferState.Done &&
+                AlignerA_Job.TargetFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD))
             {
-                
+                if (LeftUpperArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    LeftUpperArm_Job = AlignerA_Job.Clone();
+                    LeftUpperArm_Job.arm = Arm.U;
+                    LeftArm_Job = LeftUpperArm_Job.Clone();
+                    AlignerA_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                if (LeftLowerArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    LeftLowerArm_Job = AlignerA_Job.Clone();
+                    LeftLowerArm_Job.arm = Arm.L;
+                    LeftArm_Job = LeftLowerArm_Job.Clone();
+                    AlignerA_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
             }
-            return FlowChart.FCRESULT.IDLE;
+            else if (AlignerB_Job.State == WaferState.Done &&
+                AlignerB_Job.TargetFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD))
+            {
+                if (LeftUpperArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    LeftUpperArm_Job = AlignerB_Job.Clone();
+                    LeftUpperArm_Job.arm = Arm.U;
+                    LeftArm_Job = LeftUpperArm_Job.Clone();
+                    AlignerB_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                if (LeftLowerArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    LeftLowerArm_Job = AlignerB_Job.Clone();
+                    LeftLowerArm_Job.arm = Arm.L;
+                    LeftArm_Job = LeftLowerArm_Job.Clone();
+                    AlignerB_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_ResetReceiveAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_A_ReceiveAction.Reset();
+            TM_Delay_WTR_A.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_ReceiveActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_A_ReceiveAction(LeftArm_Job);
+            if (b1)
+            {
+                switch (LeftArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job.Reset();
+                        switch (LeftArm_Job.arm)
+                        { 
+                            case Arm.U:
+                                LeftUpperArm_Job = LeftArm_Job.Clone();
+                                break;
+                            case Arm.L:
+                                LeftLowerArm_Job = LeftArm_Job.Clone();
+                                break;
+                        }
+                        LeftArm_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
+                        break;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job.Reset();
+                        switch (LeftArm_Job.arm)
+                        {
+                            case Arm.U:
+                                LeftUpperArm_Job = LeftArm_Job.Clone();
+                                break;
+                            case Arm.L:
+                                LeftLowerArm_Job = LeftArm_Job.Clone();
+                                break;
+                        }
+                        LeftArm_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
+                        break;
+                    default:
+                        //TODO:ShowAlarm
+                        return FlowChart.FCRESULT.IDLE;
+                }
+                TM_Delay_WTR_A.Restart();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next5_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_IsNeedLoadFromPort_Run()
         {
-            return default(FlowChart.FCRESULT);
+            //AlignerA B UpperArm LowerArm 至少要兩個空位才能取料
+            int iEmptyCount = GetLeftEmptyCount();
+            if (iEmptyCount >= 2)
+            {
+                //先尋找FoupA有沒有需要作業的，確定沒有再循找FoupD
+                if (LeftUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                {
+                    SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupA;
+                    LeftUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    if (LeftUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                    {
+                        station = SANWA_Robot.DefStation.FoupD;
+                        LeftUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    }
+                    if (LeftUpperArm_Job.State == WaferState.NeedToDo)
+                    {
+                        RemoveTransferJob(station, WaferState.NeedToDo);
+                        LeftArm_Job = LeftUpperArm_Job.Clone();
+                        LeftArm_Job.arm = Arm.U;
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                }
+                if (LeftLowerArm_Job.State == (WaferState.None | WaferState.Done))
+                {
+                    SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupA;
+                    LeftLowerArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    if (LeftLowerArm_Job.State == (WaferState.None | WaferState.Done))
+                    {
+                        station = SANWA_Robot.DefStation.FoupD;
+                        LeftLowerArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    }
+                    if (LeftLowerArm_Job.State == WaferState.NeedToDo)
+                    {
+                        RemoveTransferJob(station, WaferState.NeedToDo);
+                        LeftArm_Job = LeftLowerArm_Job.Clone();
+                        LeftArm_Job.arm = Arm.L;
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                }
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_ResetLoadAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_A_LoadAction.Reset();
+            TM_Delay_WTR_A.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_LoadActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_A_LoadAction(LeftArm_Job);
+            if (b1)
+            {
+                //資料交換已經在Action做完
+                TM_Delay_WTR_A.Restart();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next4_Run()
@@ -3601,7 +3951,18 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_IsNeedUnloadToPort_Run()
         {
-            return default(FlowChart.FCRESULT);
+            //手臂的狀態為Done就看Target在哪放哪
+            if (LeftUpperArm_Job.State == WaferState.Done)
+            {
+                LeftArm_Job = LeftUpperArm_Job.Clone();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            if (LeftLowerArm_Job.State == WaferState.Done)
+            {
+                LeftArm_Job = LeftLowerArm_Job.Clone();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_ResetUnloadAction_Run()
