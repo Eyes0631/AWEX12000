@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WTR_A));
             this.dFieldEdit17 = new KCSDK.DFieldEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -154,13 +153,13 @@
             this.FC_Auto_CheckHasWafer_GetStutesDone = new ProVLib.FlowChart();
             this.FC_Auto_CheckHasWafer_Next2 = new ProVLib.FlowChart();
             this.FC_Auto_CheckHasWafer_Start = new ProVLib.FlowChart();
-            this.dCheckBox3 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox3 = new KCSDK.DCheckBox();
             this.dFieldEdit5 = new KCSDK.DFieldEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dFieldEdit6 = new KCSDK.DFieldEdit();
             this.label14 = new System.Windows.Forms.Label();
-            this.dCheckBox1 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox1 = new KCSDK.DCheckBox();
             this.dFieldEdit7 = new KCSDK.DFieldEdit();
             this.Robot = new RobotControl.RobotControl();
             this.tabMain.SuspendLayout();
@@ -193,7 +192,7 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1444, 766);
+            this.tabMain.Size = new System.Drawing.Size(1028, 749);
             // 
             // tpControl
             // 
@@ -201,7 +200,7 @@
             this.tpControl.Controls.Add(this.label5);
             this.tpControl.Controls.Add(this.groupBox11);
             this.tpControl.Controls.Add(this.Robot);
-            this.tpControl.Size = new System.Drawing.Size(1436, 698);
+            this.tpControl.Size = new System.Drawing.Size(1020, 681);
             // 
             // tpSetting
             // 
@@ -215,10 +214,6 @@
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit5, 0);
             this.tpSetting.Controls.SetChildIndex(this.dCheckBox1, 0);
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit7, 0);
-            // 
-            // tpFlow
-            // 
-            this.tpFlow.Size = new System.Drawing.Size(1436, 698);
             // 
             // tpSuperSetting
             // 
@@ -241,10 +236,6 @@
             this.tpSuperSetting.Controls.SetChildIndex(this.label4, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox2, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox3, 0);
-            // 
-            // TabFlow
-            // 
-            this.TabFlow.Size = new System.Drawing.Size(1432, 694);
             // 
             // tpHome
             // 
@@ -287,7 +278,6 @@
             this.tpHome.Controls.Add(this.FC_Home_GetArmStatus);
             this.tpHome.Controls.Add(this.FC_Home_Connect);
             this.tpHome.Controls.Add(this.FC_Home_Start);
-            this.tpHome.Size = new System.Drawing.Size(1424, 652);
             // 
             // tpAuto
             // 
@@ -357,7 +347,6 @@
             this.tpAuto.Controls.Add(this.FC_Auto_Get_DoAction);
             this.tpAuto.Controls.Add(this.FC_Auto_Get_WaitCommand);
             this.tpAuto.Controls.Add(this.FC_Auto_Get_Start);
-            this.tpAuto.Size = new System.Drawing.Size(1424, 652);
             // 
             // dFieldEdit17
             // 
@@ -4160,7 +4149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 766);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Name = "WTR_A";
             this.Text = "WTR";
             this.tabMain.ResumeLayout(false);

@@ -50,6 +50,7 @@ namespace CommonObj
         Booking_A = 12,
         Booking_B = 13,
         DoAlign = 14,
+        Disabled = 15,
     }
 
     public enum FAO_SpeedMode
@@ -921,20 +922,27 @@ namespace CommonObj
 
     public class WaferTransferJob
     {
-        // --- 任務基本屬性 ---
         public string JobName { get; set; }
         public bool RequiresAlignment { get; set; }
+        public bool RequiresOCR { get; set; }
+        public bool OCRType { get; set; }   //Value is True use Top OCR else if Value is false use bottom OCR
         public List<SlotMapping> Mappings { get; set; }
 
         public WaferTransferJob()
         {
+            this.JobName = "WaferExchange";
             this.RequiresAlignment = false;
+            this.RequiresOCR = false;
+            this.OCRType = true;
+            Mappings = new List<SlotMapping>();
         }
 
         public WaferTransferJob(string name, bool align)
         {
             JobName = name;
             RequiresAlignment = align;
+            RequiresOCR = false;
+            OCRType = true;
             Mappings = new List<SlotMapping>();
         }
     }
@@ -974,9 +982,9 @@ namespace CommonObj
         public void Reset()
         {
             this.SourceFoup = SANWA_Robot.DefStation.None;
-            this.SourceSlot = 0;
+            this.SourceSlot = -1;
             this.TargetFoup = SANWA_Robot.DefStation.None;
-            this.TargetSlot = 0;
+            this.TargetSlot = -1;
             this.NowStation = SANWA_Robot.DefStation.None;
             this.State = WaferState.None;
             this.arm = Arm.None;
@@ -998,6 +1006,19 @@ namespace CommonObj
             return mapping;
         }
     }
+
+    public static class EnumExtensions
+    {
+        public static string GetDescription(this Enum value)
+        {
+            var field = value.GetType().GetField(value.ToString());
+            if (field == null) return value.ToString();
+
+            var attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
+            return attribute == null ? value.ToString() : attribute.Description;
+        }
+    }
+
     #endregion class
 
     public struct sCounter

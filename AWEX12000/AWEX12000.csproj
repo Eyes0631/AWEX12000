@@ -187,6 +187,12 @@
     <Compile Include="FormSet\ReportF.Designer.cs">
       <DependentUpon>ReportF.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSet\WaferExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSet\WaferExchange.designer.cs">
+      <DependentUpon>WaferExchange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kernal\BasePackageExF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     <EmbeddedResource Include="FormSet\ReportF.resx">
       <DependentUpon>ReportF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSet\WaferExchange.resx">
+      <DependentUpon>WaferExchange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kernal\BasePackageExF.resx">
       <DependentUpon>BasePackageExF.cs</DependentUpon>
     </EmbeddedResource>
@@ -594,7 +603,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Enabled="0" Reactor_Commands="" Reactor_Project="D:\ProVDLL\KCSDK\Package.nrproj" Reactor_Configuration="ALL" Reactor_Output="D:\ProVDLL\KCSDK.dll" Reactor_Deploy="0" />
+      <UserProperties Reactor_Deploy="0" Reactor_Output="D:\ProVDLL\KCSDK.dll" Reactor_Configuration="ALL" Reactor_Project="D:\ProVDLL\KCSDK\Package.nrproj" Reactor_Commands="" Reactor_Enabled="0" />
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>

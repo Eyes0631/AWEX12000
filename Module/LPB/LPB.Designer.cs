@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LPB));
-            ProVLib.MotorParam motorParam2 = new ProVLib.MotorParam();
+            ProVLib.MotorParam motorParam1 = new ProVLib.MotorParam();
             this.tpLock_Unlock = new System.Windows.Forms.TabPage();
             this.FC_Auto_Unlock_Next_1 = new ProVLib.FlowChart();
             this.FC_Auto_Unlock_WaitCmd = new ProVLib.FlowChart();
@@ -48,6 +48,11 @@
             this.FC_UNLOCK_START = new ProVLib.FlowChart();
             this.FC_LOCK_START = new ProVLib.FlowChart();
             this.tpOpen_Close = new System.Windows.Forms.TabPage();
+            this.FC_SCAN_NEXT_2 = new ProVLib.FlowChart();
+            this.FC_SCAN_IsScanFlagDoit = new ProVLib.FlowChart();
+            this.FC_SCAN_ListAddPos = new ProVLib.FlowChart();
+            this.FC_SCAN_NEXT_1 = new ProVLib.FlowChart();
+            this.FC_SCAN_START = new ProVLib.FlowChart();
             this.FC_Auto_Open_CalculationResult = new ProVLib.FlowChart();
             this.FC_Auto_Open_Next_4 = new ProVLib.FlowChart();
             this.FC_Auto_Open_Next_3 = new ProVLib.FlowChart();
@@ -241,11 +246,6 @@
             this.dFieldEdit10 = new KCSDK.DFieldEdit();
             this.dFieldEdit11 = new KCSDK.DFieldEdit();
             this.dRadioGroupBox3 = new KCSDK.DRadioGroupBox();
-            this.FC_SCAN_NEXT_2 = new ProVLib.FlowChart();
-            this.FC_SCAN_IsScanFlagDoit = new ProVLib.FlowChart();
-            this.FC_SCAN_ListAddPos = new ProVLib.FlowChart();
-            this.FC_SCAN_NEXT_1 = new ProVLib.FlowChart();
-            this.FC_SCAN_START = new ProVLib.FlowChart();
             this.tabMain.SuspendLayout();
             this.tpControl.SuspendLayout();
             this.tpPosition.SuspendLayout();
@@ -297,12 +297,12 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1370, 750);
+            this.tabMain.Size = new System.Drawing.Size(1028, 749);
             // 
             // tpControl
             // 
             this.tpControl.Controls.Add(this.tabControl1);
-            this.tpControl.Size = new System.Drawing.Size(1362, 682);
+            this.tpControl.Size = new System.Drawing.Size(1020, 681);
             // 
             // tpPosition
             // 
@@ -320,19 +320,13 @@
             // tpSetting
             // 
             this.tpSetting.Controls.Add(this.flowLayoutPanel2);
-            this.tpSetting.Size = new System.Drawing.Size(1362, 682);
             this.tpSetting.Controls.SetChildIndex(this.flowLayoutPanel2, 0);
-            // 
-            // tpFlow
-            // 
-            this.tpFlow.Size = new System.Drawing.Size(1362, 682);
             // 
             // tpSuperSetting
             // 
             this.tpSuperSetting.Controls.Add(this.dRadioGroupBox3);
             this.tpSuperSetting.Controls.Add(this.groupBox7);
             this.tpSuperSetting.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tpSuperSetting.Size = new System.Drawing.Size(1362, 682);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox7, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.dRadioGroupBox3, 0);
             // 
@@ -341,7 +335,6 @@
             this.TabFlow.Controls.Add(this.tpLock_Unlock);
             this.TabFlow.Controls.Add(this.tpOpen_Close);
             this.TabFlow.Controls.Add(this.tpInputID);
-            this.TabFlow.Size = new System.Drawing.Size(1358, 678);
             this.TabFlow.Controls.SetChildIndex(this.tpAuto, 0);
             this.TabFlow.Controls.SetChildIndex(this.tpCheck, 0);
             this.TabFlow.Controls.SetChildIndex(this.tpInputID, 0);
@@ -361,7 +354,6 @@
             this.tpHome.Controls.Add(this.FC_Home_Done);
             this.tpHome.Controls.Add(this.FC_Home_WaitCmd);
             this.tpHome.Controls.Add(this.FC_HOME_START);
-            this.tpHome.Size = new System.Drawing.Size(1350, 636);
             // 
             // tpLock_Unlock
             // 
@@ -946,10 +938,165 @@
             this.tpOpen_Close.Controls.Add(this.FC_OPEN_START);
             this.tpOpen_Close.Location = new System.Drawing.Point(4, 38);
             this.tpOpen_Close.Name = "tpOpen_Close";
-            this.tpOpen_Close.Size = new System.Drawing.Size(1350, 636);
+            this.tpOpen_Close.Size = new System.Drawing.Size(948, 496);
             this.tpOpen_Close.TabIndex = 3;
             this.tpOpen_Close.Text = "Open/Close";
             this.tpOpen_Close.UseVisualStyleBackColor = true;
+            // 
+            // FC_SCAN_NEXT_2
+            // 
+            this.FC_SCAN_NEXT_2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_SCAN_NEXT_2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_SCAN_NEXT_2.CASE1 = null;
+            this.FC_SCAN_NEXT_2.CASE2 = null;
+            this.FC_SCAN_NEXT_2.CASE3 = null;
+            this.FC_SCAN_NEXT_2.CASE4 = null;
+            this.FC_SCAN_NEXT_2.ContinueRun = false;
+            this.FC_SCAN_NEXT_2.DesignTimeParent = null;
+            this.FC_SCAN_NEXT_2.EndFC = null;
+            this.FC_SCAN_NEXT_2.ErrID = 0;
+            this.FC_SCAN_NEXT_2.InAlarm = false;
+            this.FC_SCAN_NEXT_2.IsFlowHead = false;
+            this.FC_SCAN_NEXT_2.Location = new System.Drawing.Point(1289, 335);
+            this.FC_SCAN_NEXT_2.LockUI = false;
+            this.FC_SCAN_NEXT_2.Message = null;
+            this.FC_SCAN_NEXT_2.MsgID = 0;
+            this.FC_SCAN_NEXT_2.Name = "FC_SCAN_NEXT_2";
+            this.FC_SCAN_NEXT_2.NEXT = this.FC_SCAN_IsScanFlagDoit;
+            this.FC_SCAN_NEXT_2.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_SCAN_NEXT_2.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_SCAN_NEXT_2.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_SCAN_NEXT_2.OverTimeSpec = 100;
+            this.FC_SCAN_NEXT_2.Running = false;
+            this.FC_SCAN_NEXT_2.Size = new System.Drawing.Size(30, 30);
+            this.FC_SCAN_NEXT_2.SlowRunCycle = -1;
+            this.FC_SCAN_NEXT_2.StartFC = null;
+            this.FC_SCAN_NEXT_2.Text = "N";
+            this.FC_SCAN_NEXT_2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_NEXT_2_Run);
+            // 
+            // FC_SCAN_IsScanFlagDoit
+            // 
+            this.FC_SCAN_IsScanFlagDoit.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_SCAN_IsScanFlagDoit.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_SCAN_IsScanFlagDoit.CASE1 = null;
+            this.FC_SCAN_IsScanFlagDoit.CASE2 = null;
+            this.FC_SCAN_IsScanFlagDoit.CASE3 = null;
+            this.FC_SCAN_IsScanFlagDoit.CASE4 = null;
+            this.FC_SCAN_IsScanFlagDoit.ContinueRun = false;
+            this.FC_SCAN_IsScanFlagDoit.DesignTimeParent = null;
+            this.FC_SCAN_IsScanFlagDoit.EndFC = null;
+            this.FC_SCAN_IsScanFlagDoit.ErrID = 0;
+            this.FC_SCAN_IsScanFlagDoit.InAlarm = false;
+            this.FC_SCAN_IsScanFlagDoit.IsFlowHead = false;
+            this.FC_SCAN_IsScanFlagDoit.Location = new System.Drawing.Point(1052, 335);
+            this.FC_SCAN_IsScanFlagDoit.LockUI = false;
+            this.FC_SCAN_IsScanFlagDoit.Message = null;
+            this.FC_SCAN_IsScanFlagDoit.MsgID = 0;
+            this.FC_SCAN_IsScanFlagDoit.Name = "FC_SCAN_IsScanFlagDoit";
+            this.FC_SCAN_IsScanFlagDoit.NEXT = this.FC_SCAN_ListAddPos;
+            this.FC_SCAN_IsScanFlagDoit.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_SCAN_IsScanFlagDoit.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_SCAN_IsScanFlagDoit.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_SCAN_IsScanFlagDoit.OverTimeSpec = 100;
+            this.FC_SCAN_IsScanFlagDoit.Running = false;
+            this.FC_SCAN_IsScanFlagDoit.Size = new System.Drawing.Size(200, 30);
+            this.FC_SCAN_IsScanFlagDoit.SlowRunCycle = -1;
+            this.FC_SCAN_IsScanFlagDoit.StartFC = null;
+            this.FC_SCAN_IsScanFlagDoit.Text = "Is ScanFlag DoIt";
+            this.FC_SCAN_IsScanFlagDoit.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_IsScanFlagDoit_Run);
+            // 
+            // FC_SCAN_ListAddPos
+            // 
+            this.FC_SCAN_ListAddPos.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_SCAN_ListAddPos.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_SCAN_ListAddPos.CASE1 = null;
+            this.FC_SCAN_ListAddPos.CASE2 = null;
+            this.FC_SCAN_ListAddPos.CASE3 = null;
+            this.FC_SCAN_ListAddPos.CASE4 = null;
+            this.FC_SCAN_ListAddPos.ContinueRun = false;
+            this.FC_SCAN_ListAddPos.DesignTimeParent = null;
+            this.FC_SCAN_ListAddPos.EndFC = null;
+            this.FC_SCAN_ListAddPos.ErrID = 0;
+            this.FC_SCAN_ListAddPos.InAlarm = false;
+            this.FC_SCAN_ListAddPos.IsFlowHead = false;
+            this.FC_SCAN_ListAddPos.Location = new System.Drawing.Point(1052, 373);
+            this.FC_SCAN_ListAddPos.LockUI = false;
+            this.FC_SCAN_ListAddPos.Message = null;
+            this.FC_SCAN_ListAddPos.MsgID = 0;
+            this.FC_SCAN_ListAddPos.Name = "FC_SCAN_ListAddPos";
+            this.FC_SCAN_ListAddPos.NEXT = this.FC_SCAN_NEXT_1;
+            this.FC_SCAN_ListAddPos.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_SCAN_ListAddPos.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_SCAN_ListAddPos.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_SCAN_ListAddPos.OverTimeSpec = 100;
+            this.FC_SCAN_ListAddPos.Running = false;
+            this.FC_SCAN_ListAddPos.Size = new System.Drawing.Size(200, 30);
+            this.FC_SCAN_ListAddPos.SlowRunCycle = -1;
+            this.FC_SCAN_ListAddPos.StartFC = null;
+            this.FC_SCAN_ListAddPos.Text = "List Add Pos";
+            this.FC_SCAN_ListAddPos.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_ListAddPos_Run);
+            // 
+            // FC_SCAN_NEXT_1
+            // 
+            this.FC_SCAN_NEXT_1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_SCAN_NEXT_1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_SCAN_NEXT_1.CASE1 = null;
+            this.FC_SCAN_NEXT_1.CASE2 = null;
+            this.FC_SCAN_NEXT_1.CASE3 = null;
+            this.FC_SCAN_NEXT_1.CASE4 = null;
+            this.FC_SCAN_NEXT_1.ContinueRun = false;
+            this.FC_SCAN_NEXT_1.DesignTimeParent = null;
+            this.FC_SCAN_NEXT_1.EndFC = null;
+            this.FC_SCAN_NEXT_1.ErrID = 0;
+            this.FC_SCAN_NEXT_1.InAlarm = false;
+            this.FC_SCAN_NEXT_1.IsFlowHead = false;
+            this.FC_SCAN_NEXT_1.Location = new System.Drawing.Point(1289, 373);
+            this.FC_SCAN_NEXT_1.LockUI = false;
+            this.FC_SCAN_NEXT_1.Message = null;
+            this.FC_SCAN_NEXT_1.MsgID = 0;
+            this.FC_SCAN_NEXT_1.Name = "FC_SCAN_NEXT_1";
+            this.FC_SCAN_NEXT_1.NEXT = this.FC_SCAN_NEXT_2;
+            this.FC_SCAN_NEXT_1.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_SCAN_NEXT_1.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_SCAN_NEXT_1.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_SCAN_NEXT_1.OverTimeSpec = 100;
+            this.FC_SCAN_NEXT_1.Running = false;
+            this.FC_SCAN_NEXT_1.Size = new System.Drawing.Size(30, 30);
+            this.FC_SCAN_NEXT_1.SlowRunCycle = -1;
+            this.FC_SCAN_NEXT_1.StartFC = null;
+            this.FC_SCAN_NEXT_1.Text = "N";
+            this.FC_SCAN_NEXT_1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_NEXT_1_Run);
+            // 
+            // FC_SCAN_START
+            // 
+            this.FC_SCAN_START.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_SCAN_START.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_SCAN_START.CASE1 = null;
+            this.FC_SCAN_START.CASE2 = null;
+            this.FC_SCAN_START.CASE3 = null;
+            this.FC_SCAN_START.CASE4 = null;
+            this.FC_SCAN_START.ContinueRun = false;
+            this.FC_SCAN_START.DesignTimeParent = null;
+            this.FC_SCAN_START.EndFC = null;
+            this.FC_SCAN_START.ErrID = 0;
+            this.FC_SCAN_START.InAlarm = false;
+            this.FC_SCAN_START.IsFlowHead = false;
+            this.FC_SCAN_START.Location = new System.Drawing.Point(1052, 297);
+            this.FC_SCAN_START.LockUI = false;
+            this.FC_SCAN_START.Message = null;
+            this.FC_SCAN_START.MsgID = 0;
+            this.FC_SCAN_START.Name = "FC_SCAN_START";
+            this.FC_SCAN_START.NEXT = this.FC_SCAN_IsScanFlagDoit;
+            this.FC_SCAN_START.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_SCAN_START.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_SCAN_START.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_SCAN_START.OverTimeSpec = 100;
+            this.FC_SCAN_START.Running = false;
+            this.FC_SCAN_START.Size = new System.Drawing.Size(200, 30);
+            this.FC_SCAN_START.SlowRunCycle = -1;
+            this.FC_SCAN_START.StartFC = null;
+            this.FC_SCAN_START.Text = "Start Scan Action ";
+            this.FC_SCAN_START.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_START_Run);
             // 
             // FC_Auto_Open_CalculationResult
             // 
@@ -3292,7 +3439,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1358, 678);
+            this.tabControl1.Size = new System.Drawing.Size(1016, 677);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -3306,7 +3453,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1350, 644);
+            this.tabPage1.Size = new System.Drawing.Size(1008, 643);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Table";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -4725,71 +4872,71 @@
             this.MT_DoorZ.Message = null;
             this.MT_DoorZ.Mileage = 0F;
             this.MT_DoorZ.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
-            motorParam2.Acceleration = 300000;
-            motorParam2.AddressID = 0;
-            motorParam2.AlarmPolarity = ProVLib.ALMPOLARITY.ACTIVELOW;
-            motorParam2.AxisDIR = ProVLib.AxisDIRType.AXIS_Z;
-            motorParam2.AxisIndex = 0;
-            motorParam2.BasePulseCount = 0;
-            motorParam2.CMPSRC = ProVLib.ECMPSRC.CMPSRC_None;
-            motorParam2.CommandPos = 0;
-            motorParam2.Deceleration = 300000;
-            motorParam2.DelayT = 0D;
-            motorParam2.Direction = true;
-            motorParam2.DownZ1 = 0;
-            motorParam2.DownZ2 = 0;
-            motorParam2.DownZ3 = 0;
-            motorParam2.EncGearRatio = 1D;
-            motorParam2.EncoderPos = 0;
-            motorParam2.EndX = 0;
-            motorParam2.ExtraMotor = null;
-            motorParam2.Function = ProVLib.ExtraFunction.None;
-            motorParam2.GearRatio = 1D;
-            motorParam2.GroupNo = ((short)(0));
-            motorParam2.HomeBeforeGoto = false;
-            motorParam2.HomeDirection = true;
-            motorParam2.HomeException = ProVLib.HOMEEXP.Default;
-            motorParam2.HomeMode = ProVLib.HOMEMODE.LIMITSNR;
-            motorParam2.HomePos = 100;
-            motorParam2.IDZ = ((short)(0));
-            motorParam2.InitSpeed = 100;
-            motorParam2.InPosOn = false;
-            motorParam2.InposRange = 50;
-            motorParam2.IOPort = "000";
-            motorParam2.IsAlarmReseted = false;
-            motorParam2.IsBusy = false;
-            motorParam2.IsELSensorB = true;
-            motorParam2.IsSensorB = true;
-            motorParam2.IsUseSoftLimit = false;
-            motorParam2.JogHighSpeed = 30000;
-            motorParam2.JogLowSpeed = 1000;
-            motorParam2.LimitX = 0;
-            motorParam2.LimitZ = 0;
-            motorParam2.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
-            motorParam2.MotionCard = ProVLib.EMOTIONCARD.MCMNET;
-            motorParam2.MotorType = ProVLib.MOTORTYPE.NORMAL;
-            motorParam2.ObjType = 0;
-            motorParam2.Owner = null;
-            motorParam2.PitchCOMEnable = false;
-            motorParam2.PulseCtrlMode = ProVLib.EPULSEMODE.CWCCW_2;
-            motorParam2.ScanByKernal = false;
-            motorParam2.SCurveAccRatio = 50;
-            motorParam2.SCurveDecRatio = 50;
-            motorParam2.SerialPortName = "COM1";
-            motorParam2.ServoAlarmOn = false;
-            motorParam2.ServoOnPolarity = ProVLib.SVONPOLARITY.ACTIVELOW;
-            motorParam2.SlaveIOPort = null;
-            motorParam2.SoftLimitN = -9999999;
-            motorParam2.SoftLimitP = 9999999;
-            motorParam2.Speed = 50000;
-            motorParam2.SpeedPattern = ProVLib.MOVINGPATTERN.T_Curve;
-            motorParam2.StopDeceleration = 100000000;
-            motorParam2.TRGSRC = ProVLib.ETRIGGERSRC.TRGENC;
-            motorParam2.TriggerChannel = ProVLib.ETriggerChannel.CH_1;
-            motorParam2.TriggerPolarity = ProVLib.ETriggerLogic.ActiveLow;
-            motorParam2.UpZ = 0;
-            motorParam2.ZPhaseLogic = ProVLib.ZPHASELOGIC.FALLINGEDGE;
-            this.MT_DoorZ.MotorParameter = motorParam2;
+            motorParam1.Acceleration = 300000;
+            motorParam1.AddressID = 0;
+            motorParam1.AlarmPolarity = ProVLib.ALMPOLARITY.ACTIVELOW;
+            motorParam1.AxisDIR = ProVLib.AxisDIRType.AXIS_Z;
+            motorParam1.AxisIndex = 0;
+            motorParam1.BasePulseCount = 0;
+            motorParam1.CMPSRC = ProVLib.ECMPSRC.CMPSRC_None;
+            motorParam1.CommandPos = 0;
+            motorParam1.Deceleration = 300000;
+            motorParam1.DelayT = 0D;
+            motorParam1.Direction = true;
+            motorParam1.DownZ1 = 0;
+            motorParam1.DownZ2 = 0;
+            motorParam1.DownZ3 = 0;
+            motorParam1.EncGearRatio = 1D;
+            motorParam1.EncoderPos = 0;
+            motorParam1.EndX = 0;
+            motorParam1.ExtraMotor = null;
+            motorParam1.Function = ProVLib.ExtraFunction.None;
+            motorParam1.GearRatio = 1D;
+            motorParam1.GroupNo = ((short)(0));
+            motorParam1.HomeBeforeGoto = false;
+            motorParam1.HomeDirection = true;
+            motorParam1.HomeException = ProVLib.HOMEEXP.Default;
+            motorParam1.HomeMode = ProVLib.HOMEMODE.LIMITSNR;
+            motorParam1.HomePos = 100;
+            motorParam1.IDZ = ((short)(0));
+            motorParam1.InitSpeed = 100;
+            motorParam1.InPosOn = false;
+            motorParam1.InposRange = 50;
+            motorParam1.IOPort = "000";
+            motorParam1.IsAlarmReseted = false;
+            motorParam1.IsBusy = false;
+            motorParam1.IsELSensorB = true;
+            motorParam1.IsSensorB = true;
+            motorParam1.IsUseSoftLimit = false;
+            motorParam1.JogHighSpeed = 30000;
+            motorParam1.JogLowSpeed = 1000;
+            motorParam1.LimitX = 0;
+            motorParam1.LimitZ = 0;
+            motorParam1.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
+            motorParam1.MotionCard = ProVLib.EMOTIONCARD.MCMNET;
+            motorParam1.MotorType = ProVLib.MOTORTYPE.NORMAL;
+            motorParam1.ObjType = 0;
+            motorParam1.Owner = null;
+            motorParam1.PitchCOMEnable = false;
+            motorParam1.PulseCtrlMode = ProVLib.EPULSEMODE.CWCCW_2;
+            motorParam1.ScanByKernal = false;
+            motorParam1.SCurveAccRatio = 50;
+            motorParam1.SCurveDecRatio = 50;
+            motorParam1.SerialPortName = "COM1";
+            motorParam1.ServoAlarmOn = false;
+            motorParam1.ServoOnPolarity = ProVLib.SVONPOLARITY.ACTIVELOW;
+            motorParam1.SlaveIOPort = null;
+            motorParam1.SoftLimitN = -9999999;
+            motorParam1.SoftLimitP = 9999999;
+            motorParam1.Speed = 50000;
+            motorParam1.SpeedPattern = ProVLib.MOVINGPATTERN.T_Curve;
+            motorParam1.StopDeceleration = 100000000;
+            motorParam1.TRGSRC = ProVLib.ETRIGGERSRC.TRGENC;
+            motorParam1.TriggerChannel = ProVLib.ETriggerChannel.CH_1;
+            motorParam1.TriggerPolarity = ProVLib.ETriggerLogic.ActiveLow;
+            motorParam1.UpZ = 0;
+            motorParam1.ZPhaseLogic = ProVLib.ZPHASELOGIC.FALLINGEDGE;
+            this.MT_DoorZ.MotorParameter = motorParam1;
             this.MT_DoorZ.MoverSize = ((uint)(0u));
             this.MT_DoorZ.MsgID = 0;
             this.MT_DoorZ.Name = "MT_DoorZ";
@@ -5917,166 +6064,11 @@
             this.dRadioGroupBox3.TabStop = false;
             this.dRadioGroupBox3.Text = "Wafer Type";
             // 
-            // FC_SCAN_NEXT_2
-            // 
-            this.FC_SCAN_NEXT_2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_SCAN_NEXT_2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_SCAN_NEXT_2.CASE1 = null;
-            this.FC_SCAN_NEXT_2.CASE2 = null;
-            this.FC_SCAN_NEXT_2.CASE3 = null;
-            this.FC_SCAN_NEXT_2.CASE4 = null;
-            this.FC_SCAN_NEXT_2.ContinueRun = false;
-            this.FC_SCAN_NEXT_2.DesignTimeParent = null;
-            this.FC_SCAN_NEXT_2.EndFC = null;
-            this.FC_SCAN_NEXT_2.ErrID = 0;
-            this.FC_SCAN_NEXT_2.InAlarm = false;
-            this.FC_SCAN_NEXT_2.IsFlowHead = false;
-            this.FC_SCAN_NEXT_2.Location = new System.Drawing.Point(1289, 335);
-            this.FC_SCAN_NEXT_2.LockUI = false;
-            this.FC_SCAN_NEXT_2.Message = null;
-            this.FC_SCAN_NEXT_2.MsgID = 0;
-            this.FC_SCAN_NEXT_2.Name = "FC_SCAN_NEXT_2";
-            this.FC_SCAN_NEXT_2.NEXT = this.FC_SCAN_IsScanFlagDoit;
-            this.FC_SCAN_NEXT_2.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_SCAN_NEXT_2.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_SCAN_NEXT_2.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_SCAN_NEXT_2.OverTimeSpec = 100;
-            this.FC_SCAN_NEXT_2.Running = false;
-            this.FC_SCAN_NEXT_2.Size = new System.Drawing.Size(30, 30);
-            this.FC_SCAN_NEXT_2.SlowRunCycle = -1;
-            this.FC_SCAN_NEXT_2.StartFC = null;
-            this.FC_SCAN_NEXT_2.Text = "N";
-            this.FC_SCAN_NEXT_2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_NEXT_2_Run);
-            // 
-            // FC_SCAN_IsScanFlagDoit
-            // 
-            this.FC_SCAN_IsScanFlagDoit.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_SCAN_IsScanFlagDoit.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_SCAN_IsScanFlagDoit.CASE1 = null;
-            this.FC_SCAN_IsScanFlagDoit.CASE2 = null;
-            this.FC_SCAN_IsScanFlagDoit.CASE3 = null;
-            this.FC_SCAN_IsScanFlagDoit.CASE4 = null;
-            this.FC_SCAN_IsScanFlagDoit.ContinueRun = false;
-            this.FC_SCAN_IsScanFlagDoit.DesignTimeParent = null;
-            this.FC_SCAN_IsScanFlagDoit.EndFC = null;
-            this.FC_SCAN_IsScanFlagDoit.ErrID = 0;
-            this.FC_SCAN_IsScanFlagDoit.InAlarm = false;
-            this.FC_SCAN_IsScanFlagDoit.IsFlowHead = false;
-            this.FC_SCAN_IsScanFlagDoit.Location = new System.Drawing.Point(1052, 335);
-            this.FC_SCAN_IsScanFlagDoit.LockUI = false;
-            this.FC_SCAN_IsScanFlagDoit.Message = null;
-            this.FC_SCAN_IsScanFlagDoit.MsgID = 0;
-            this.FC_SCAN_IsScanFlagDoit.Name = "FC_SCAN_IsScanFlagDoit";
-            this.FC_SCAN_IsScanFlagDoit.NEXT = this.FC_SCAN_ListAddPos;
-            this.FC_SCAN_IsScanFlagDoit.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_SCAN_IsScanFlagDoit.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_SCAN_IsScanFlagDoit.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_SCAN_IsScanFlagDoit.OverTimeSpec = 100;
-            this.FC_SCAN_IsScanFlagDoit.Running = false;
-            this.FC_SCAN_IsScanFlagDoit.Size = new System.Drawing.Size(200, 30);
-            this.FC_SCAN_IsScanFlagDoit.SlowRunCycle = -1;
-            this.FC_SCAN_IsScanFlagDoit.StartFC = null;
-            this.FC_SCAN_IsScanFlagDoit.Text = "Is ScanFlag DoIt";
-            this.FC_SCAN_IsScanFlagDoit.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_IsScanFlagDoit_Run);
-            // 
-            // FC_SCAN_ListAddPos
-            // 
-            this.FC_SCAN_ListAddPos.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_SCAN_ListAddPos.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_SCAN_ListAddPos.CASE1 = null;
-            this.FC_SCAN_ListAddPos.CASE2 = null;
-            this.FC_SCAN_ListAddPos.CASE3 = null;
-            this.FC_SCAN_ListAddPos.CASE4 = null;
-            this.FC_SCAN_ListAddPos.ContinueRun = false;
-            this.FC_SCAN_ListAddPos.DesignTimeParent = null;
-            this.FC_SCAN_ListAddPos.EndFC = null;
-            this.FC_SCAN_ListAddPos.ErrID = 0;
-            this.FC_SCAN_ListAddPos.InAlarm = false;
-            this.FC_SCAN_ListAddPos.IsFlowHead = false;
-            this.FC_SCAN_ListAddPos.Location = new System.Drawing.Point(1052, 373);
-            this.FC_SCAN_ListAddPos.LockUI = false;
-            this.FC_SCAN_ListAddPos.Message = null;
-            this.FC_SCAN_ListAddPos.MsgID = 0;
-            this.FC_SCAN_ListAddPos.Name = "FC_SCAN_ListAddPos";
-            this.FC_SCAN_ListAddPos.NEXT = this.FC_SCAN_NEXT_1;
-            this.FC_SCAN_ListAddPos.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_SCAN_ListAddPos.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_SCAN_ListAddPos.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_SCAN_ListAddPos.OverTimeSpec = 100;
-            this.FC_SCAN_ListAddPos.Running = false;
-            this.FC_SCAN_ListAddPos.Size = new System.Drawing.Size(200, 30);
-            this.FC_SCAN_ListAddPos.SlowRunCycle = -1;
-            this.FC_SCAN_ListAddPos.StartFC = null;
-            this.FC_SCAN_ListAddPos.Text = "List Add Pos";
-            this.FC_SCAN_ListAddPos.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_ListAddPos_Run);
-            // 
-            // FC_SCAN_NEXT_1
-            // 
-            this.FC_SCAN_NEXT_1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_SCAN_NEXT_1.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_SCAN_NEXT_1.CASE1 = null;
-            this.FC_SCAN_NEXT_1.CASE2 = null;
-            this.FC_SCAN_NEXT_1.CASE3 = null;
-            this.FC_SCAN_NEXT_1.CASE4 = null;
-            this.FC_SCAN_NEXT_1.ContinueRun = false;
-            this.FC_SCAN_NEXT_1.DesignTimeParent = null;
-            this.FC_SCAN_NEXT_1.EndFC = null;
-            this.FC_SCAN_NEXT_1.ErrID = 0;
-            this.FC_SCAN_NEXT_1.InAlarm = false;
-            this.FC_SCAN_NEXT_1.IsFlowHead = false;
-            this.FC_SCAN_NEXT_1.Location = new System.Drawing.Point(1289, 373);
-            this.FC_SCAN_NEXT_1.LockUI = false;
-            this.FC_SCAN_NEXT_1.Message = null;
-            this.FC_SCAN_NEXT_1.MsgID = 0;
-            this.FC_SCAN_NEXT_1.Name = "FC_SCAN_NEXT_1";
-            this.FC_SCAN_NEXT_1.NEXT = this.FC_SCAN_NEXT_2;
-            this.FC_SCAN_NEXT_1.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_SCAN_NEXT_1.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_SCAN_NEXT_1.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_SCAN_NEXT_1.OverTimeSpec = 100;
-            this.FC_SCAN_NEXT_1.Running = false;
-            this.FC_SCAN_NEXT_1.Size = new System.Drawing.Size(30, 30);
-            this.FC_SCAN_NEXT_1.SlowRunCycle = -1;
-            this.FC_SCAN_NEXT_1.StartFC = null;
-            this.FC_SCAN_NEXT_1.Text = "N";
-            this.FC_SCAN_NEXT_1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_NEXT_1_Run);
-            // 
-            // FC_SCAN_START
-            // 
-            this.FC_SCAN_START.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_SCAN_START.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_SCAN_START.CASE1 = null;
-            this.FC_SCAN_START.CASE2 = null;
-            this.FC_SCAN_START.CASE3 = null;
-            this.FC_SCAN_START.CASE4 = null;
-            this.FC_SCAN_START.ContinueRun = false;
-            this.FC_SCAN_START.DesignTimeParent = null;
-            this.FC_SCAN_START.EndFC = null;
-            this.FC_SCAN_START.ErrID = 0;
-            this.FC_SCAN_START.InAlarm = false;
-            this.FC_SCAN_START.IsFlowHead = false;
-            this.FC_SCAN_START.Location = new System.Drawing.Point(1052, 297);
-            this.FC_SCAN_START.LockUI = false;
-            this.FC_SCAN_START.Message = null;
-            this.FC_SCAN_START.MsgID = 0;
-            this.FC_SCAN_START.Name = "FC_SCAN_START";
-            this.FC_SCAN_START.NEXT = this.FC_SCAN_IsScanFlagDoit;
-            this.FC_SCAN_START.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_SCAN_START.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_SCAN_START.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_SCAN_START.OverTimeSpec = 100;
-            this.FC_SCAN_START.Running = false;
-            this.FC_SCAN_START.Size = new System.Drawing.Size(200, 30);
-            this.FC_SCAN_START.SlowRunCycle = -1;
-            this.FC_SCAN_START.StartFC = null;
-            this.FC_SCAN_START.Text = "Start Scan Action ";
-            this.FC_SCAN_START.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_SCAN_START_Run);
-            // 
             // LPB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Name = "LPB";
             this.Text = "FLP";
             this.tabMain.ResumeLayout(false);

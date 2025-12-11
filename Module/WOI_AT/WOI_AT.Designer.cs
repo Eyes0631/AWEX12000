@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WOI_AT));
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,14 +77,14 @@
             this.FC_AUTO_InchSwitch_Done = new ProVLib.FlowChart();
             this.flowChart8 = new ProVLib.FlowChart();
             this.FC_AUTO_INCH_SWITCH_START = new ProVLib.FlowChart();
-            this.dCheckBox2 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox2 = new KCSDK.DCheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dCheckBox3 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox3 = new KCSDK.DCheckBox();
             this.dFieldEdit3 = new KCSDK.DFieldEdit();
             this.btn_OpenTeachingSoftware = new System.Windows.Forms.Button();
             this.pbx_OCR_Read = new System.Windows.Forms.PictureBox();
             this.lb_OcrResult = new System.Windows.Forms.Label();
-            this.dCheckBox4 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox4 = new KCSDK.DCheckBox();
             this.FC_Auto_TeachAngleMode_Done = new ProVLib.FlowChart();
             this.flowChart6 = new ProVLib.FlowChart();
             this.flowChart9 = new ProVLib.FlowChart();
@@ -96,8 +95,8 @@
             this.FC_Auto_TeachAngleMode_Connect = new ProVLib.FlowChart();
             this.FC_Auto_TeachAngleMode_START = new ProVLib.FlowChart();
             this.dFieldEdit4 = new KCSDK.DFieldEdit();
-            this.dCheckBox1 = new KCSDK.DCheckBox(this.components);
-            this.dCheckBox5 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox1 = new KCSDK.DCheckBox();
+            this.dCheckBox5 = new KCSDK.DCheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tpControl.SuspendLayout();
@@ -107,6 +106,7 @@
             this.TabFlow.SuspendLayout();
             this.tpHome.SuspendLayout();
             this.tpAuto.SuspendLayout();
+            this.tpCheck.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -129,7 +129,7 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1280, 736);
+            this.tabMain.Size = new System.Drawing.Size(1028, 736);
             // 
             // tpControl
             // 
@@ -139,7 +139,7 @@
             this.tpControl.Controls.Add(this.btn_OpenTeachingSoftware);
             this.tpControl.Controls.Add(this.groupBox1);
             this.tpControl.Controls.Add(this.flowLayoutPanel4);
-            this.tpControl.Size = new System.Drawing.Size(1272, 668);
+            this.tpControl.Size = new System.Drawing.Size(1020, 668);
             // 
             // tpSetting
             // 
@@ -153,10 +153,6 @@
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit3, 0);
             this.tpSetting.Controls.SetChildIndex(this.dCheckBox4, 0);
             this.tpSetting.Controls.SetChildIndex(this.dCheckBox5, 0);
-            // 
-            // tpFlow
-            // 
-            this.tpFlow.Size = new System.Drawing.Size(1272, 668);
             // 
             // tpSuperSetting
             // 
@@ -172,10 +168,6 @@
             this.tpSuperSetting.Controls.SetChildIndex(this.dFieldEdit4, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.dCheckBox1, 0);
             // 
-            // TabFlow
-            // 
-            this.TabFlow.Size = new System.Drawing.Size(1268, 664);
-            // 
             // tpHome
             // 
             this.tpHome.Controls.Add(this.FC_Home_InchSwitchDone);
@@ -186,7 +178,6 @@
             this.tpHome.Controls.Add(this.FC_Home_Done);
             this.tpHome.Controls.Add(this.FC_Home_WaitCmd);
             this.tpHome.Controls.Add(this.FC_HOME_START);
-            this.tpHome.Size = new System.Drawing.Size(1260, 622);
             // 
             // tpAuto
             // 
@@ -220,8 +211,6 @@
             this.tpAuto.Controls.Add(this.FC_Auto_Trigger_Trigger);
             this.tpAuto.Controls.Add(this.FC_Auto_Trigger_WaitCmd);
             this.tpAuto.Controls.Add(this.FC_AUTO_TRIGGER_START);
-            this.tpAuto.Location = new System.Drawing.Point(4, 38);
-            this.tpAuto.Size = new System.Drawing.Size(1260, 622);
             // 
             // flowLayoutPanel4
             // 
@@ -254,6 +243,7 @@
             // 
             this.ib_Ocr_Out.BackColor = System.Drawing.Color.RoyalBlue;
             this.ib_Ocr_Out.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.ib_Ocr_Out.DesignTimeParent = null;
             this.ib_Ocr_Out.ErrID = 0;
             this.ib_Ocr_Out.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
             this.ib_Ocr_Out.InAlarm = false;
@@ -282,6 +272,7 @@
             // 
             this.ib_Ocr_Back.BackColor = System.Drawing.Color.RoyalBlue;
             this.ib_Ocr_Back.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.ib_Ocr_Back.DesignTimeParent = null;
             this.ib_Ocr_Back.ErrID = 0;
             this.ib_Ocr_Back.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
             this.ib_Ocr_Back.InAlarm = false;
@@ -311,6 +302,7 @@
             this.ob_Ocr_Out.ActionCount = 0;
             this.ob_Ocr_Out.BackColor = System.Drawing.Color.RoyalBlue;
             this.ob_Ocr_Out.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.ob_Ocr_Out.DesignTimeParent = null;
             this.ob_Ocr_Out.ErrID = 0;
             this.ob_Ocr_Out.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
             this.ob_Ocr_Out.InAlarm = false;
@@ -391,6 +383,7 @@
             this.FC_Home_Done.CASE3 = null;
             this.FC_Home_Done.CASE4 = null;
             this.FC_Home_Done.ContinueRun = false;
+            this.FC_Home_Done.DesignTimeParent = null;
             this.FC_Home_Done.EndFC = null;
             this.FC_Home_Done.ErrID = 0;
             this.FC_Home_Done.InAlarm = false;
@@ -421,6 +414,7 @@
             this.FC_Home_DoOcrConnect.CASE3 = null;
             this.FC_Home_DoOcrConnect.CASE4 = null;
             this.FC_Home_DoOcrConnect.ContinueRun = false;
+            this.FC_Home_DoOcrConnect.DesignTimeParent = null;
             this.FC_Home_DoOcrConnect.EndFC = null;
             this.FC_Home_DoOcrConnect.ErrID = 0;
             this.FC_Home_DoOcrConnect.InAlarm = false;
@@ -451,6 +445,7 @@
             this.FC_Home_OcrConnectDone.CASE3 = null;
             this.FC_Home_OcrConnectDone.CASE4 = null;
             this.FC_Home_OcrConnectDone.ContinueRun = false;
+            this.FC_Home_OcrConnectDone.DesignTimeParent = null;
             this.FC_Home_OcrConnectDone.EndFC = null;
             this.FC_Home_OcrConnectDone.ErrID = 0;
             this.FC_Home_OcrConnectDone.InAlarm = false;
@@ -481,6 +476,7 @@
             this.FC_Home_DoInchSwitch.CASE3 = null;
             this.FC_Home_DoInchSwitch.CASE4 = null;
             this.FC_Home_DoInchSwitch.ContinueRun = false;
+            this.FC_Home_DoInchSwitch.DesignTimeParent = null;
             this.FC_Home_DoInchSwitch.EndFC = null;
             this.FC_Home_DoInchSwitch.ErrID = 0;
             this.FC_Home_DoInchSwitch.InAlarm = false;
@@ -511,6 +507,7 @@
             this.FC_Home_InchSwitchDone.CASE3 = null;
             this.FC_Home_InchSwitchDone.CASE4 = null;
             this.FC_Home_InchSwitchDone.ContinueRun = false;
+            this.FC_Home_InchSwitchDone.DesignTimeParent = null;
             this.FC_Home_InchSwitchDone.EndFC = null;
             this.FC_Home_InchSwitchDone.ErrID = 0;
             this.FC_Home_InchSwitchDone.InAlarm = false;
@@ -541,6 +538,7 @@
             this.FC_Home_OcrCyOff.CASE3 = null;
             this.FC_Home_OcrCyOff.CASE4 = null;
             this.FC_Home_OcrCyOff.ContinueRun = false;
+            this.FC_Home_OcrCyOff.DesignTimeParent = null;
             this.FC_Home_OcrCyOff.EndFC = null;
             this.FC_Home_OcrCyOff.ErrID = 0;
             this.FC_Home_OcrCyOff.InAlarm = false;
@@ -571,6 +569,7 @@
             this.FC_Home_WaitCmd.CASE3 = null;
             this.FC_Home_WaitCmd.CASE4 = null;
             this.FC_Home_WaitCmd.ContinueRun = false;
+            this.FC_Home_WaitCmd.DesignTimeParent = null;
             this.FC_Home_WaitCmd.EndFC = null;
             this.FC_Home_WaitCmd.ErrID = 0;
             this.FC_Home_WaitCmd.InAlarm = false;
@@ -601,6 +600,7 @@
             this.FC_HOME_START.CASE3 = null;
             this.FC_HOME_START.CASE4 = null;
             this.FC_HOME_START.ContinueRun = false;
+            this.FC_HOME_START.DesignTimeParent = null;
             this.FC_HOME_START.EndFC = null;
             this.FC_HOME_START.ErrID = 0;
             this.FC_HOME_START.InAlarm = false;
@@ -702,6 +702,7 @@
             this.FC_AUTO_TRIGGER_START.CASE3 = null;
             this.FC_AUTO_TRIGGER_START.CASE4 = null;
             this.FC_AUTO_TRIGGER_START.ContinueRun = false;
+            this.FC_AUTO_TRIGGER_START.DesignTimeParent = null;
             this.FC_AUTO_TRIGGER_START.EndFC = null;
             this.FC_AUTO_TRIGGER_START.ErrID = 0;
             this.FC_AUTO_TRIGGER_START.InAlarm = false;
@@ -732,6 +733,7 @@
             this.FC_Auto_Trigger_WaitCmd.CASE3 = null;
             this.FC_Auto_Trigger_WaitCmd.CASE4 = null;
             this.FC_Auto_Trigger_WaitCmd.ContinueRun = false;
+            this.FC_Auto_Trigger_WaitCmd.DesignTimeParent = null;
             this.FC_Auto_Trigger_WaitCmd.EndFC = null;
             this.FC_Auto_Trigger_WaitCmd.ErrID = 0;
             this.FC_Auto_Trigger_WaitCmd.InAlarm = false;
@@ -762,6 +764,7 @@
             this.FC_Auto_Trigger_Trigger.CASE3 = null;
             this.FC_Auto_Trigger_Trigger.CASE4 = null;
             this.FC_Auto_Trigger_Trigger.ContinueRun = false;
+            this.FC_Auto_Trigger_Trigger.DesignTimeParent = null;
             this.FC_Auto_Trigger_Trigger.EndFC = null;
             this.FC_Auto_Trigger_Trigger.ErrID = 0;
             this.FC_Auto_Trigger_Trigger.InAlarm = false;
@@ -792,6 +795,7 @@
             this.FC_Auto_Trigger_ReadIDFailResult.CASE3 = this.FC_Auto_Trigger_Done;
             this.FC_Auto_Trigger_ReadIDFailResult.CASE4 = null;
             this.FC_Auto_Trigger_ReadIDFailResult.ContinueRun = false;
+            this.FC_Auto_Trigger_ReadIDFailResult.DesignTimeParent = null;
             this.FC_Auto_Trigger_ReadIDFailResult.EndFC = null;
             this.FC_Auto_Trigger_ReadIDFailResult.ErrID = 0;
             this.FC_Auto_Trigger_ReadIDFailResult.InAlarm = false;
@@ -822,6 +826,7 @@
             this.FC_Auto_Trigger_ManualInputIDResult.CASE3 = null;
             this.FC_Auto_Trigger_ManualInputIDResult.CASE4 = null;
             this.FC_Auto_Trigger_ManualInputIDResult.ContinueRun = false;
+            this.FC_Auto_Trigger_ManualInputIDResult.DesignTimeParent = null;
             this.FC_Auto_Trigger_ManualInputIDResult.EndFC = null;
             this.FC_Auto_Trigger_ManualInputIDResult.ErrID = 0;
             this.FC_Auto_Trigger_ManualInputIDResult.InAlarm = false;
@@ -852,6 +857,7 @@
             this.FC_Auto_Trigger_Done.CASE3 = null;
             this.FC_Auto_Trigger_Done.CASE4 = null;
             this.FC_Auto_Trigger_Done.ContinueRun = false;
+            this.FC_Auto_Trigger_Done.DesignTimeParent = null;
             this.FC_Auto_Trigger_Done.EndFC = null;
             this.FC_Auto_Trigger_Done.ErrID = 0;
             this.FC_Auto_Trigger_Done.InAlarm = false;
@@ -882,6 +888,7 @@
             this.flowChart7.CASE3 = null;
             this.flowChart7.CASE4 = null;
             this.flowChart7.ContinueRun = false;
+            this.flowChart7.DesignTimeParent = null;
             this.flowChart7.EndFC = null;
             this.flowChart7.ErrID = 0;
             this.flowChart7.InAlarm = false;
@@ -912,6 +919,7 @@
             this.flowChart4.CASE3 = null;
             this.flowChart4.CASE4 = null;
             this.flowChart4.ContinueRun = false;
+            this.flowChart4.DesignTimeParent = null;
             this.flowChart4.EndFC = null;
             this.flowChart4.ErrID = 0;
             this.flowChart4.InAlarm = false;
@@ -942,6 +950,7 @@
             this.FC_Auto_Trigger_Connect.CASE3 = null;
             this.FC_Auto_Trigger_Connect.CASE4 = null;
             this.FC_Auto_Trigger_Connect.ContinueRun = false;
+            this.FC_Auto_Trigger_Connect.DesignTimeParent = null;
             this.FC_Auto_Trigger_Connect.EndFC = null;
             this.FC_Auto_Trigger_Connect.ErrID = 0;
             this.FC_Auto_Trigger_Connect.InAlarm = false;
@@ -1054,6 +1063,7 @@
             this.flowChart5.CASE3 = null;
             this.flowChart5.CASE4 = null;
             this.flowChart5.ContinueRun = false;
+            this.flowChart5.DesignTimeParent = null;
             this.flowChart5.EndFC = null;
             this.flowChart5.ErrID = 0;
             this.flowChart5.InAlarm = false;
@@ -1084,6 +1094,7 @@
             this.FC_Auto_OcrConnect_WaitCmd.CASE3 = null;
             this.FC_Auto_OcrConnect_WaitCmd.CASE4 = null;
             this.FC_Auto_OcrConnect_WaitCmd.ContinueRun = false;
+            this.FC_Auto_OcrConnect_WaitCmd.DesignTimeParent = null;
             this.FC_Auto_OcrConnect_WaitCmd.EndFC = null;
             this.FC_Auto_OcrConnect_WaitCmd.ErrID = 0;
             this.FC_Auto_OcrConnect_WaitCmd.InAlarm = false;
@@ -1114,6 +1125,7 @@
             this.FC_Auto_OcrConnect_Connect.CASE3 = null;
             this.FC_Auto_OcrConnect_Connect.CASE4 = null;
             this.FC_Auto_OcrConnect_Connect.ContinueRun = false;
+            this.FC_Auto_OcrConnect_Connect.DesignTimeParent = null;
             this.FC_Auto_OcrConnect_Connect.EndFC = null;
             this.FC_Auto_OcrConnect_Connect.ErrID = 0;
             this.FC_Auto_OcrConnect_Connect.InAlarm = false;
@@ -1144,6 +1156,7 @@
             this.FC_Auto_OcrConnect_Done.CASE3 = null;
             this.FC_Auto_OcrConnect_Done.CASE4 = null;
             this.FC_Auto_OcrConnect_Done.ContinueRun = false;
+            this.FC_Auto_OcrConnect_Done.DesignTimeParent = null;
             this.FC_Auto_OcrConnect_Done.EndFC = null;
             this.FC_Auto_OcrConnect_Done.ErrID = 0;
             this.FC_Auto_OcrConnect_Done.InAlarm = false;
@@ -1174,6 +1187,7 @@
             this.FC_Auto_Trigger_WaitCmd0.CASE3 = null;
             this.FC_Auto_Trigger_WaitCmd0.CASE4 = null;
             this.FC_Auto_Trigger_WaitCmd0.ContinueRun = false;
+            this.FC_Auto_Trigger_WaitCmd0.DesignTimeParent = null;
             this.FC_Auto_Trigger_WaitCmd0.EndFC = null;
             this.FC_Auto_Trigger_WaitCmd0.ErrID = 0;
             this.FC_Auto_Trigger_WaitCmd0.InAlarm = false;
@@ -1204,6 +1218,7 @@
             this.FC_AUTO_OCRCONNECT_START.CASE3 = null;
             this.FC_AUTO_OCRCONNECT_START.CASE4 = null;
             this.FC_AUTO_OCRCONNECT_START.ContinueRun = false;
+            this.FC_AUTO_OCRCONNECT_START.DesignTimeParent = null;
             this.FC_AUTO_OCRCONNECT_START.EndFC = null;
             this.FC_AUTO_OCRCONNECT_START.ErrID = 0;
             this.FC_AUTO_OCRCONNECT_START.InAlarm = false;
@@ -1234,6 +1249,7 @@
             this.flowChart1.CASE3 = null;
             this.flowChart1.CASE4 = null;
             this.flowChart1.ContinueRun = false;
+            this.flowChart1.DesignTimeParent = null;
             this.flowChart1.EndFC = null;
             this.flowChart1.ErrID = 0;
             this.flowChart1.InAlarm = false;
@@ -1264,6 +1280,7 @@
             this.FC_AUTO_InchSwitch_WaitCmd.CASE3 = null;
             this.FC_AUTO_InchSwitch_WaitCmd.CASE4 = null;
             this.FC_AUTO_InchSwitch_WaitCmd.ContinueRun = false;
+            this.FC_AUTO_InchSwitch_WaitCmd.DesignTimeParent = null;
             this.FC_AUTO_InchSwitch_WaitCmd.EndFC = null;
             this.FC_AUTO_InchSwitch_WaitCmd.ErrID = 0;
             this.FC_AUTO_InchSwitch_WaitCmd.InAlarm = false;
@@ -1294,6 +1311,7 @@
             this.FC_AUTO_InchSwitch_CyliderAction.CASE3 = null;
             this.FC_AUTO_InchSwitch_CyliderAction.CASE4 = null;
             this.FC_AUTO_InchSwitch_CyliderAction.ContinueRun = false;
+            this.FC_AUTO_InchSwitch_CyliderAction.DesignTimeParent = null;
             this.FC_AUTO_InchSwitch_CyliderAction.EndFC = null;
             this.FC_AUTO_InchSwitch_CyliderAction.ErrID = 0;
             this.FC_AUTO_InchSwitch_CyliderAction.InAlarm = false;
@@ -1324,6 +1342,7 @@
             this.FC_AUTO_InchSwitch_Done.CASE3 = null;
             this.FC_AUTO_InchSwitch_Done.CASE4 = null;
             this.FC_AUTO_InchSwitch_Done.ContinueRun = false;
+            this.FC_AUTO_InchSwitch_Done.DesignTimeParent = null;
             this.FC_AUTO_InchSwitch_Done.EndFC = null;
             this.FC_AUTO_InchSwitch_Done.ErrID = 0;
             this.FC_AUTO_InchSwitch_Done.InAlarm = false;
@@ -1354,6 +1373,7 @@
             this.flowChart8.CASE3 = null;
             this.flowChart8.CASE4 = null;
             this.flowChart8.ContinueRun = false;
+            this.flowChart8.DesignTimeParent = null;
             this.flowChart8.EndFC = null;
             this.flowChart8.ErrID = 0;
             this.flowChart8.InAlarm = false;
@@ -1384,6 +1404,7 @@
             this.FC_AUTO_INCH_SWITCH_START.CASE3 = null;
             this.FC_AUTO_INCH_SWITCH_START.CASE4 = null;
             this.FC_AUTO_INCH_SWITCH_START.ContinueRun = false;
+            this.FC_AUTO_INCH_SWITCH_START.DesignTimeParent = null;
             this.FC_AUTO_INCH_SWITCH_START.EndFC = null;
             this.FC_AUTO_INCH_SWITCH_START.ErrID = 0;
             this.FC_AUTO_INCH_SWITCH_START.InAlarm = false;
@@ -1536,6 +1557,7 @@
             this.FC_Auto_TeachAngleMode_Done.CASE3 = null;
             this.FC_Auto_TeachAngleMode_Done.CASE4 = null;
             this.FC_Auto_TeachAngleMode_Done.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_Done.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_Done.EndFC = null;
             this.FC_Auto_TeachAngleMode_Done.ErrID = 0;
             this.FC_Auto_TeachAngleMode_Done.InAlarm = false;
@@ -1566,6 +1588,7 @@
             this.flowChart6.CASE3 = null;
             this.flowChart6.CASE4 = null;
             this.flowChart6.ContinueRun = false;
+            this.flowChart6.DesignTimeParent = null;
             this.flowChart6.EndFC = null;
             this.flowChart6.ErrID = 0;
             this.flowChart6.InAlarm = false;
@@ -1596,6 +1619,7 @@
             this.flowChart9.CASE3 = null;
             this.flowChart9.CASE4 = null;
             this.flowChart9.ContinueRun = false;
+            this.flowChart9.DesignTimeParent = null;
             this.flowChart9.EndFC = null;
             this.flowChart9.ErrID = 0;
             this.flowChart9.InAlarm = false;
@@ -1626,6 +1650,7 @@
             this.FC_Auto_TeachAngleMode_WaitCommand.CASE3 = null;
             this.FC_Auto_TeachAngleMode_WaitCommand.CASE4 = null;
             this.FC_Auto_TeachAngleMode_WaitCommand.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_WaitCommand.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_WaitCommand.EndFC = null;
             this.FC_Auto_TeachAngleMode_WaitCommand.ErrID = 0;
             this.FC_Auto_TeachAngleMode_WaitCommand.InAlarm = false;
@@ -1656,6 +1681,7 @@
             this.FC_Auto_TeachAngleMode_Trigger.CASE3 = null;
             this.FC_Auto_TeachAngleMode_Trigger.CASE4 = null;
             this.FC_Auto_TeachAngleMode_Trigger.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_Trigger.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_Trigger.EndFC = null;
             this.FC_Auto_TeachAngleMode_Trigger.ErrID = 0;
             this.FC_Auto_TeachAngleMode_Trigger.InAlarm = false;
@@ -1686,6 +1712,7 @@
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.CASE3 = this.FC_Auto_TeachAngleMode_Done;
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.CASE4 = null;
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_ReadIDFailResult.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.EndFC = null;
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.ErrID = 0;
             this.FC_Auto_TeachAngleMode_ReadIDFailResult.InAlarm = false;
@@ -1716,6 +1743,7 @@
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.CASE3 = null;
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.CASE4 = null;
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_ManualInputIDResult.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.EndFC = null;
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.ErrID = 0;
             this.FC_Auto_TeachAngleMode_ManualInputIDResult.InAlarm = false;
@@ -1746,6 +1774,7 @@
             this.FC_Auto_TeachAngleMode_Connect.CASE3 = null;
             this.FC_Auto_TeachAngleMode_Connect.CASE4 = null;
             this.FC_Auto_TeachAngleMode_Connect.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_Connect.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_Connect.EndFC = null;
             this.FC_Auto_TeachAngleMode_Connect.ErrID = 0;
             this.FC_Auto_TeachAngleMode_Connect.InAlarm = false;
@@ -1776,6 +1805,7 @@
             this.FC_Auto_TeachAngleMode_START.CASE3 = null;
             this.FC_Auto_TeachAngleMode_START.CASE4 = null;
             this.FC_Auto_TeachAngleMode_START.ContinueRun = false;
+            this.FC_Auto_TeachAngleMode_START.DesignTimeParent = null;
             this.FC_Auto_TeachAngleMode_START.EndFC = null;
             this.FC_Auto_TeachAngleMode_START.ErrID = 0;
             this.FC_Auto_TeachAngleMode_START.InAlarm = false;
@@ -1873,12 +1903,12 @@
             this.label14.Text = "WOIA(Aligner OCR)";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // WOIA
+            // WOI_AT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 736);
-            this.Name = "WOIA";
+            this.ClientSize = new System.Drawing.Size(1028, 736);
+            this.Name = "WOI_AT";
             this.Text = "WOIA";
             this.tabMain.ResumeLayout(false);
             this.tpControl.ResumeLayout(false);
@@ -1891,6 +1921,7 @@
             this.TabFlow.ResumeLayout(false);
             this.tpHome.ResumeLayout(false);
             this.tpAuto.ResumeLayout(false);
+            this.tpCheck.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             this.groupBox3.ResumeLayout(false);

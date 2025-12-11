@@ -249,10 +249,7 @@
             this.FC_Auto_WTRMain_WTRWorkDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WTRMain_Start = new ProVLib.FlowChart();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.FC_Auto_WTR_A_Next2 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next3 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next4 = new ProVLib.FlowChart();
-            this.FC_Auto_WTR_A_Next5 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_AlignementIsDone = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next6 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next7 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_FlagIsDoIt = new ProVLib.FlowChart();
@@ -261,6 +258,10 @@
             this.FC_Auto_WTR_A_IsNeedLoadFromPort = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_IsNeedUnloadToPort = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_Next1 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next2 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next3 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next4 = new ProVLib.FlowChart();
+            this.FC_Auto_WTR_A_Next5 = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_ResetUnloadAction = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_UnloadActionDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WTR_A_ResetLoadAction = new ProVLib.FlowChart();
@@ -351,7 +352,6 @@
             this.FC_Auto_WOI_BB_AlignDoIt = new ProVLib.FlowChart();
             this.FC_Auto_WOI_BB_Done = new ProVLib.FlowChart();
             this.OptionDS = new KCSDK.DataManagement(this.components);
-            this.FC_Auto_WTR_A_AlignementIsDone = new ProVLib.FlowChart();
             this.TabFlow.SuspendLayout();
             this.tpHome.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -412,7 +412,7 @@
             this.TabFlow.Location = new System.Drawing.Point(0, 0);
             this.TabFlow.Name = "TabFlow";
             this.TabFlow.SelectedIndex = 0;
-            this.TabFlow.Size = new System.Drawing.Size(1370, 881);
+            this.TabFlow.Size = new System.Drawing.Size(1309, 749);
             this.TabFlow.TabIndex = 1;
             // 
             // tpHome
@@ -422,7 +422,7 @@
             this.tpHome.Location = new System.Drawing.Point(4, 44);
             this.tpHome.Name = "tpHome";
             this.tpHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHome.Size = new System.Drawing.Size(1362, 833);
+            this.tpHome.Size = new System.Drawing.Size(1301, 701);
             this.tpHome.TabIndex = 0;
             this.tpHome.Text = "歸零流程";
             // 
@@ -436,7 +436,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1356, 827);
+            this.tabControl1.Size = new System.Drawing.Size(1295, 695);
             this.tabControl1.TabIndex = 0;
             // 
             // tap_Initial_LoadPort
@@ -445,7 +445,7 @@
             this.tap_Initial_LoadPort.Location = new System.Drawing.Point(4, 35);
             this.tap_Initial_LoadPort.Name = "tap_Initial_LoadPort";
             this.tap_Initial_LoadPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_LoadPort.Size = new System.Drawing.Size(1348, 788);
+            this.tap_Initial_LoadPort.Size = new System.Drawing.Size(1287, 656);
             this.tap_Initial_LoadPort.TabIndex = 12;
             this.tap_Initial_LoadPort.Text = "LoadPort";
             this.tap_Initial_LoadPort.UseVisualStyleBackColor = true;
@@ -460,7 +460,7 @@
             this.tabControl7.Location = new System.Drawing.Point(3, 3);
             this.tabControl7.Name = "tabControl7";
             this.tabControl7.SelectedIndex = 0;
-            this.tabControl7.Size = new System.Drawing.Size(1342, 782);
+            this.tabControl7.Size = new System.Drawing.Size(1281, 650);
             this.tabControl7.TabIndex = 0;
             // 
             // tap_LPA
@@ -472,7 +472,7 @@
             this.tap_LPA.Location = new System.Drawing.Point(4, 35);
             this.tap_LPA.Name = "tap_LPA";
             this.tap_LPA.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_LPA.Size = new System.Drawing.Size(1334, 743);
+            this.tap_LPA.Size = new System.Drawing.Size(1273, 611);
             this.tap_LPA.TabIndex = 3;
             this.tap_LPA.Text = "LPA";
             this.tap_LPA.UseVisualStyleBackColor = true;
@@ -610,7 +610,7 @@
             this.tap_LPB.Location = new System.Drawing.Point(4, 22);
             this.tap_LPB.Name = "tap_LPB";
             this.tap_LPB.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_LPB.Size = new System.Drawing.Size(1334, 756);
+            this.tap_LPB.Size = new System.Drawing.Size(992, 624);
             this.tap_LPB.TabIndex = 1;
             this.tap_LPB.Text = "LPB";
             this.tap_LPB.UseVisualStyleBackColor = true;
@@ -748,7 +748,7 @@
             this.tap_LPC.Location = new System.Drawing.Point(4, 22);
             this.tap_LPC.Name = "tap_LPC";
             this.tap_LPC.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_LPC.Size = new System.Drawing.Size(1334, 756);
+            this.tap_LPC.Size = new System.Drawing.Size(992, 624);
             this.tap_LPC.TabIndex = 2;
             this.tap_LPC.Text = "LPC";
             this.tap_LPC.UseVisualStyleBackColor = true;
@@ -886,7 +886,7 @@
             this.tap_LPD.Location = new System.Drawing.Point(4, 22);
             this.tap_LPD.Name = "tap_LPD";
             this.tap_LPD.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_LPD.Size = new System.Drawing.Size(1334, 756);
+            this.tap_LPD.Size = new System.Drawing.Size(992, 624);
             this.tap_LPD.TabIndex = 0;
             this.tap_LPD.Text = "LPD";
             this.tap_LPD.UseVisualStyleBackColor = true;
@@ -1021,7 +1021,7 @@
             this.tap_Initial_WTR.Location = new System.Drawing.Point(4, 22);
             this.tap_Initial_WTR.Name = "tap_Initial_WTR";
             this.tap_Initial_WTR.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WTR.Size = new System.Drawing.Size(1348, 801);
+            this.tap_Initial_WTR.Size = new System.Drawing.Size(1006, 669);
             this.tap_Initial_WTR.TabIndex = 7;
             this.tap_Initial_WTR.Text = "WTR";
             this.tap_Initial_WTR.UseVisualStyleBackColor = true;
@@ -1034,7 +1034,7 @@
             this.tabControl10.Location = new System.Drawing.Point(3, 3);
             this.tabControl10.Name = "tabControl10";
             this.tabControl10.SelectedIndex = 0;
-            this.tabControl10.Size = new System.Drawing.Size(1342, 795);
+            this.tabControl10.Size = new System.Drawing.Size(1000, 663);
             this.tabControl10.TabIndex = 5;
             // 
             // tap_Initial_WTR_A
@@ -1047,7 +1047,7 @@
             this.tap_Initial_WTR_A.Location = new System.Drawing.Point(4, 35);
             this.tap_Initial_WTR_A.Name = "tap_Initial_WTR_A";
             this.tap_Initial_WTR_A.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WTR_A.Size = new System.Drawing.Size(1334, 756);
+            this.tap_Initial_WTR_A.Size = new System.Drawing.Size(992, 624);
             this.tap_Initial_WTR_A.TabIndex = 0;
             this.tap_Initial_WTR_A.Text = "WTR_A";
             this.tap_Initial_WTR_A.UseVisualStyleBackColor = true;
@@ -1217,7 +1217,7 @@
             this.tap_Initial_WTR_B.Location = new System.Drawing.Point(4, 22);
             this.tap_Initial_WTR_B.Name = "tap_Initial_WTR_B";
             this.tap_Initial_WTR_B.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WTR_B.Size = new System.Drawing.Size(1334, 769);
+            this.tap_Initial_WTR_B.Size = new System.Drawing.Size(992, 637);
             this.tap_Initial_WTR_B.TabIndex = 1;
             this.tap_Initial_WTR_B.Text = "WTR_B";
             this.tap_Initial_WTR_B.UseVisualStyleBackColor = true;
@@ -1383,7 +1383,7 @@
             this.tap_Initial_WAS.Location = new System.Drawing.Point(4, 22);
             this.tap_Initial_WAS.Name = "tap_Initial_WAS";
             this.tap_Initial_WAS.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_Initial_WAS.Size = new System.Drawing.Size(1348, 801);
+            this.tap_Initial_WAS.Size = new System.Drawing.Size(1006, 669);
             this.tap_Initial_WAS.TabIndex = 5;
             this.tap_Initial_WAS.Text = "WAS";
             this.tap_Initial_WAS.UseVisualStyleBackColor = true;
@@ -1396,7 +1396,7 @@
             this.tabControl9.Location = new System.Drawing.Point(3, 3);
             this.tabControl9.Name = "tabControl9";
             this.tabControl9.SelectedIndex = 0;
-            this.tabControl9.Size = new System.Drawing.Size(1342, 795);
+            this.tabControl9.Size = new System.Drawing.Size(1000, 663);
             this.tabControl9.TabIndex = 0;
             // 
             // tabPage26
@@ -1409,7 +1409,7 @@
             this.tabPage26.Location = new System.Drawing.Point(4, 35);
             this.tabPage26.Name = "tabPage26";
             this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage26.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage26.Size = new System.Drawing.Size(992, 624);
             this.tabPage26.TabIndex = 0;
             this.tabPage26.Text = "WAS_A";
             this.tabPage26.UseVisualStyleBackColor = true;
@@ -1579,7 +1579,7 @@
             this.tabPage27.Location = new System.Drawing.Point(4, 22);
             this.tabPage27.Name = "tabPage27";
             this.tabPage27.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage27.Size = new System.Drawing.Size(1334, 769);
+            this.tabPage27.Size = new System.Drawing.Size(992, 637);
             this.tabPage27.TabIndex = 1;
             this.tabPage27.Text = "WAS_B";
             this.tabPage27.UseVisualStyleBackColor = true;
@@ -1744,7 +1744,7 @@
             this.tap_Initial_WOI.Controls.Add(this.tabControl8);
             this.tap_Initial_WOI.Location = new System.Drawing.Point(4, 22);
             this.tap_Initial_WOI.Name = "tap_Initial_WOI";
-            this.tap_Initial_WOI.Size = new System.Drawing.Size(1348, 801);
+            this.tap_Initial_WOI.Size = new System.Drawing.Size(1006, 669);
             this.tap_Initial_WOI.TabIndex = 13;
             this.tap_Initial_WOI.Text = "WOI";
             this.tap_Initial_WOI.UseVisualStyleBackColor = true;
@@ -1759,7 +1759,7 @@
             this.tabControl8.Location = new System.Drawing.Point(0, 0);
             this.tabControl8.Name = "tabControl8";
             this.tabControl8.SelectedIndex = 0;
-            this.tabControl8.Size = new System.Drawing.Size(1348, 801);
+            this.tabControl8.Size = new System.Drawing.Size(1006, 669);
             this.tabControl8.TabIndex = 0;
             // 
             // tabPage18
@@ -1771,7 +1771,7 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 35);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(1340, 762);
+            this.tabPage18.Size = new System.Drawing.Size(998, 630);
             this.tabPage18.TabIndex = 0;
             this.tabPage18.Text = "WOI_AT";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -1909,7 +1909,7 @@
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
             this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage23.Size = new System.Drawing.Size(1340, 775);
+            this.tabPage23.Size = new System.Drawing.Size(998, 643);
             this.tabPage23.TabIndex = 1;
             this.tabPage23.Text = "WOI_AB";
             this.tabPage23.UseVisualStyleBackColor = true;
@@ -2047,7 +2047,7 @@
             this.tabPage24.Location = new System.Drawing.Point(4, 22);
             this.tabPage24.Name = "tabPage24";
             this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage24.Size = new System.Drawing.Size(1340, 775);
+            this.tabPage24.Size = new System.Drawing.Size(998, 643);
             this.tabPage24.TabIndex = 2;
             this.tabPage24.Text = "WOI_BT";
             this.tabPage24.UseVisualStyleBackColor = true;
@@ -2185,7 +2185,7 @@
             this.tabPage25.Location = new System.Drawing.Point(4, 22);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage25.Size = new System.Drawing.Size(1340, 775);
+            this.tabPage25.Size = new System.Drawing.Size(998, 643);
             this.tabPage25.TabIndex = 3;
             this.tabPage25.Text = "WOI_BB";
             this.tabPage25.UseVisualStyleBackColor = true;
@@ -2321,7 +2321,7 @@
             this.tpAuto.Location = new System.Drawing.Point(4, 44);
             this.tpAuto.Name = "tpAuto";
             this.tpAuto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAuto.Size = new System.Drawing.Size(1362, 833);
+            this.tpAuto.Size = new System.Drawing.Size(1301, 701);
             this.tpAuto.TabIndex = 1;
             this.tpAuto.Text = "自動流程";
             // 
@@ -2335,7 +2335,7 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1356, 827);
+            this.tabControl2.Size = new System.Drawing.Size(1295, 695);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage1
@@ -2344,7 +2344,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 35);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1348, 788);
+            this.tabPage1.Size = new System.Drawing.Size(1287, 656);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Load Port";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2359,7 +2359,7 @@
             this.tabControl3.Location = new System.Drawing.Point(3, 3);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1342, 782);
+            this.tabControl3.Size = new System.Drawing.Size(1281, 650);
             this.tabControl3.TabIndex = 0;
             // 
             // tabPage3
@@ -2395,7 +2395,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 35);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1334, 743);
+            this.tabPage3.Size = new System.Drawing.Size(1273, 611);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "LoadPort1";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2553,7 +2553,7 @@
             this.FC_Auto_LoadPort1_WaitHandOffReadyToReady.SlowRunCycle = -1;
             this.FC_Auto_LoadPort1_WaitHandOffReadyToReady.StartFC = null;
             this.FC_Auto_LoadPort1_WaitHandOffReadyToReady.Text = "Wait Hand Off Ready to Load";
-            this.FC_Auto_LoadPort1_WaitHandOffReadyToReady.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_LoadPort1_WaitHandOffReadyToReady_Run);
+            this.FC_Auto_LoadPort1_WaitHandOffReadyToReady.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_LoadPort1_WaitHandOffReadyToLoad_Run);
             // 
             // FC_Auto_LoadPort1_WaitHandOffReadyDone
             // 
@@ -3301,7 +3301,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage4.Size = new System.Drawing.Size(992, 624);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "LoadPort2";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -4207,7 +4207,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage5.Size = new System.Drawing.Size(992, 624);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "LoadPort3";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -5113,7 +5113,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage6.Size = new System.Drawing.Size(992, 624);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "LoadPort4";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -5992,7 +5992,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 35);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1348, 788);
+            this.tabPage2.Size = new System.Drawing.Size(1287, 656);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "WTR";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -6006,7 +6006,7 @@
             this.tabControl4.Location = new System.Drawing.Point(3, 3);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1342, 782);
+            this.tabControl4.Size = new System.Drawing.Size(1281, 650);
             this.tabControl4.TabIndex = 0;
             // 
             // tabPage7
@@ -6035,7 +6035,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 35);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1334, 743);
+            this.tabPage7.Size = new System.Drawing.Size(1273, 611);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Main";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -6719,134 +6719,41 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 35);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1334, 743);
+            this.tabPage8.Size = new System.Drawing.Size(1273, 611);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "WTR_A";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // FC_Auto_WTR_A_Next2
+            // FC_Auto_WTR_A_AlignementIsDone
             // 
-            this.FC_Auto_WTR_A_Next2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next2.CASE1 = null;
-            this.FC_Auto_WTR_A_Next2.CASE2 = null;
-            this.FC_Auto_WTR_A_Next2.CASE3 = null;
-            this.FC_Auto_WTR_A_Next2.CASE4 = null;
-            this.FC_Auto_WTR_A_Next2.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next2.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next2.EndFC = null;
-            this.FC_Auto_WTR_A_Next2.ErrID = 0;
-            this.FC_Auto_WTR_A_Next2.InAlarm = false;
-            this.FC_Auto_WTR_A_Next2.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next2.Location = new System.Drawing.Point(1237, 283);
-            this.FC_Auto_WTR_A_Next2.LockUI = false;
-            this.FC_Auto_WTR_A_Next2.Message = null;
-            this.FC_Auto_WTR_A_Next2.MsgID = 0;
-            this.FC_Auto_WTR_A_Next2.Name = "FC_Auto_WTR_A_Next2";
-            this.FC_Auto_WTR_A_Next2.NEXT = this.FC_Auto_WTR_A_Next3;
-            this.FC_Auto_WTR_A_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next2.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next2.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next2.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next2.Running = false;
-            this.FC_Auto_WTR_A_Next2.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next2.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next2.StartFC = null;
-            this.FC_Auto_WTR_A_Next2.Text = "Next";
-            this.FC_Auto_WTR_A_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next2_Run);
-            // 
-            // FC_Auto_WTR_A_Next3
-            // 
-            this.FC_Auto_WTR_A_Next3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next3.CASE1 = null;
-            this.FC_Auto_WTR_A_Next3.CASE2 = null;
-            this.FC_Auto_WTR_A_Next3.CASE3 = null;
-            this.FC_Auto_WTR_A_Next3.CASE4 = null;
-            this.FC_Auto_WTR_A_Next3.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next3.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next3.EndFC = null;
-            this.FC_Auto_WTR_A_Next3.ErrID = 0;
-            this.FC_Auto_WTR_A_Next3.InAlarm = false;
-            this.FC_Auto_WTR_A_Next3.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next3.Location = new System.Drawing.Point(1237, 237);
-            this.FC_Auto_WTR_A_Next3.LockUI = false;
-            this.FC_Auto_WTR_A_Next3.Message = null;
-            this.FC_Auto_WTR_A_Next3.MsgID = 0;
-            this.FC_Auto_WTR_A_Next3.Name = "FC_Auto_WTR_A_Next3";
-            this.FC_Auto_WTR_A_Next3.NEXT = this.FC_Auto_WTR_A_Next4;
-            this.FC_Auto_WTR_A_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next3.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next3.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next3.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next3.Running = false;
-            this.FC_Auto_WTR_A_Next3.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next3.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next3.StartFC = null;
-            this.FC_Auto_WTR_A_Next3.Text = "Next";
-            this.FC_Auto_WTR_A_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next3_Run);
-            // 
-            // FC_Auto_WTR_A_Next4
-            // 
-            this.FC_Auto_WTR_A_Next4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next4.CASE1 = null;
-            this.FC_Auto_WTR_A_Next4.CASE2 = null;
-            this.FC_Auto_WTR_A_Next4.CASE3 = null;
-            this.FC_Auto_WTR_A_Next4.CASE4 = null;
-            this.FC_Auto_WTR_A_Next4.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next4.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next4.EndFC = null;
-            this.FC_Auto_WTR_A_Next4.ErrID = 0;
-            this.FC_Auto_WTR_A_Next4.InAlarm = false;
-            this.FC_Auto_WTR_A_Next4.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next4.Location = new System.Drawing.Point(1237, 191);
-            this.FC_Auto_WTR_A_Next4.LockUI = false;
-            this.FC_Auto_WTR_A_Next4.Message = null;
-            this.FC_Auto_WTR_A_Next4.MsgID = 0;
-            this.FC_Auto_WTR_A_Next4.Name = "FC_Auto_WTR_A_Next4";
-            this.FC_Auto_WTR_A_Next4.NEXT = this.FC_Auto_WTR_A_Next5;
-            this.FC_Auto_WTR_A_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next4.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next4.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next4.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next4.Running = false;
-            this.FC_Auto_WTR_A_Next4.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next4.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next4.StartFC = null;
-            this.FC_Auto_WTR_A_Next4.Text = "Next";
-            this.FC_Auto_WTR_A_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next4_Run);
-            // 
-            // FC_Auto_WTR_A_Next5
-            // 
-            this.FC_Auto_WTR_A_Next5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_Next5.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_Next5.CASE1 = null;
-            this.FC_Auto_WTR_A_Next5.CASE2 = null;
-            this.FC_Auto_WTR_A_Next5.CASE3 = null;
-            this.FC_Auto_WTR_A_Next5.CASE4 = null;
-            this.FC_Auto_WTR_A_Next5.ContinueRun = false;
-            this.FC_Auto_WTR_A_Next5.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_Next5.EndFC = null;
-            this.FC_Auto_WTR_A_Next5.ErrID = 0;
-            this.FC_Auto_WTR_A_Next5.InAlarm = false;
-            this.FC_Auto_WTR_A_Next5.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next5.Location = new System.Drawing.Point(1237, 145);
-            this.FC_Auto_WTR_A_Next5.LockUI = false;
-            this.FC_Auto_WTR_A_Next5.Message = null;
-            this.FC_Auto_WTR_A_Next5.MsgID = 0;
-            this.FC_Auto_WTR_A_Next5.Name = "FC_Auto_WTR_A_Next5";
-            this.FC_Auto_WTR_A_Next5.NEXT = this.FC_Auto_WTR_A_Next6;
-            this.FC_Auto_WTR_A_Next5.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_Next5.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_Next5.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_Next5.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_Next5.Running = false;
-            this.FC_Auto_WTR_A_Next5.Size = new System.Drawing.Size(56, 25);
-            this.FC_Auto_WTR_A_Next5.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_Next5.StartFC = null;
-            this.FC_Auto_WTR_A_Next5.Text = "Next";
-            this.FC_Auto_WTR_A_Next5.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next5_Run);
+            this.FC_Auto_WTR_A_AlignementIsDone.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_AlignementIsDone.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE1 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE2 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE3 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.CASE4 = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.ContinueRun = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.EndFC = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.ErrID = 0;
+            this.FC_Auto_WTR_A_AlignementIsDone.InAlarm = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.IsFlowHead = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Location = new System.Drawing.Point(685, 96);
+            this.FC_Auto_WTR_A_AlignementIsDone.LockUI = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Message = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.MsgID = 0;
+            this.FC_Auto_WTR_A_AlignementIsDone.Name = "FC_Auto_WTR_A_AlignementIsDone";
+            this.FC_Auto_WTR_A_AlignementIsDone.NEXT = this.FC_Auto_WTR_A_Next6;
+            this.FC_Auto_WTR_A_AlignementIsDone.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_AlignementIsDone.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_AlignementIsDone.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_AlignementIsDone.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_AlignementIsDone.Running = false;
+            this.FC_Auto_WTR_A_AlignementIsDone.Size = new System.Drawing.Size(200, 25);
+            this.FC_Auto_WTR_A_AlignementIsDone.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_AlignementIsDone.StartFC = null;
+            this.FC_Auto_WTR_A_AlignementIsDone.Text = "Alignement IsDone?";
+            this.FC_Auto_WTR_A_AlignementIsDone.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_AlignementIsDone_Run);
             // 
             // FC_Auto_WTR_A_Next6
             // 
@@ -6862,7 +6769,7 @@
             this.FC_Auto_WTR_A_Next6.ErrID = 0;
             this.FC_Auto_WTR_A_Next6.InAlarm = false;
             this.FC_Auto_WTR_A_Next6.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next6.Location = new System.Drawing.Point(1237, 99);
+            this.FC_Auto_WTR_A_Next6.Location = new System.Drawing.Point(924, 96);
             this.FC_Auto_WTR_A_Next6.LockUI = false;
             this.FC_Auto_WTR_A_Next6.Message = null;
             this.FC_Auto_WTR_A_Next6.MsgID = 0;
@@ -6893,7 +6800,7 @@
             this.FC_Auto_WTR_A_Next7.ErrID = 0;
             this.FC_Auto_WTR_A_Next7.InAlarm = false;
             this.FC_Auto_WTR_A_Next7.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next7.Location = new System.Drawing.Point(1237, 53);
+            this.FC_Auto_WTR_A_Next7.Location = new System.Drawing.Point(924, 50);
             this.FC_Auto_WTR_A_Next7.LockUI = false;
             this.FC_Auto_WTR_A_Next7.Message = null;
             this.FC_Auto_WTR_A_Next7.MsgID = 0;
@@ -6924,7 +6831,7 @@
             this.FC_Auto_WTR_A_FlagIsDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_FlagIsDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_FlagIsDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_FlagIsDoIt.Location = new System.Drawing.Point(100, 53);
+            this.FC_Auto_WTR_A_FlagIsDoIt.Location = new System.Drawing.Point(6, 50);
             this.FC_Auto_WTR_A_FlagIsDoIt.LockUI = false;
             this.FC_Auto_WTR_A_FlagIsDoIt.Message = null;
             this.FC_Auto_WTR_A_FlagIsDoIt.MsgID = 0;
@@ -6955,7 +6862,7 @@
             this.FC_Auto_WTR_A_IsNeedSendToAligner.ErrID = 0;
             this.FC_Auto_WTR_A_IsNeedSendToAligner.InAlarm = false;
             this.FC_Auto_WTR_A_IsNeedSendToAligner.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedSendToAligner.Location = new System.Drawing.Point(100, 99);
+            this.FC_Auto_WTR_A_IsNeedSendToAligner.Location = new System.Drawing.Point(6, 142);
             this.FC_Auto_WTR_A_IsNeedSendToAligner.LockUI = false;
             this.FC_Auto_WTR_A_IsNeedSendToAligner.Message = null;
             this.FC_Auto_WTR_A_IsNeedSendToAligner.MsgID = 0;
@@ -6986,7 +6893,7 @@
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.ErrID = 0;
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.InAlarm = false;
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(100, 145);
+            this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Location = new System.Drawing.Point(6, 188);
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.LockUI = false;
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.Message = null;
             this.FC_Auto_WTR_A_IsNeedReceiveFromAligner.MsgID = 0;
@@ -7017,7 +6924,7 @@
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.ErrID = 0;
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.InAlarm = false;
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Location = new System.Drawing.Point(100, 191);
+            this.FC_Auto_WTR_A_IsNeedLoadFromPort.Location = new System.Drawing.Point(6, 234);
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.LockUI = false;
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.Message = null;
             this.FC_Auto_WTR_A_IsNeedLoadFromPort.MsgID = 0;
@@ -7048,7 +6955,7 @@
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.ErrID = 0;
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.InAlarm = false;
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.IsFlowHead = false;
-            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Location = new System.Drawing.Point(100, 237);
+            this.FC_Auto_WTR_A_IsNeedUnloadToPort.Location = new System.Drawing.Point(6, 280);
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.LockUI = false;
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.Message = null;
             this.FC_Auto_WTR_A_IsNeedUnloadToPort.MsgID = 0;
@@ -7079,7 +6986,7 @@
             this.FC_Auto_WTR_A_Next1.ErrID = 0;
             this.FC_Auto_WTR_A_Next1.InAlarm = false;
             this.FC_Auto_WTR_A_Next1.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Next1.Location = new System.Drawing.Point(172, 283);
+            this.FC_Auto_WTR_A_Next1.Location = new System.Drawing.Point(78, 326);
             this.FC_Auto_WTR_A_Next1.LockUI = false;
             this.FC_Auto_WTR_A_Next1.Message = null;
             this.FC_Auto_WTR_A_Next1.MsgID = 0;
@@ -7096,6 +7003,130 @@
             this.FC_Auto_WTR_A_Next1.Text = "Next";
             this.FC_Auto_WTR_A_Next1.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next1_Run);
             // 
+            // FC_Auto_WTR_A_Next2
+            // 
+            this.FC_Auto_WTR_A_Next2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next2.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next2.CASE1 = null;
+            this.FC_Auto_WTR_A_Next2.CASE2 = null;
+            this.FC_Auto_WTR_A_Next2.CASE3 = null;
+            this.FC_Auto_WTR_A_Next2.CASE4 = null;
+            this.FC_Auto_WTR_A_Next2.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next2.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next2.EndFC = null;
+            this.FC_Auto_WTR_A_Next2.ErrID = 0;
+            this.FC_Auto_WTR_A_Next2.InAlarm = false;
+            this.FC_Auto_WTR_A_Next2.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next2.Location = new System.Drawing.Point(923, 326);
+            this.FC_Auto_WTR_A_Next2.LockUI = false;
+            this.FC_Auto_WTR_A_Next2.Message = null;
+            this.FC_Auto_WTR_A_Next2.MsgID = 0;
+            this.FC_Auto_WTR_A_Next2.Name = "FC_Auto_WTR_A_Next2";
+            this.FC_Auto_WTR_A_Next2.NEXT = this.FC_Auto_WTR_A_Next3;
+            this.FC_Auto_WTR_A_Next2.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next2.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next2.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next2.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next2.Running = false;
+            this.FC_Auto_WTR_A_Next2.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next2.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next2.StartFC = null;
+            this.FC_Auto_WTR_A_Next2.Text = "Next";
+            this.FC_Auto_WTR_A_Next2.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next2_Run);
+            // 
+            // FC_Auto_WTR_A_Next3
+            // 
+            this.FC_Auto_WTR_A_Next3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next3.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next3.CASE1 = null;
+            this.FC_Auto_WTR_A_Next3.CASE2 = null;
+            this.FC_Auto_WTR_A_Next3.CASE3 = null;
+            this.FC_Auto_WTR_A_Next3.CASE4 = null;
+            this.FC_Auto_WTR_A_Next3.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next3.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next3.EndFC = null;
+            this.FC_Auto_WTR_A_Next3.ErrID = 0;
+            this.FC_Auto_WTR_A_Next3.InAlarm = false;
+            this.FC_Auto_WTR_A_Next3.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next3.Location = new System.Drawing.Point(923, 280);
+            this.FC_Auto_WTR_A_Next3.LockUI = false;
+            this.FC_Auto_WTR_A_Next3.Message = null;
+            this.FC_Auto_WTR_A_Next3.MsgID = 0;
+            this.FC_Auto_WTR_A_Next3.Name = "FC_Auto_WTR_A_Next3";
+            this.FC_Auto_WTR_A_Next3.NEXT = this.FC_Auto_WTR_A_Next4;
+            this.FC_Auto_WTR_A_Next3.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next3.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next3.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next3.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next3.Running = false;
+            this.FC_Auto_WTR_A_Next3.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next3.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next3.StartFC = null;
+            this.FC_Auto_WTR_A_Next3.Text = "Next";
+            this.FC_Auto_WTR_A_Next3.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next3_Run);
+            // 
+            // FC_Auto_WTR_A_Next4
+            // 
+            this.FC_Auto_WTR_A_Next4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next4.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next4.CASE1 = null;
+            this.FC_Auto_WTR_A_Next4.CASE2 = null;
+            this.FC_Auto_WTR_A_Next4.CASE3 = null;
+            this.FC_Auto_WTR_A_Next4.CASE4 = null;
+            this.FC_Auto_WTR_A_Next4.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next4.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next4.EndFC = null;
+            this.FC_Auto_WTR_A_Next4.ErrID = 0;
+            this.FC_Auto_WTR_A_Next4.InAlarm = false;
+            this.FC_Auto_WTR_A_Next4.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next4.Location = new System.Drawing.Point(923, 234);
+            this.FC_Auto_WTR_A_Next4.LockUI = false;
+            this.FC_Auto_WTR_A_Next4.Message = null;
+            this.FC_Auto_WTR_A_Next4.MsgID = 0;
+            this.FC_Auto_WTR_A_Next4.Name = "FC_Auto_WTR_A_Next4";
+            this.FC_Auto_WTR_A_Next4.NEXT = this.FC_Auto_WTR_A_Next5;
+            this.FC_Auto_WTR_A_Next4.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next4.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next4.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next4.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next4.Running = false;
+            this.FC_Auto_WTR_A_Next4.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next4.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next4.StartFC = null;
+            this.FC_Auto_WTR_A_Next4.Text = "Next";
+            this.FC_Auto_WTR_A_Next4.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next4_Run);
+            // 
+            // FC_Auto_WTR_A_Next5
+            // 
+            this.FC_Auto_WTR_A_Next5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.FC_Auto_WTR_A_Next5.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.FC_Auto_WTR_A_Next5.CASE1 = null;
+            this.FC_Auto_WTR_A_Next5.CASE2 = null;
+            this.FC_Auto_WTR_A_Next5.CASE3 = null;
+            this.FC_Auto_WTR_A_Next5.CASE4 = null;
+            this.FC_Auto_WTR_A_Next5.ContinueRun = false;
+            this.FC_Auto_WTR_A_Next5.DesignTimeParent = null;
+            this.FC_Auto_WTR_A_Next5.EndFC = null;
+            this.FC_Auto_WTR_A_Next5.ErrID = 0;
+            this.FC_Auto_WTR_A_Next5.InAlarm = false;
+            this.FC_Auto_WTR_A_Next5.IsFlowHead = false;
+            this.FC_Auto_WTR_A_Next5.Location = new System.Drawing.Point(923, 188);
+            this.FC_Auto_WTR_A_Next5.LockUI = false;
+            this.FC_Auto_WTR_A_Next5.Message = null;
+            this.FC_Auto_WTR_A_Next5.MsgID = 0;
+            this.FC_Auto_WTR_A_Next5.Name = "FC_Auto_WTR_A_Next5";
+            this.FC_Auto_WTR_A_Next5.NEXT = this.FC_Auto_WTR_A_Next6;
+            this.FC_Auto_WTR_A_Next5.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.FC_Auto_WTR_A_Next5.OrgLocation = new System.Drawing.Point(0, 0);
+            this.FC_Auto_WTR_A_Next5.OrgSize = new System.Drawing.Size(0, 0);
+            this.FC_Auto_WTR_A_Next5.OverTimeSpec = 100;
+            this.FC_Auto_WTR_A_Next5.Running = false;
+            this.FC_Auto_WTR_A_Next5.Size = new System.Drawing.Size(56, 25);
+            this.FC_Auto_WTR_A_Next5.SlowRunCycle = -1;
+            this.FC_Auto_WTR_A_Next5.StartFC = null;
+            this.FC_Auto_WTR_A_Next5.Text = "Next";
+            this.FC_Auto_WTR_A_Next5.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_Next5_Run);
+            // 
             // FC_Auto_WTR_A_ResetUnloadAction
             // 
             this.FC_Auto_WTR_A_ResetUnloadAction.BackColor = System.Drawing.Color.RoyalBlue;
@@ -7110,7 +7141,7 @@
             this.FC_Auto_WTR_A_ResetUnloadAction.ErrID = 0;
             this.FC_Auto_WTR_A_ResetUnloadAction.InAlarm = false;
             this.FC_Auto_WTR_A_ResetUnloadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetUnloadAction.Location = new System.Drawing.Point(334, 237);
+            this.FC_Auto_WTR_A_ResetUnloadAction.Location = new System.Drawing.Point(239, 280);
             this.FC_Auto_WTR_A_ResetUnloadAction.LockUI = false;
             this.FC_Auto_WTR_A_ResetUnloadAction.Message = null;
             this.FC_Auto_WTR_A_ResetUnloadAction.MsgID = 0;
@@ -7141,7 +7172,7 @@
             this.FC_Auto_WTR_A_UnloadActionDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_UnloadActionDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_UnloadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_UnloadActionDoIt.Location = new System.Drawing.Point(555, 237);
+            this.FC_Auto_WTR_A_UnloadActionDoIt.Location = new System.Drawing.Point(460, 280);
             this.FC_Auto_WTR_A_UnloadActionDoIt.LockUI = false;
             this.FC_Auto_WTR_A_UnloadActionDoIt.Message = null;
             this.FC_Auto_WTR_A_UnloadActionDoIt.MsgID = 0;
@@ -7172,7 +7203,7 @@
             this.FC_Auto_WTR_A_ResetLoadAction.ErrID = 0;
             this.FC_Auto_WTR_A_ResetLoadAction.InAlarm = false;
             this.FC_Auto_WTR_A_ResetLoadAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetLoadAction.Location = new System.Drawing.Point(334, 191);
+            this.FC_Auto_WTR_A_ResetLoadAction.Location = new System.Drawing.Point(239, 234);
             this.FC_Auto_WTR_A_ResetLoadAction.LockUI = false;
             this.FC_Auto_WTR_A_ResetLoadAction.Message = null;
             this.FC_Auto_WTR_A_ResetLoadAction.MsgID = 0;
@@ -7203,7 +7234,7 @@
             this.FC_Auto_WTR_A_LoadActionDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_LoadActionDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_LoadActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_LoadActionDoIt.Location = new System.Drawing.Point(555, 191);
+            this.FC_Auto_WTR_A_LoadActionDoIt.Location = new System.Drawing.Point(460, 234);
             this.FC_Auto_WTR_A_LoadActionDoIt.LockUI = false;
             this.FC_Auto_WTR_A_LoadActionDoIt.Message = null;
             this.FC_Auto_WTR_A_LoadActionDoIt.MsgID = 0;
@@ -7234,7 +7265,7 @@
             this.FC_Auto_WTR_A_ResetReceiveAction.ErrID = 0;
             this.FC_Auto_WTR_A_ResetReceiveAction.InAlarm = false;
             this.FC_Auto_WTR_A_ResetReceiveAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetReceiveAction.Location = new System.Drawing.Point(334, 145);
+            this.FC_Auto_WTR_A_ResetReceiveAction.Location = new System.Drawing.Point(239, 188);
             this.FC_Auto_WTR_A_ResetReceiveAction.LockUI = false;
             this.FC_Auto_WTR_A_ResetReceiveAction.Message = null;
             this.FC_Auto_WTR_A_ResetReceiveAction.MsgID = 0;
@@ -7265,7 +7296,7 @@
             this.FC_Auto_WTR_A_ReceiveActionDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_ReceiveActionDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_ReceiveActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ReceiveActionDoIt.Location = new System.Drawing.Point(555, 145);
+            this.FC_Auto_WTR_A_ReceiveActionDoIt.Location = new System.Drawing.Point(460, 188);
             this.FC_Auto_WTR_A_ReceiveActionDoIt.LockUI = false;
             this.FC_Auto_WTR_A_ReceiveActionDoIt.Message = null;
             this.FC_Auto_WTR_A_ReceiveActionDoIt.MsgID = 0;
@@ -7296,7 +7327,7 @@
             this.FC_Auto_WTR_A_ResetSendAction.ErrID = 0;
             this.FC_Auto_WTR_A_ResetSendAction.InAlarm = false;
             this.FC_Auto_WTR_A_ResetSendAction.IsFlowHead = false;
-            this.FC_Auto_WTR_A_ResetSendAction.Location = new System.Drawing.Point(334, 99);
+            this.FC_Auto_WTR_A_ResetSendAction.Location = new System.Drawing.Point(239, 142);
             this.FC_Auto_WTR_A_ResetSendAction.LockUI = false;
             this.FC_Auto_WTR_A_ResetSendAction.Message = null;
             this.FC_Auto_WTR_A_ResetSendAction.MsgID = 0;
@@ -7327,7 +7358,7 @@
             this.FC_Auto_WTR_A_SendActionDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_SendActionDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_SendActionDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_SendActionDoIt.Location = new System.Drawing.Point(555, 99);
+            this.FC_Auto_WTR_A_SendActionDoIt.Location = new System.Drawing.Point(460, 142);
             this.FC_Auto_WTR_A_SendActionDoIt.LockUI = false;
             this.FC_Auto_WTR_A_SendActionDoIt.Message = null;
             this.FC_Auto_WTR_A_SendActionDoIt.MsgID = 0;
@@ -7358,7 +7389,7 @@
             this.FC_Auto_WTR_A_AlignementDoIt.ErrID = 0;
             this.FC_Auto_WTR_A_AlignementDoIt.InAlarm = false;
             this.FC_Auto_WTR_A_AlignementDoIt.IsFlowHead = false;
-            this.FC_Auto_WTR_A_AlignementDoIt.Location = new System.Drawing.Point(780, 99);
+            this.FC_Auto_WTR_A_AlignementDoIt.Location = new System.Drawing.Point(685, 142);
             this.FC_Auto_WTR_A_AlignementDoIt.LockUI = false;
             this.FC_Auto_WTR_A_AlignementDoIt.Message = null;
             this.FC_Auto_WTR_A_AlignementDoIt.MsgID = 0;
@@ -7389,7 +7420,7 @@
             this.FC_Auto_WTR_A_Action_Start.ErrID = 0;
             this.FC_Auto_WTR_A_Action_Start.InAlarm = false;
             this.FC_Auto_WTR_A_Action_Start.IsFlowHead = false;
-            this.FC_Auto_WTR_A_Action_Start.Location = new System.Drawing.Point(100, 10);
+            this.FC_Auto_WTR_A_Action_Start.Location = new System.Drawing.Point(6, 7);
             this.FC_Auto_WTR_A_Action_Start.LockUI = false;
             this.FC_Auto_WTR_A_Action_Start.Message = null;
             this.FC_Auto_WTR_A_Action_Start.MsgID = 0;
@@ -7430,10 +7461,10 @@
             this.tabPage17.Controls.Add(this.FC_Auto_WTR_B_IsNeedSendToAligner);
             this.tabPage17.Controls.Add(this.FC_Auto_WTR_B_FlagIsDoIt);
             this.tabPage17.Controls.Add(this.FC_Auto_WTR_B_Action_Start);
-            this.tabPage17.Location = new System.Drawing.Point(4, 35);
+            this.tabPage17.Location = new System.Drawing.Point(4, 22);
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(1334, 743);
+            this.tabPage17.Size = new System.Drawing.Size(1273, 624);
             this.tabPage17.TabIndex = 2;
             this.tabPage17.Text = "WTR_B";
             this.tabPage17.UseVisualStyleBackColor = true;
@@ -8126,7 +8157,7 @@
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1348, 801);
+            this.tabPage9.Size = new System.Drawing.Size(1287, 669);
             this.tabPage9.TabIndex = 2;
             this.tabPage9.Text = "WAS";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -8139,7 +8170,7 @@
             this.tabControl6.Location = new System.Drawing.Point(3, 3);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(1342, 795);
+            this.tabControl6.Size = new System.Drawing.Size(1281, 663);
             this.tabControl6.TabIndex = 0;
             // 
             // tabPage15
@@ -8162,7 +8193,7 @@
             this.tabPage15.Location = new System.Drawing.Point(4, 35);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage15.Size = new System.Drawing.Size(1273, 624);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "WAS_A";
             this.tabPage15.UseVisualStyleBackColor = true;
@@ -8652,7 +8683,7 @@
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(1334, 769);
+            this.tabPage16.Size = new System.Drawing.Size(992, 624);
             this.tabPage16.TabIndex = 1;
             this.tabPage16.Text = "WAS_B";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -9128,7 +9159,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1348, 801);
+            this.tabPage10.Size = new System.Drawing.Size(1287, 669);
             this.tabPage10.TabIndex = 3;
             this.tabPage10.Text = "WOI";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -9143,7 +9174,7 @@
             this.tabControl5.Location = new System.Drawing.Point(3, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(1342, 795);
+            this.tabControl5.Size = new System.Drawing.Size(1281, 663);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage11
@@ -9155,7 +9186,7 @@
             this.tabPage11.Location = new System.Drawing.Point(4, 35);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(1334, 756);
+            this.tabPage11.Size = new System.Drawing.Size(1273, 624);
             this.tabPage11.TabIndex = 0;
             this.tabPage11.Text = "WOI_AT";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -9293,7 +9324,7 @@
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(1334, 769);
+            this.tabPage12.Size = new System.Drawing.Size(992, 624);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "WOI_AB";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -9431,7 +9462,7 @@
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(1334, 769);
+            this.tabPage13.Size = new System.Drawing.Size(992, 624);
             this.tabPage13.TabIndex = 2;
             this.tabPage13.Text = "WOI_BT";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -9569,7 +9600,7 @@
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1334, 769);
+            this.tabPage14.Size = new System.Drawing.Size(992, 624);
             this.tabPage14.TabIndex = 3;
             this.tabPage14.Text = "WOI_BB";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -9703,42 +9734,11 @@
             this.OptionDS.ModifiedLog = false;
             this.OptionDS.ModifiedLogToDB = true;
             // 
-            // FC_Auto_WTR_A_AlignementIsDone
-            // 
-            this.FC_Auto_WTR_A_AlignementIsDone.BackColor = System.Drawing.Color.RoyalBlue;
-            this.FC_Auto_WTR_A_AlignementIsDone.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.FC_Auto_WTR_A_AlignementIsDone.CASE1 = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.CASE2 = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.CASE3 = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.CASE4 = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.ContinueRun = false;
-            this.FC_Auto_WTR_A_AlignementIsDone.DesignTimeParent = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.EndFC = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.ErrID = 0;
-            this.FC_Auto_WTR_A_AlignementIsDone.InAlarm = false;
-            this.FC_Auto_WTR_A_AlignementIsDone.IsFlowHead = false;
-            this.FC_Auto_WTR_A_AlignementIsDone.Location = new System.Drawing.Point(1011, 99);
-            this.FC_Auto_WTR_A_AlignementIsDone.LockUI = false;
-            this.FC_Auto_WTR_A_AlignementIsDone.Message = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.MsgID = 0;
-            this.FC_Auto_WTR_A_AlignementIsDone.Name = "FC_Auto_WTR_A_AlignementIsDone";
-            this.FC_Auto_WTR_A_AlignementIsDone.NEXT = this.FC_Auto_WTR_A_Next6;
-            this.FC_Auto_WTR_A_AlignementIsDone.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.FC_Auto_WTR_A_AlignementIsDone.OrgLocation = new System.Drawing.Point(0, 0);
-            this.FC_Auto_WTR_A_AlignementIsDone.OrgSize = new System.Drawing.Size(0, 0);
-            this.FC_Auto_WTR_A_AlignementIsDone.OverTimeSpec = 100;
-            this.FC_Auto_WTR_A_AlignementIsDone.Running = false;
-            this.FC_Auto_WTR_A_AlignementIsDone.Size = new System.Drawing.Size(200, 25);
-            this.FC_Auto_WTR_A_AlignementIsDone.SlowRunCycle = -1;
-            this.FC_Auto_WTR_A_AlignementIsDone.StartFC = null;
-            this.FC_Auto_WTR_A_AlignementIsDone.Text = "Alignement IsDone?";
-            this.FC_Auto_WTR_A_AlignementIsDone.Run += new ProVLib.FlowChart.RunEventHandler(this.FC_Auto_WTR_A_AlignementIsDone_Run);
-            // 
             // MainFlowF
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(1370, 881);
+            this.ClientSize = new System.Drawing.Size(1309, 749);
             this.Controls.Add(this.TabFlow);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Name = "MainFlowF";

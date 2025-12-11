@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WOI_AB));
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,14 +77,14 @@
             this.FC_AUTO_InchSwitch_Done = new ProVLib.FlowChart();
             this.flowChart8 = new ProVLib.FlowChart();
             this.FC_AUTO_INCH_SWITCH_START = new ProVLib.FlowChart();
-            this.dCheckBox2 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox2 = new KCSDK.DCheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dCheckBox3 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox3 = new KCSDK.DCheckBox();
             this.dFieldEdit3 = new KCSDK.DFieldEdit();
             this.btn_OpenTeachingSoftware = new System.Windows.Forms.Button();
             this.pbx_OCR_Read = new System.Windows.Forms.PictureBox();
             this.lb_OcrResult = new System.Windows.Forms.Label();
-            this.dCheckBox4 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox4 = new KCSDK.DCheckBox();
             this.FC_Auto_TeachAngleMode_Done = new ProVLib.FlowChart();
             this.flowChart6 = new ProVLib.FlowChart();
             this.flowChart9 = new ProVLib.FlowChart();
@@ -96,8 +95,8 @@
             this.FC_Auto_TeachAngleMode_Connect = new ProVLib.FlowChart();
             this.FC_Auto_TeachAngleMode_START = new ProVLib.FlowChart();
             this.dFieldEdit4 = new KCSDK.DFieldEdit();
-            this.dCheckBox1 = new KCSDK.DCheckBox(this.components);
-            this.dCheckBox5 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox1 = new KCSDK.DCheckBox();
+            this.dCheckBox5 = new KCSDK.DCheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tpControl.SuspendLayout();
@@ -130,7 +129,7 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1280, 736);
+            this.tabMain.Size = new System.Drawing.Size(1028, 736);
             // 
             // tpControl
             // 
@@ -140,7 +139,7 @@
             this.tpControl.Controls.Add(this.btn_OpenTeachingSoftware);
             this.tpControl.Controls.Add(this.groupBox1);
             this.tpControl.Controls.Add(this.flowLayoutPanel4);
-            this.tpControl.Size = new System.Drawing.Size(1272, 668);
+            this.tpControl.Size = new System.Drawing.Size(1020, 668);
             // 
             // tpSetting
             // 
@@ -1908,7 +1907,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 736);
+            this.ClientSize = new System.Drawing.Size(1028, 736);
             this.Name = "WOI_AB";
             this.Text = "7";
             this.tabMain.ResumeLayout(false);

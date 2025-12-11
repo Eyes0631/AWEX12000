@@ -135,6 +135,7 @@
             this.TabFlow.SuspendLayout();
             this.tpHome.SuspendLayout();
             this.tpAuto.SuspendLayout();
+            this.tpCheck.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -155,14 +156,14 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1317, 717);
+            this.tabMain.Size = new System.Drawing.Size(1028, 717);
             // 
             // tpControl
             // 
             this.tpControl.Controls.Add(this.label14);
             this.tpControl.Controls.Add(this.groupBox11);
             this.tpControl.Controls.Add(this.Aligner);
-            this.tpControl.Size = new System.Drawing.Size(1309, 649);
+            this.tpControl.Size = new System.Drawing.Size(1020, 649);
             // 
             // tpSetting
             // 
@@ -170,10 +171,6 @@
             this.tpSetting.Controls.Add(this.dFieldEdit2);
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit2, 0);
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit1, 0);
-            // 
-            // tpFlow
-            // 
-            this.tpFlow.Size = new System.Drawing.Size(1309, 649);
             // 
             // tpSuperSetting
             // 
@@ -184,10 +181,6 @@
             this.tpSuperSetting.Controls.SetChildIndex(this.panel1, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.dFieldEdit3, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox1, 0);
-            // 
-            // TabFlow
-            // 
-            this.TabFlow.Size = new System.Drawing.Size(1305, 645);
             // 
             // tpHome
             // 
@@ -223,7 +216,6 @@
             this.tpHome.Controls.Add(this.FC_Home_GetStatus);
             this.tpHome.Controls.Add(this.FC_Home_Connect);
             this.tpHome.Controls.Add(this.FC_Home_Start);
-            this.tpHome.Size = new System.Drawing.Size(1297, 603);
             // 
             // tpAuto
             // 
@@ -268,8 +260,6 @@
             this.tpAuto.Controls.Add(this.FC_Auto_Align_DoAction);
             this.tpAuto.Controls.Add(this.FC_Auto_Align_WaitCommand);
             this.tpAuto.Controls.Add(this.FC_Auto_Align_Start);
-            this.tpAuto.Location = new System.Drawing.Point(4, 38);
-            this.tpAuto.Size = new System.Drawing.Size(1297, 603);
             // 
             // panel1
             // 
@@ -482,6 +472,7 @@
             this.FC_Home_DoHome.CASE3 = null;
             this.FC_Home_DoHome.CASE4 = null;
             this.FC_Home_DoHome.ContinueRun = false;
+            this.FC_Home_DoHome.DesignTimeParent = null;
             this.FC_Home_DoHome.EndFC = null;
             this.FC_Home_DoHome.ErrID = 0;
             this.FC_Home_DoHome.InAlarm = false;
@@ -512,6 +503,7 @@
             this.FC_Home_DoHomeDone.CASE3 = null;
             this.FC_Home_DoHomeDone.CASE4 = null;
             this.FC_Home_DoHomeDone.ContinueRun = false;
+            this.FC_Home_DoHomeDone.DesignTimeParent = null;
             this.FC_Home_DoHomeDone.EndFC = null;
             this.FC_Home_DoHomeDone.ErrID = 0;
             this.FC_Home_DoHomeDone.InAlarm = false;
@@ -542,6 +534,7 @@
             this.FC_Home_SetSpeed_Doit.CASE3 = null;
             this.FC_Home_SetSpeed_Doit.CASE4 = null;
             this.FC_Home_SetSpeed_Doit.ContinueRun = false;
+            this.FC_Home_SetSpeed_Doit.DesignTimeParent = null;
             this.FC_Home_SetSpeed_Doit.EndFC = null;
             this.FC_Home_SetSpeed_Doit.ErrID = 0;
             this.FC_Home_SetSpeed_Doit.InAlarm = false;
@@ -572,6 +565,7 @@
             this.FC_Home_SetSpeed_Done.CASE3 = null;
             this.FC_Home_SetSpeed_Done.CASE4 = null;
             this.FC_Home_SetSpeed_Done.ContinueRun = false;
+            this.FC_Home_SetSpeed_Done.DesignTimeParent = null;
             this.FC_Home_SetSpeed_Done.EndFC = null;
             this.FC_Home_SetSpeed_Done.ErrID = 0;
             this.FC_Home_SetSpeed_Done.InAlarm = false;
@@ -602,6 +596,7 @@
             this.FC_Home_SetSWaferType_Doit.CASE3 = null;
             this.FC_Home_SetSWaferType_Doit.CASE4 = null;
             this.FC_Home_SetSWaferType_Doit.ContinueRun = false;
+            this.FC_Home_SetSWaferType_Doit.DesignTimeParent = null;
             this.FC_Home_SetSWaferType_Doit.EndFC = null;
             this.FC_Home_SetSWaferType_Doit.ErrID = 0;
             this.FC_Home_SetSWaferType_Doit.InAlarm = false;
@@ -632,6 +627,7 @@
             this.FC_Home_Pass.CASE3 = null;
             this.FC_Home_Pass.CASE4 = null;
             this.FC_Home_Pass.ContinueRun = false;
+            this.FC_Home_Pass.DesignTimeParent = null;
             this.FC_Home_Pass.EndFC = null;
             this.FC_Home_Pass.ErrID = 0;
             this.FC_Home_Pass.InAlarm = false;
@@ -661,6 +657,7 @@
             this.FC_Home_SetTime_Doit.CASE3 = null;
             this.FC_Home_SetTime_Doit.CASE4 = null;
             this.FC_Home_SetTime_Doit.ContinueRun = false;
+            this.FC_Home_SetTime_Doit.DesignTimeParent = null;
             this.FC_Home_SetTime_Doit.EndFC = null;
             this.FC_Home_SetTime_Doit.ErrID = 0;
             this.FC_Home_SetTime_Doit.InAlarm = false;
@@ -691,6 +688,7 @@
             this.FC_Home_SetTime_Done.CASE3 = null;
             this.FC_Home_SetTime_Done.CASE4 = null;
             this.FC_Home_SetTime_Done.ContinueRun = false;
+            this.FC_Home_SetTime_Done.DesignTimeParent = null;
             this.FC_Home_SetTime_Done.EndFC = null;
             this.FC_Home_SetTime_Done.ErrID = 0;
             this.FC_Home_SetTime_Done.InAlarm = false;
@@ -721,6 +719,7 @@
             this.FC_Home_End.CASE3 = null;
             this.FC_Home_End.CASE4 = null;
             this.FC_Home_End.ContinueRun = false;
+            this.FC_Home_End.DesignTimeParent = null;
             this.FC_Home_End.EndFC = null;
             this.FC_Home_End.ErrID = 0;
             this.FC_Home_End.InAlarm = false;
@@ -751,6 +750,7 @@
             this.FC_Home_SetWaferType_Done.CASE3 = null;
             this.FC_Home_SetWaferType_Done.CASE4 = null;
             this.FC_Home_SetWaferType_Done.ContinueRun = false;
+            this.FC_Home_SetWaferType_Done.DesignTimeParent = null;
             this.FC_Home_SetWaferType_Done.EndFC = null;
             this.FC_Home_SetWaferType_Done.ErrID = 0;
             this.FC_Home_SetWaferType_Done.InAlarm = false;
@@ -781,6 +781,7 @@
             this.FC_Home_ChkHasNoWafer.CASE3 = null;
             this.FC_Home_ChkHasNoWafer.CASE4 = null;
             this.FC_Home_ChkHasNoWafer.ContinueRun = false;
+            this.FC_Home_ChkHasNoWafer.DesignTimeParent = null;
             this.FC_Home_ChkHasNoWafer.EndFC = null;
             this.FC_Home_ChkHasNoWafer.ErrID = 0;
             this.FC_Home_ChkHasNoWafer.InAlarm = false;
@@ -811,6 +812,7 @@
             this.FC_Home_Retry1.CASE3 = null;
             this.FC_Home_Retry1.CASE4 = null;
             this.FC_Home_Retry1.ContinueRun = false;
+            this.FC_Home_Retry1.DesignTimeParent = null;
             this.FC_Home_Retry1.EndFC = null;
             this.FC_Home_Retry1.ErrID = 0;
             this.FC_Home_Retry1.InAlarm = false;
@@ -841,6 +843,7 @@
             this.FC_Home_VacOn.CASE3 = null;
             this.FC_Home_VacOn.CASE4 = null;
             this.FC_Home_VacOn.ContinueRun = false;
+            this.FC_Home_VacOn.DesignTimeParent = null;
             this.FC_Home_VacOn.EndFC = null;
             this.FC_Home_VacOn.ErrID = 0;
             this.FC_Home_VacOn.InAlarm = false;
@@ -871,6 +874,7 @@
             this.FC_Home_VacOnDone.CASE3 = null;
             this.FC_Home_VacOnDone.CASE4 = null;
             this.FC_Home_VacOnDone.ContinueRun = false;
+            this.FC_Home_VacOnDone.DesignTimeParent = null;
             this.FC_Home_VacOnDone.EndFC = null;
             this.FC_Home_VacOnDone.ErrID = 0;
             this.FC_Home_VacOnDone.InAlarm = false;
@@ -901,6 +905,7 @@
             this.FC_Home_GetStatus.CASE3 = null;
             this.FC_Home_GetStatus.CASE4 = null;
             this.FC_Home_GetStatus.ContinueRun = false;
+            this.FC_Home_GetStatus.DesignTimeParent = null;
             this.FC_Home_GetStatus.EndFC = null;
             this.FC_Home_GetStatus.ErrID = 0;
             this.FC_Home_GetStatus.InAlarm = false;
@@ -931,6 +936,7 @@
             this.FC_Home_GetStatusDone.CASE3 = null;
             this.FC_Home_GetStatusDone.CASE4 = null;
             this.FC_Home_GetStatusDone.ContinueRun = false;
+            this.FC_Home_GetStatusDone.DesignTimeParent = null;
             this.FC_Home_GetStatusDone.EndFC = null;
             this.FC_Home_GetStatusDone.ErrID = 0;
             this.FC_Home_GetStatusDone.InAlarm = false;
@@ -961,6 +967,7 @@
             this.FC_Home_VacOff.CASE3 = null;
             this.FC_Home_VacOff.CASE4 = null;
             this.FC_Home_VacOff.ContinueRun = false;
+            this.FC_Home_VacOff.DesignTimeParent = null;
             this.FC_Home_VacOff.EndFC = null;
             this.FC_Home_VacOff.ErrID = 0;
             this.FC_Home_VacOff.InAlarm = false;
@@ -991,6 +998,7 @@
             this.FC_Home_VacOffDone.CASE3 = null;
             this.FC_Home_VacOffDone.CASE4 = null;
             this.FC_Home_VacOffDone.ContinueRun = false;
+            this.FC_Home_VacOffDone.DesignTimeParent = null;
             this.FC_Home_VacOffDone.EndFC = null;
             this.FC_Home_VacOffDone.ErrID = 0;
             this.FC_Home_VacOffDone.InAlarm = false;
@@ -1021,6 +1029,7 @@
             this.FC_Home_CommandStart_Next.CASE3 = null;
             this.FC_Home_CommandStart_Next.CASE4 = null;
             this.FC_Home_CommandStart_Next.ContinueRun = false;
+            this.FC_Home_CommandStart_Next.DesignTimeParent = null;
             this.FC_Home_CommandStart_Next.EndFC = null;
             this.FC_Home_CommandStart_Next.ErrID = 0;
             this.FC_Home_CommandStart_Next.InAlarm = false;
@@ -1051,6 +1060,7 @@
             this.FC_Home_CommandStart_WaitCommand.CASE3 = null;
             this.FC_Home_CommandStart_WaitCommand.CASE4 = null;
             this.FC_Home_CommandStart_WaitCommand.ContinueRun = false;
+            this.FC_Home_CommandStart_WaitCommand.DesignTimeParent = null;
             this.FC_Home_CommandStart_WaitCommand.EndFC = null;
             this.FC_Home_CommandStart_WaitCommand.ErrID = 0;
             this.FC_Home_CommandStart_WaitCommand.InAlarm = false;
@@ -1081,6 +1091,7 @@
             this.FC_Home_CommandStart_DoCommand.CASE3 = null;
             this.FC_Home_CommandStart_DoCommand.CASE4 = null;
             this.FC_Home_CommandStart_DoCommand.ContinueRun = false;
+            this.FC_Home_CommandStart_DoCommand.DesignTimeParent = null;
             this.FC_Home_CommandStart_DoCommand.EndFC = null;
             this.FC_Home_CommandStart_DoCommand.ErrID = 0;
             this.FC_Home_CommandStart_DoCommand.InAlarm = false;
@@ -1111,6 +1122,7 @@
             this.FC_Home_CommandStart_CommandFinish.CASE3 = null;
             this.FC_Home_CommandStart_CommandFinish.CASE4 = null;
             this.FC_Home_CommandStart_CommandFinish.ContinueRun = false;
+            this.FC_Home_CommandStart_CommandFinish.DesignTimeParent = null;
             this.FC_Home_CommandStart_CommandFinish.EndFC = null;
             this.FC_Home_CommandStart_CommandFinish.ErrID = 0;
             this.FC_Home_CommandStart_CommandFinish.InAlarm = false;
@@ -1141,6 +1153,7 @@
             this.FC_Home_CommandStart_Retry.CASE3 = null;
             this.FC_Home_CommandStart_Retry.CASE4 = null;
             this.FC_Home_CommandStart_Retry.ContinueRun = false;
+            this.FC_Home_CommandStart_Retry.DesignTimeParent = null;
             this.FC_Home_CommandStart_Retry.EndFC = null;
             this.FC_Home_CommandStart_Retry.ErrID = 0;
             this.FC_Home_CommandStart_Retry.InAlarm = false;
@@ -1171,6 +1184,7 @@
             this.FC_Home_CommandStart_Done.CASE3 = null;
             this.FC_Home_CommandStart_Done.CASE4 = null;
             this.FC_Home_CommandStart_Done.ContinueRun = false;
+            this.FC_Home_CommandStart_Done.DesignTimeParent = null;
             this.FC_Home_CommandStart_Done.EndFC = null;
             this.FC_Home_CommandStart_Done.ErrID = 0;
             this.FC_Home_CommandStart_Done.InAlarm = false;
@@ -1201,6 +1215,7 @@
             this.FC_Home_Command_Start.CASE3 = null;
             this.FC_Home_Command_Start.CASE4 = null;
             this.FC_Home_Command_Start.ContinueRun = false;
+            this.FC_Home_Command_Start.DesignTimeParent = null;
             this.FC_Home_Command_Start.EndFC = null;
             this.FC_Home_Command_Start.ErrID = 0;
             this.FC_Home_Command_Start.InAlarm = false;
@@ -1231,6 +1246,7 @@
             this.FC_Home_Simulation.CASE3 = null;
             this.FC_Home_Simulation.CASE4 = null;
             this.FC_Home_Simulation.ContinueRun = false;
+            this.FC_Home_Simulation.DesignTimeParent = null;
             this.FC_Home_Simulation.EndFC = null;
             this.FC_Home_Simulation.ErrID = 0;
             this.FC_Home_Simulation.InAlarm = false;
@@ -1261,6 +1277,7 @@
             this.FC_Home_Connect.CASE3 = null;
             this.FC_Home_Connect.CASE4 = null;
             this.FC_Home_Connect.ContinueRun = false;
+            this.FC_Home_Connect.DesignTimeParent = null;
             this.FC_Home_Connect.EndFC = null;
             this.FC_Home_Connect.ErrID = 0;
             this.FC_Home_Connect.InAlarm = false;
@@ -1291,6 +1308,7 @@
             this.FC_Home_Delay.CASE3 = null;
             this.FC_Home_Delay.CASE4 = null;
             this.FC_Home_Delay.ContinueRun = false;
+            this.FC_Home_Delay.DesignTimeParent = null;
             this.FC_Home_Delay.EndFC = null;
             this.FC_Home_Delay.ErrID = 0;
             this.FC_Home_Delay.InAlarm = false;
@@ -1321,6 +1339,7 @@
             this.FC_Home_Reset.CASE3 = null;
             this.FC_Home_Reset.CASE4 = null;
             this.FC_Home_Reset.ContinueRun = false;
+            this.FC_Home_Reset.DesignTimeParent = null;
             this.FC_Home_Reset.EndFC = null;
             this.FC_Home_Reset.ErrID = 0;
             this.FC_Home_Reset.InAlarm = false;
@@ -1351,6 +1370,7 @@
             this.FC_Home_Reset_Done.CASE3 = null;
             this.FC_Home_Reset_Done.CASE4 = null;
             this.FC_Home_Reset_Done.ContinueRun = false;
+            this.FC_Home_Reset_Done.DesignTimeParent = null;
             this.FC_Home_Reset_Done.EndFC = null;
             this.FC_Home_Reset_Done.ErrID = 0;
             this.FC_Home_Reset_Done.InAlarm = false;
@@ -1381,6 +1401,7 @@
             this.FC_Home_Start.CASE3 = null;
             this.FC_Home_Start.CASE4 = null;
             this.FC_Home_Start.ContinueRun = false;
+            this.FC_Home_Start.DesignTimeParent = null;
             this.FC_Home_Start.EndFC = null;
             this.FC_Home_Start.ErrID = 0;
             this.FC_Home_Start.InAlarm = false;
@@ -1411,6 +1432,7 @@
             this.FC_Home_WaitCmd.CASE3 = null;
             this.FC_Home_WaitCmd.CASE4 = null;
             this.FC_Home_WaitCmd.ContinueRun = false;
+            this.FC_Home_WaitCmd.DesignTimeParent = null;
             this.FC_Home_WaitCmd.EndFC = null;
             this.FC_Home_WaitCmd.ErrID = 0;
             this.FC_Home_WaitCmd.InAlarm = false;
@@ -1501,6 +1523,7 @@
             this.FC_Auto_Align_Next.CASE3 = null;
             this.FC_Auto_Align_Next.CASE4 = null;
             this.FC_Auto_Align_Next.ContinueRun = false;
+            this.FC_Auto_Align_Next.DesignTimeParent = null;
             this.FC_Auto_Align_Next.EndFC = null;
             this.FC_Auto_Align_Next.ErrID = 0;
             this.FC_Auto_Align_Next.InAlarm = false;
@@ -1531,6 +1554,7 @@
             this.FC_Auto_Align_WaitCommand.CASE3 = null;
             this.FC_Auto_Align_WaitCommand.CASE4 = null;
             this.FC_Auto_Align_WaitCommand.ContinueRun = false;
+            this.FC_Auto_Align_WaitCommand.DesignTimeParent = null;
             this.FC_Auto_Align_WaitCommand.EndFC = null;
             this.FC_Auto_Align_WaitCommand.ErrID = 0;
             this.FC_Auto_Align_WaitCommand.InAlarm = false;
@@ -1561,6 +1585,7 @@
             this.FC_Auto_Align_DoVacOn.CASE3 = null;
             this.FC_Auto_Align_DoVacOn.CASE4 = null;
             this.FC_Auto_Align_DoVacOn.ContinueRun = false;
+            this.FC_Auto_Align_DoVacOn.DesignTimeParent = null;
             this.FC_Auto_Align_DoVacOn.EndFC = null;
             this.FC_Auto_Align_DoVacOn.ErrID = 0;
             this.FC_Auto_Align_DoVacOn.InAlarm = false;
@@ -1591,6 +1616,7 @@
             this.FC_Auto_Align_VacOnDone.CASE3 = null;
             this.FC_Auto_Align_VacOnDone.CASE4 = null;
             this.FC_Auto_Align_VacOnDone.ContinueRun = false;
+            this.FC_Auto_Align_VacOnDone.DesignTimeParent = null;
             this.FC_Auto_Align_VacOnDone.EndFC = null;
             this.FC_Auto_Align_VacOnDone.ErrID = 0;
             this.FC_Auto_Align_VacOnDone.InAlarm = false;
@@ -1621,6 +1647,7 @@
             this.FC_Auto_Align_FailAction3.CASE3 = null;
             this.FC_Auto_Align_FailAction3.CASE4 = null;
             this.FC_Auto_Align_FailAction3.ContinueRun = false;
+            this.FC_Auto_Align_FailAction3.DesignTimeParent = null;
             this.FC_Auto_Align_FailAction3.EndFC = null;
             this.FC_Auto_Align_FailAction3.ErrID = 0;
             this.FC_Auto_Align_FailAction3.InAlarm = false;
@@ -1651,6 +1678,7 @@
             this.FC_Auto_Align_DoPreAlign.CASE3 = null;
             this.FC_Auto_Align_DoPreAlign.CASE4 = null;
             this.FC_Auto_Align_DoPreAlign.ContinueRun = false;
+            this.FC_Auto_Align_DoPreAlign.DesignTimeParent = null;
             this.FC_Auto_Align_DoPreAlign.EndFC = null;
             this.FC_Auto_Align_DoPreAlign.ErrID = 0;
             this.FC_Auto_Align_DoPreAlign.InAlarm = false;
@@ -1681,6 +1709,7 @@
             this.FC_Auto_Align_PreAlignDone.CASE3 = null;
             this.FC_Auto_Align_PreAlignDone.CASE4 = null;
             this.FC_Auto_Align_PreAlignDone.ContinueRun = false;
+            this.FC_Auto_Align_PreAlignDone.DesignTimeParent = null;
             this.FC_Auto_Align_PreAlignDone.EndFC = null;
             this.FC_Auto_Align_PreAlignDone.ErrID = 0;
             this.FC_Auto_Align_PreAlignDone.InAlarm = false;
@@ -1711,6 +1740,7 @@
             this.FC_Auto_Align_FailAction2.CASE3 = null;
             this.FC_Auto_Align_FailAction2.CASE4 = null;
             this.FC_Auto_Align_FailAction2.ContinueRun = false;
+            this.FC_Auto_Align_FailAction2.DesignTimeParent = null;
             this.FC_Auto_Align_FailAction2.EndFC = null;
             this.FC_Auto_Align_FailAction2.ErrID = 0;
             this.FC_Auto_Align_FailAction2.InAlarm = false;
@@ -1741,6 +1771,7 @@
             this.FC_Auto_Align_DoAction.CASE3 = null;
             this.FC_Auto_Align_DoAction.CASE4 = null;
             this.FC_Auto_Align_DoAction.ContinueRun = false;
+            this.FC_Auto_Align_DoAction.DesignTimeParent = null;
             this.FC_Auto_Align_DoAction.EndFC = null;
             this.FC_Auto_Align_DoAction.ErrID = 0;
             this.FC_Auto_Align_DoAction.InAlarm = false;
@@ -1771,6 +1802,7 @@
             this.FC_Auto_Align_DoActionDone.CASE3 = null;
             this.FC_Auto_Align_DoActionDone.CASE4 = null;
             this.FC_Auto_Align_DoActionDone.ContinueRun = false;
+            this.FC_Auto_Align_DoActionDone.DesignTimeParent = null;
             this.FC_Auto_Align_DoActionDone.EndFC = null;
             this.FC_Auto_Align_DoActionDone.ErrID = 0;
             this.FC_Auto_Align_DoActionDone.InAlarm = false;
@@ -1801,6 +1833,7 @@
             this.FC_Auto_Align_FailAction.CASE3 = null;
             this.FC_Auto_Align_FailAction.CASE4 = null;
             this.FC_Auto_Align_FailAction.ContinueRun = false;
+            this.FC_Auto_Align_FailAction.DesignTimeParent = null;
             this.FC_Auto_Align_FailAction.EndFC = null;
             this.FC_Auto_Align_FailAction.ErrID = 0;
             this.FC_Auto_Align_FailAction.InAlarm = false;
@@ -1831,6 +1864,7 @@
             this.FC_Auto_Align_Done.CASE3 = null;
             this.FC_Auto_Align_Done.CASE4 = null;
             this.FC_Auto_Align_Done.ContinueRun = false;
+            this.FC_Auto_Align_Done.DesignTimeParent = null;
             this.FC_Auto_Align_Done.EndFC = null;
             this.FC_Auto_Align_Done.ErrID = 0;
             this.FC_Auto_Align_Done.InAlarm = false;
@@ -1861,6 +1895,7 @@
             this.FC_Auto_Align_Start.CASE3 = null;
             this.FC_Auto_Align_Start.CASE4 = null;
             this.FC_Auto_Align_Start.ContinueRun = false;
+            this.FC_Auto_Align_Start.DesignTimeParent = null;
             this.FC_Auto_Align_Start.EndFC = null;
             this.FC_Auto_Align_Start.ErrID = 0;
             this.FC_Auto_Align_Start.InAlarm = false;
@@ -1891,6 +1926,7 @@
             this.FC_Auto_VaccumSW_Next.CASE3 = null;
             this.FC_Auto_VaccumSW_Next.CASE4 = null;
             this.FC_Auto_VaccumSW_Next.ContinueRun = false;
+            this.FC_Auto_VaccumSW_Next.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_Next.EndFC = null;
             this.FC_Auto_VaccumSW_Next.ErrID = 0;
             this.FC_Auto_VaccumSW_Next.InAlarm = false;
@@ -1921,6 +1957,7 @@
             this.FC_Auto_VaccumSW_WaitCommand.CASE3 = null;
             this.FC_Auto_VaccumSW_WaitCommand.CASE4 = null;
             this.FC_Auto_VaccumSW_WaitCommand.ContinueRun = false;
+            this.FC_Auto_VaccumSW_WaitCommand.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_WaitCommand.EndFC = null;
             this.FC_Auto_VaccumSW_WaitCommand.ErrID = 0;
             this.FC_Auto_VaccumSW_WaitCommand.InAlarm = false;
@@ -1951,6 +1988,7 @@
             this.FC_Auto_VaccumSW_DoAction.CASE3 = null;
             this.FC_Auto_VaccumSW_DoAction.CASE4 = null;
             this.FC_Auto_VaccumSW_DoAction.ContinueRun = false;
+            this.FC_Auto_VaccumSW_DoAction.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_DoAction.EndFC = null;
             this.FC_Auto_VaccumSW_DoAction.ErrID = 0;
             this.FC_Auto_VaccumSW_DoAction.InAlarm = false;
@@ -1981,6 +2019,7 @@
             this.FC_Auto_VaccumSW_DoActionDone.CASE3 = null;
             this.FC_Auto_VaccumSW_DoActionDone.CASE4 = null;
             this.FC_Auto_VaccumSW_DoActionDone.ContinueRun = false;
+            this.FC_Auto_VaccumSW_DoActionDone.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_DoActionDone.EndFC = null;
             this.FC_Auto_VaccumSW_DoActionDone.ErrID = 0;
             this.FC_Auto_VaccumSW_DoActionDone.InAlarm = false;
@@ -2011,6 +2050,7 @@
             this.FC_Auto_VaccumSW_FailAction.CASE3 = null;
             this.FC_Auto_VaccumSW_FailAction.CASE4 = null;
             this.FC_Auto_VaccumSW_FailAction.ContinueRun = false;
+            this.FC_Auto_VaccumSW_FailAction.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_FailAction.EndFC = null;
             this.FC_Auto_VaccumSW_FailAction.ErrID = 0;
             this.FC_Auto_VaccumSW_FailAction.InAlarm = false;
@@ -2041,6 +2081,7 @@
             this.FC_Auto_VaccumSW_Done.CASE3 = null;
             this.FC_Auto_VaccumSW_Done.CASE4 = null;
             this.FC_Auto_VaccumSW_Done.ContinueRun = false;
+            this.FC_Auto_VaccumSW_Done.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_Done.EndFC = null;
             this.FC_Auto_VaccumSW_Done.ErrID = 0;
             this.FC_Auto_VaccumSW_Done.InAlarm = false;
@@ -2071,6 +2112,7 @@
             this.FC_Auto_VaccumSW_Start.CASE3 = null;
             this.FC_Auto_VaccumSW_Start.CASE4 = null;
             this.FC_Auto_VaccumSW_Start.ContinueRun = false;
+            this.FC_Auto_VaccumSW_Start.DesignTimeParent = null;
             this.FC_Auto_VaccumSW_Start.EndFC = null;
             this.FC_Auto_VaccumSW_Start.ErrID = 0;
             this.FC_Auto_VaccumSW_Start.InAlarm = false;
@@ -2101,6 +2143,7 @@
             this.FC_Auto_PreAction_Next.CASE3 = null;
             this.FC_Auto_PreAction_Next.CASE4 = null;
             this.FC_Auto_PreAction_Next.ContinueRun = false;
+            this.FC_Auto_PreAction_Next.DesignTimeParent = null;
             this.FC_Auto_PreAction_Next.EndFC = null;
             this.FC_Auto_PreAction_Next.ErrID = 0;
             this.FC_Auto_PreAction_Next.InAlarm = false;
@@ -2131,6 +2174,7 @@
             this.FC_Auto_PreAction_WaitCommand.CASE3 = null;
             this.FC_Auto_PreAction_WaitCommand.CASE4 = null;
             this.FC_Auto_PreAction_WaitCommand.ContinueRun = false;
+            this.FC_Auto_PreAction_WaitCommand.DesignTimeParent = null;
             this.FC_Auto_PreAction_WaitCommand.EndFC = null;
             this.FC_Auto_PreAction_WaitCommand.ErrID = 0;
             this.FC_Auto_PreAction_WaitCommand.InAlarm = false;
@@ -2161,6 +2205,7 @@
             this.FC_Auto_PreAction_DoAction.CASE3 = null;
             this.FC_Auto_PreAction_DoAction.CASE4 = null;
             this.FC_Auto_PreAction_DoAction.ContinueRun = false;
+            this.FC_Auto_PreAction_DoAction.DesignTimeParent = null;
             this.FC_Auto_PreAction_DoAction.EndFC = null;
             this.FC_Auto_PreAction_DoAction.ErrID = 0;
             this.FC_Auto_PreAction_DoAction.InAlarm = false;
@@ -2191,6 +2236,7 @@
             this.FC_Auto_PreAction_DoActionDone.CASE3 = null;
             this.FC_Auto_PreAction_DoActionDone.CASE4 = null;
             this.FC_Auto_PreAction_DoActionDone.ContinueRun = false;
+            this.FC_Auto_PreAction_DoActionDone.DesignTimeParent = null;
             this.FC_Auto_PreAction_DoActionDone.EndFC = null;
             this.FC_Auto_PreAction_DoActionDone.ErrID = 0;
             this.FC_Auto_PreAction_DoActionDone.InAlarm = false;
@@ -2221,6 +2267,7 @@
             this.FC_Auto_PreAction_FailAction.CASE3 = null;
             this.FC_Auto_PreAction_FailAction.CASE4 = null;
             this.FC_Auto_PreAction_FailAction.ContinueRun = false;
+            this.FC_Auto_PreAction_FailAction.DesignTimeParent = null;
             this.FC_Auto_PreAction_FailAction.EndFC = null;
             this.FC_Auto_PreAction_FailAction.ErrID = 0;
             this.FC_Auto_PreAction_FailAction.InAlarm = false;
@@ -2251,6 +2298,7 @@
             this.FC_Auto_PreAction_Done.CASE3 = null;
             this.FC_Auto_PreAction_Done.CASE4 = null;
             this.FC_Auto_PreAction_Done.ContinueRun = false;
+            this.FC_Auto_PreAction_Done.DesignTimeParent = null;
             this.FC_Auto_PreAction_Done.EndFC = null;
             this.FC_Auto_PreAction_Done.ErrID = 0;
             this.FC_Auto_PreAction_Done.InAlarm = false;
@@ -2281,6 +2329,7 @@
             this.FC_Auto_PreAction_Start.CASE3 = null;
             this.FC_Auto_PreAction_Start.CASE4 = null;
             this.FC_Auto_PreAction_Start.ContinueRun = false;
+            this.FC_Auto_PreAction_Start.DesignTimeParent = null;
             this.FC_Auto_PreAction_Start.EndFC = null;
             this.FC_Auto_PreAction_Start.ErrID = 0;
             this.FC_Auto_PreAction_Start.InAlarm = false;
@@ -2452,6 +2501,7 @@
             this.OB_NegativePressure_On.ActionCount = 0;
             this.OB_NegativePressure_On.BackColor = System.Drawing.Color.RoyalBlue;
             this.OB_NegativePressure_On.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.OB_NegativePressure_On.DesignTimeParent = null;
             this.OB_NegativePressure_On.ErrID = 0;
             this.OB_NegativePressure_On.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
             this.OB_NegativePressure_On.InAlarm = false;
@@ -2475,6 +2525,7 @@
             this.OB_NegativePressure_Off.ActionCount = 0;
             this.OB_NegativePressure_Off.BackColor = System.Drawing.Color.RoyalBlue;
             this.OB_NegativePressure_Off.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.OB_NegativePressure_Off.DesignTimeParent = null;
             this.OB_NegativePressure_Off.ErrID = 0;
             this.OB_NegativePressure_Off.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
             this.OB_NegativePressure_Off.InAlarm = false;
@@ -2522,6 +2573,7 @@
             this.FC_Auto_CheckHasWafer_CheckHasWafer.CASE3 = null;
             this.FC_Auto_CheckHasWafer_CheckHasWafer.CASE4 = null;
             this.FC_Auto_CheckHasWafer_CheckHasWafer.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_CheckHasWafer.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_CheckHasWafer.EndFC = null;
             this.FC_Auto_CheckHasWafer_CheckHasWafer.ErrID = 0;
             this.FC_Auto_CheckHasWafer_CheckHasWafer.InAlarm = false;
@@ -2552,6 +2604,7 @@
             this.FC_Auto_CheckHasWafer_VacOff.CASE3 = null;
             this.FC_Auto_CheckHasWafer_VacOff.CASE4 = null;
             this.FC_Auto_CheckHasWafer_VacOff.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_VacOff.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_VacOff.EndFC = null;
             this.FC_Auto_CheckHasWafer_VacOff.ErrID = 0;
             this.FC_Auto_CheckHasWafer_VacOff.InAlarm = false;
@@ -2582,6 +2635,7 @@
             this.FC_Auto_CheckHasWafer_VacOffDone.CASE3 = null;
             this.FC_Auto_CheckHasWafer_VacOffDone.CASE4 = null;
             this.FC_Auto_CheckHasWafer_VacOffDone.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_VacOffDone.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_VacOffDone.EndFC = null;
             this.FC_Auto_CheckHasWafer_VacOffDone.ErrID = 0;
             this.FC_Auto_CheckHasWafer_VacOffDone.InAlarm = false;
@@ -2612,6 +2666,7 @@
             this.FC_Auto_CheckHasWafer_FailAction3.CASE3 = null;
             this.FC_Auto_CheckHasWafer_FailAction3.CASE4 = null;
             this.FC_Auto_CheckHasWafer_FailAction3.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_FailAction3.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_FailAction3.EndFC = null;
             this.FC_Auto_CheckHasWafer_FailAction3.ErrID = 0;
             this.FC_Auto_CheckHasWafer_FailAction3.InAlarm = false;
@@ -2642,6 +2697,7 @@
             this.FC_Auto_CheckHasWafer_Done.CASE3 = null;
             this.FC_Auto_CheckHasWafer_Done.CASE4 = null;
             this.FC_Auto_CheckHasWafer_Done.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_Done.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_Done.EndFC = null;
             this.FC_Auto_CheckHasWafer_Done.ErrID = 0;
             this.FC_Auto_CheckHasWafer_Done.InAlarm = false;
@@ -2672,6 +2728,7 @@
             this.FC_Auto_CheckHasWafer_Next.CASE3 = null;
             this.FC_Auto_CheckHasWafer_Next.CASE4 = null;
             this.FC_Auto_CheckHasWafer_Next.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_Next.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_Next.EndFC = null;
             this.FC_Auto_CheckHasWafer_Next.ErrID = 0;
             this.FC_Auto_CheckHasWafer_Next.InAlarm = false;
@@ -2702,6 +2759,7 @@
             this.FC_Auto_CheckHasWafer_WaitCommand.CASE3 = null;
             this.FC_Auto_CheckHasWafer_WaitCommand.CASE4 = null;
             this.FC_Auto_CheckHasWafer_WaitCommand.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_WaitCommand.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_WaitCommand.EndFC = null;
             this.FC_Auto_CheckHasWafer_WaitCommand.ErrID = 0;
             this.FC_Auto_CheckHasWafer_WaitCommand.InAlarm = false;
@@ -2732,6 +2790,7 @@
             this.FC_Auto_CheckHasWafer_VacOn.CASE3 = null;
             this.FC_Auto_CheckHasWafer_VacOn.CASE4 = null;
             this.FC_Auto_CheckHasWafer_VacOn.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_VacOn.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_VacOn.EndFC = null;
             this.FC_Auto_CheckHasWafer_VacOn.ErrID = 0;
             this.FC_Auto_CheckHasWafer_VacOn.InAlarm = false;
@@ -2762,6 +2821,7 @@
             this.FC_Auto_CheckHasWafer_VacOnDone.CASE3 = null;
             this.FC_Auto_CheckHasWafer_VacOnDone.CASE4 = null;
             this.FC_Auto_CheckHasWafer_VacOnDone.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_VacOnDone.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_VacOnDone.EndFC = null;
             this.FC_Auto_CheckHasWafer_VacOnDone.ErrID = 0;
             this.FC_Auto_CheckHasWafer_VacOnDone.InAlarm = false;
@@ -2792,6 +2852,7 @@
             this.FC_Auto_CheckHasWafer_FailAction.CASE3 = null;
             this.FC_Auto_CheckHasWafer_FailAction.CASE4 = null;
             this.FC_Auto_CheckHasWafer_FailAction.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_FailAction.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_FailAction.EndFC = null;
             this.FC_Auto_CheckHasWafer_FailAction.ErrID = 0;
             this.FC_Auto_CheckHasWafer_FailAction.InAlarm = false;
@@ -2822,6 +2883,7 @@
             this.FC_Auto_CheckHasWafer_GetStatus.CASE3 = null;
             this.FC_Auto_CheckHasWafer_GetStatus.CASE4 = null;
             this.FC_Auto_CheckHasWafer_GetStatus.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_GetStatus.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_GetStatus.EndFC = null;
             this.FC_Auto_CheckHasWafer_GetStatus.ErrID = 0;
             this.FC_Auto_CheckHasWafer_GetStatus.InAlarm = false;
@@ -2852,6 +2914,7 @@
             this.FC_Auto_CheckHasWafer_GetStatusDone.CASE3 = null;
             this.FC_Auto_CheckHasWafer_GetStatusDone.CASE4 = null;
             this.FC_Auto_CheckHasWafer_GetStatusDone.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_GetStatusDone.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_GetStatusDone.EndFC = null;
             this.FC_Auto_CheckHasWafer_GetStatusDone.ErrID = 0;
             this.FC_Auto_CheckHasWafer_GetStatusDone.InAlarm = false;
@@ -2882,6 +2945,7 @@
             this.FC_Auto_CheckHasWafer_FailAction2.CASE3 = null;
             this.FC_Auto_CheckHasWafer_FailAction2.CASE4 = null;
             this.FC_Auto_CheckHasWafer_FailAction2.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_FailAction2.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_FailAction2.EndFC = null;
             this.FC_Auto_CheckHasWafer_FailAction2.ErrID = 0;
             this.FC_Auto_CheckHasWafer_FailAction2.InAlarm = false;
@@ -2912,6 +2976,7 @@
             this.FC_Auto_CheckHasWafer_Start.CASE3 = null;
             this.FC_Auto_CheckHasWafer_Start.CASE4 = null;
             this.FC_Auto_CheckHasWafer_Start.ContinueRun = false;
+            this.FC_Auto_CheckHasWafer_Start.DesignTimeParent = null;
             this.FC_Auto_CheckHasWafer_Start.EndFC = null;
             this.FC_Auto_CheckHasWafer_Start.ErrID = 0;
             this.FC_Auto_CheckHasWafer_Start.InAlarm = false;
@@ -2937,7 +3002,6 @@
             // 
             this.Aligner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Aligner.ConnectedMode = CommonObj.eConnectedMode.Ethernet;
-            //this.Aligner.ConnectedMode = RobotControl.eConnectedMode.Ethernet;
             this.Aligner.IsManualTest = false;
             this.Aligner.IsSaveLog = true;
             this.Aligner.IsSimulation = false;
@@ -2963,12 +3027,12 @@
             this.label14.Text = "WAS(Aligner模組)";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // WAS
+            // WAS_A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 717);
-            this.Name = "WAS";
+            this.ClientSize = new System.Drawing.Size(1028, 717);
+            this.Name = "WAS_A";
             this.Text = "WAS";
             this.tabMain.ResumeLayout(false);
             this.tpControl.ResumeLayout(false);
@@ -2978,6 +3042,7 @@
             this.TabFlow.ResumeLayout(false);
             this.tpHome.ResumeLayout(false);
             this.tpAuto.ResumeLayout(false);
+            this.tpCheck.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

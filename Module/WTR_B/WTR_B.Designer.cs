@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WTR_B));
             this.dFieldEdit17 = new KCSDK.DFieldEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -133,6 +132,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.OB_UpperNegativePressure_On = new ProVLib.OutBit();
+            this.OB_UpperNegativePressure_Off = new ProVLib.OutBit();
             this.OB_LowerNegativePressure_On = new ProVLib.OutBit();
             this.OB_LowerNegativePressure_Off = new ProVLib.OutBit();
             this.bt_VacuumOff = new System.Windows.Forms.Button();
@@ -152,17 +153,15 @@
             this.FC_Auto_CheckHasWafer_GetStutesDone = new ProVLib.FlowChart();
             this.FC_Auto_CheckHasWafer_Next2 = new ProVLib.FlowChart();
             this.FC_Auto_CheckHasWafer_Start = new ProVLib.FlowChart();
-            this.dCheckBox3 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox3 = new KCSDK.DCheckBox();
             this.dFieldEdit5 = new KCSDK.DFieldEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dFieldEdit6 = new KCSDK.DFieldEdit();
             this.label14 = new System.Windows.Forms.Label();
-            this.dCheckBox1 = new KCSDK.DCheckBox(this.components);
+            this.dCheckBox1 = new KCSDK.DCheckBox();
             this.dFieldEdit7 = new KCSDK.DFieldEdit();
             this.Robot = new RobotControl.RobotControl();
-            this.OB_UpperNegativePressure_On = new ProVLib.OutBit();
-            this.OB_UpperNegativePressure_Off = new ProVLib.OutBit();
             this.tabMain.SuspendLayout();
             this.tpControl.SuspendLayout();
             this.tpSetting.SuspendLayout();
@@ -193,7 +192,7 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1444, 766);
+            this.tabMain.Size = new System.Drawing.Size(1028, 749);
             // 
             // tpControl
             // 
@@ -201,7 +200,7 @@
             this.tpControl.Controls.Add(this.label5);
             this.tpControl.Controls.Add(this.groupBox11);
             this.tpControl.Controls.Add(this.Robot);
-            this.tpControl.Size = new System.Drawing.Size(1436, 698);
+            this.tpControl.Size = new System.Drawing.Size(1020, 681);
             // 
             // tpSetting
             // 
@@ -215,10 +214,6 @@
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit5, 0);
             this.tpSetting.Controls.SetChildIndex(this.dCheckBox1, 0);
             this.tpSetting.Controls.SetChildIndex(this.dFieldEdit7, 0);
-            // 
-            // tpFlow
-            // 
-            this.tpFlow.Size = new System.Drawing.Size(1436, 698);
             // 
             // tpSuperSetting
             // 
@@ -241,10 +236,6 @@
             this.tpSuperSetting.Controls.SetChildIndex(this.label4, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox2, 0);
             this.tpSuperSetting.Controls.SetChildIndex(this.groupBox3, 0);
-            // 
-            // TabFlow
-            // 
-            this.TabFlow.Size = new System.Drawing.Size(1432, 694);
             // 
             // tpHome
             // 
@@ -287,7 +278,6 @@
             this.tpHome.Controls.Add(this.FC_Home_GetArmStatus);
             this.tpHome.Controls.Add(this.FC_Home_Connect);
             this.tpHome.Controls.Add(this.FC_Home_Start);
-            this.tpHome.Size = new System.Drawing.Size(1424, 652);
             // 
             // tpAuto
             // 
@@ -3417,6 +3407,54 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Vacuum";
             // 
+            // OB_UpperNegativePressure_On
+            // 
+            this.OB_UpperNegativePressure_On.ActionCount = 0;
+            this.OB_UpperNegativePressure_On.BackColor = System.Drawing.Color.RoyalBlue;
+            this.OB_UpperNegativePressure_On.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.OB_UpperNegativePressure_On.DesignTimeParent = null;
+            this.OB_UpperNegativePressure_On.ErrID = 0;
+            this.OB_UpperNegativePressure_On.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
+            this.OB_UpperNegativePressure_On.InAlarm = false;
+            this.OB_UpperNegativePressure_On.IOPort = "";
+            this.OB_UpperNegativePressure_On.IOType = ProVLib.EIOType.IOHSL;
+            this.OB_UpperNegativePressure_On.IsUseActionCount = false;
+            this.OB_UpperNegativePressure_On.Location = new System.Drawing.Point(6, 107);
+            this.OB_UpperNegativePressure_On.LockUI = false;
+            this.OB_UpperNegativePressure_On.Message = null;
+            this.OB_UpperNegativePressure_On.MsgID = 0;
+            this.OB_UpperNegativePressure_On.Name = "OB_UpperNegativePressure_On";
+            this.OB_UpperNegativePressure_On.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.OB_UpperNegativePressure_On.RetryCount = 10;
+            this.OB_UpperNegativePressure_On.Running = false;
+            this.OB_UpperNegativePressure_On.Size = new System.Drawing.Size(200, 30);
+            this.OB_UpperNegativePressure_On.Text = "Negative Pressure On_U";
+            this.OB_UpperNegativePressure_On.Value = false;
+            // 
+            // OB_UpperNegativePressure_Off
+            // 
+            this.OB_UpperNegativePressure_Off.ActionCount = 0;
+            this.OB_UpperNegativePressure_Off.BackColor = System.Drawing.Color.RoyalBlue;
+            this.OB_UpperNegativePressure_Off.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.OB_UpperNegativePressure_Off.DesignTimeParent = null;
+            this.OB_UpperNegativePressure_Off.ErrID = 0;
+            this.OB_UpperNegativePressure_Off.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
+            this.OB_UpperNegativePressure_Off.InAlarm = false;
+            this.OB_UpperNegativePressure_Off.IOPort = "";
+            this.OB_UpperNegativePressure_Off.IOType = ProVLib.EIOType.IOHSL;
+            this.OB_UpperNegativePressure_Off.IsUseActionCount = false;
+            this.OB_UpperNegativePressure_Off.Location = new System.Drawing.Point(6, 145);
+            this.OB_UpperNegativePressure_Off.LockUI = false;
+            this.OB_UpperNegativePressure_Off.Message = null;
+            this.OB_UpperNegativePressure_Off.MsgID = 0;
+            this.OB_UpperNegativePressure_Off.Name = "OB_UpperNegativePressure_Off";
+            this.OB_UpperNegativePressure_Off.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.OB_UpperNegativePressure_Off.RetryCount = 10;
+            this.OB_UpperNegativePressure_Off.Running = false;
+            this.OB_UpperNegativePressure_Off.Size = new System.Drawing.Size(200, 30);
+            this.OB_UpperNegativePressure_Off.Text = "Negative Pressure Off_U";
+            this.OB_UpperNegativePressure_Off.Value = false;
+            // 
             // OB_LowerNegativePressure_On
             // 
             this.OB_LowerNegativePressure_On.ActionCount = 0;
@@ -4107,59 +4145,11 @@
             this.Robot.UseCheckSum = false;
             this.Robot.IsSafeToAction += new RobotControl.RobotControl.IsSafeToActionEventHandler(this.Robot_IsSafeToAction);
             // 
-            // OB_UpperNegativePressure_On
-            // 
-            this.OB_UpperNegativePressure_On.ActionCount = 0;
-            this.OB_UpperNegativePressure_On.BackColor = System.Drawing.Color.RoyalBlue;
-            this.OB_UpperNegativePressure_On.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.OB_UpperNegativePressure_On.DesignTimeParent = null;
-            this.OB_UpperNegativePressure_On.ErrID = 0;
-            this.OB_UpperNegativePressure_On.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
-            this.OB_UpperNegativePressure_On.InAlarm = false;
-            this.OB_UpperNegativePressure_On.IOPort = "";
-            this.OB_UpperNegativePressure_On.IOType = ProVLib.EIOType.IOHSL;
-            this.OB_UpperNegativePressure_On.IsUseActionCount = false;
-            this.OB_UpperNegativePressure_On.Location = new System.Drawing.Point(6, 107);
-            this.OB_UpperNegativePressure_On.LockUI = false;
-            this.OB_UpperNegativePressure_On.Message = null;
-            this.OB_UpperNegativePressure_On.MsgID = 0;
-            this.OB_UpperNegativePressure_On.Name = "OB_UpperNegativePressure_On";
-            this.OB_UpperNegativePressure_On.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.OB_UpperNegativePressure_On.RetryCount = 10;
-            this.OB_UpperNegativePressure_On.Running = false;
-            this.OB_UpperNegativePressure_On.Size = new System.Drawing.Size(200, 30);
-            this.OB_UpperNegativePressure_On.Text = "Negative Pressure On_U";
-            this.OB_UpperNegativePressure_On.Value = false;
-            // 
-            // OB_UpperNegativePressure_Off
-            // 
-            this.OB_UpperNegativePressure_Off.ActionCount = 0;
-            this.OB_UpperNegativePressure_Off.BackColor = System.Drawing.Color.RoyalBlue;
-            this.OB_UpperNegativePressure_Off.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
-            this.OB_UpperNegativePressure_Off.DesignTimeParent = null;
-            this.OB_UpperNegativePressure_Off.ErrID = 0;
-            this.OB_UpperNegativePressure_Off.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
-            this.OB_UpperNegativePressure_Off.InAlarm = false;
-            this.OB_UpperNegativePressure_Off.IOPort = "";
-            this.OB_UpperNegativePressure_Off.IOType = ProVLib.EIOType.IOHSL;
-            this.OB_UpperNegativePressure_Off.IsUseActionCount = false;
-            this.OB_UpperNegativePressure_Off.Location = new System.Drawing.Point(6, 145);
-            this.OB_UpperNegativePressure_Off.LockUI = false;
-            this.OB_UpperNegativePressure_Off.Message = null;
-            this.OB_UpperNegativePressure_Off.MsgID = 0;
-            this.OB_UpperNegativePressure_Off.Name = "OB_UpperNegativePressure_Off";
-            this.OB_UpperNegativePressure_Off.ObjType = ProVLib.EObjType.VOID_TYPE;
-            this.OB_UpperNegativePressure_Off.RetryCount = 10;
-            this.OB_UpperNegativePressure_Off.Running = false;
-            this.OB_UpperNegativePressure_Off.Size = new System.Drawing.Size(200, 30);
-            this.OB_UpperNegativePressure_Off.Text = "Negative Pressure Off_U";
-            this.OB_UpperNegativePressure_Off.Value = false;
-            // 
             // WTR_B
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 766);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Name = "WTR_B";
             this.Text = "WTR";
             this.tabMain.ResumeLayout(false);

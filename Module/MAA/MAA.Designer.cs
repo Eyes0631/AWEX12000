@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAA));
-            ProVLib.MotorParam motorParam2 = new ProVLib.MotorParam();
+            ProVLib.MotorParam motorParam1 = new ProVLib.MotorParam();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.SafeDoor8 = new ProVLib.InBit();
             this.SafeDoor7 = new ProVLib.InBit();
@@ -64,8 +64,10 @@
             this.EMGA2 = new ProVLib.InBit();
             this.EMGA1 = new ProVLib.InBit();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.motor1 = new ProVLib.Motor();
             this.button1 = new System.Windows.Forms.Button();
+            this.motor1 = new ProVLib.Motor();
+            this.ib_Safety_Gate = new ProVLib.InBit();
+            this.ib_KeySwitch = new ProVLib.InBit();
             this.tabMain.SuspendLayout();
             this.tpControl.SuspendLayout();
             this.tpFlow.SuspendLayout();
@@ -95,10 +97,12 @@
             // 
             // tabMain
             // 
-            this.tabMain.Size = new System.Drawing.Size(1044, 651);
+            this.tabMain.Size = new System.Drawing.Size(1028, 651);
             // 
             // tpControl
             // 
+            this.tpControl.Controls.Add(this.ib_KeySwitch);
+            this.tpControl.Controls.Add(this.ib_Safety_Gate);
             this.tpControl.Controls.Add(this.groupBox7);
             this.tpControl.Controls.Add(this.groupBox6);
             this.tpControl.Controls.Add(this.groupBox5);
@@ -106,7 +110,7 @@
             this.tpControl.Controls.Add(this.groupBox3);
             this.tpControl.Controls.Add(this.groupBox2);
             this.tpControl.Controls.Add(this.groupBox1);
-            this.tpControl.Size = new System.Drawing.Size(1036, 583);
+            this.tpControl.Size = new System.Drawing.Size(1020, 583);
             // 
             // tpSuperSetting
             // 
@@ -946,6 +950,16 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "警示燈";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(32, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // motor1
             // 
             this.motor1.Acceleration = 300000;
@@ -1000,71 +1014,71 @@
             this.motor1.Message = null;
             this.motor1.Mileage = 0F;
             this.motor1.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
-            motorParam2.Acceleration = 300000;
-            motorParam2.AddressID = 0;
-            motorParam2.AlarmPolarity = ProVLib.ALMPOLARITY.ACTIVELOW;
-            motorParam2.AxisDIR = ProVLib.AxisDIRType.AXIS_X;
-            motorParam2.AxisIndex = 0;
-            motorParam2.BasePulseCount = 0;
-            motorParam2.CMPSRC = ProVLib.ECMPSRC.CMPSRC_None;
-            motorParam2.CommandPos = 0;
-            motorParam2.Deceleration = 300000;
-            motorParam2.DelayT = 0D;
-            motorParam2.Direction = true;
-            motorParam2.DownZ1 = 0;
-            motorParam2.DownZ2 = 0;
-            motorParam2.DownZ3 = 0;
-            motorParam2.EncGearRatio = 1D;
-            motorParam2.EncoderPos = 0;
-            motorParam2.EndX = 0;
-            motorParam2.ExtraMotor = null;
-            motorParam2.Function = ProVLib.ExtraFunction.None;
-            motorParam2.GearRatio = 1D;
-            motorParam2.GroupNo = ((short)(0));
-            motorParam2.HomeBeforeGoto = false;
-            motorParam2.HomeDirection = true;
-            motorParam2.HomeException = ProVLib.HOMEEXP.Default;
-            motorParam2.HomeMode = ProVLib.HOMEMODE.LIMITSNR;
-            motorParam2.HomePos = 100;
-            motorParam2.IDZ = ((short)(0));
-            motorParam2.InitSpeed = 100;
-            motorParam2.InPosOn = false;
-            motorParam2.InposRange = 50;
-            motorParam2.IOPort = "000";
-            motorParam2.IsAlarmReseted = false;
-            motorParam2.IsBusy = false;
-            motorParam2.IsELSensorB = true;
-            motorParam2.IsSensorB = true;
-            motorParam2.IsUseSoftLimit = false;
-            motorParam2.JogHighSpeed = 30000;
-            motorParam2.JogLowSpeed = 1000;
-            motorParam2.LimitX = 0;
-            motorParam2.LimitZ = 0;
-            motorParam2.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
-            motorParam2.MotionCard = ProVLib.EMOTIONCARD.MCMNET;
-            motorParam2.MotorType = ProVLib.MOTORTYPE.NORMAL;
-            motorParam2.ObjType = 0;
-            motorParam2.Owner = null;
-            motorParam2.PitchCOMEnable = false;
-            motorParam2.PulseCtrlMode = ProVLib.EPULSEMODE.CWCCW_2;
-            motorParam2.ScanByKernal = false;
-            motorParam2.SCurveAccRatio = 50;
-            motorParam2.SCurveDecRatio = 50;
-            motorParam2.SerialPortName = "COM1";
-            motorParam2.ServoAlarmOn = false;
-            motorParam2.ServoOnPolarity = ProVLib.SVONPOLARITY.ACTIVELOW;
-            motorParam2.SlaveIOPort = null;
-            motorParam2.SoftLimitN = -9999999;
-            motorParam2.SoftLimitP = 9999999;
-            motorParam2.Speed = 50000;
-            motorParam2.SpeedPattern = ProVLib.MOVINGPATTERN.T_Curve;
-            motorParam2.StopDeceleration = 100000000;
-            motorParam2.TRGSRC = ProVLib.ETRIGGERSRC.TRGENC;
-            motorParam2.TriggerChannel = ProVLib.ETriggerChannel.CH_1;
-            motorParam2.TriggerPolarity = ProVLib.ETriggerLogic.ActiveLow;
-            motorParam2.UpZ = 0;
-            motorParam2.ZPhaseLogic = ProVLib.ZPHASELOGIC.FALLINGEDGE;
-            this.motor1.MotorParameter = motorParam2;
+            motorParam1.Acceleration = 300000;
+            motorParam1.AddressID = 0;
+            motorParam1.AlarmPolarity = ProVLib.ALMPOLARITY.ACTIVELOW;
+            motorParam1.AxisDIR = ProVLib.AxisDIRType.AXIS_X;
+            motorParam1.AxisIndex = 0;
+            motorParam1.BasePulseCount = 0;
+            motorParam1.CMPSRC = ProVLib.ECMPSRC.CMPSRC_None;
+            motorParam1.CommandPos = 0;
+            motorParam1.Deceleration = 300000;
+            motorParam1.DelayT = 0D;
+            motorParam1.Direction = true;
+            motorParam1.DownZ1 = 0;
+            motorParam1.DownZ2 = 0;
+            motorParam1.DownZ3 = 0;
+            motorParam1.EncGearRatio = 1D;
+            motorParam1.EncoderPos = 0;
+            motorParam1.EndX = 0;
+            motorParam1.ExtraMotor = null;
+            motorParam1.Function = ProVLib.ExtraFunction.None;
+            motorParam1.GearRatio = 1D;
+            motorParam1.GroupNo = ((short)(0));
+            motorParam1.HomeBeforeGoto = false;
+            motorParam1.HomeDirection = true;
+            motorParam1.HomeException = ProVLib.HOMEEXP.Default;
+            motorParam1.HomeMode = ProVLib.HOMEMODE.LIMITSNR;
+            motorParam1.HomePos = 100;
+            motorParam1.IDZ = ((short)(0));
+            motorParam1.InitSpeed = 100;
+            motorParam1.InPosOn = false;
+            motorParam1.InposRange = 50;
+            motorParam1.IOPort = "000";
+            motorParam1.IsAlarmReseted = false;
+            motorParam1.IsBusy = false;
+            motorParam1.IsELSensorB = true;
+            motorParam1.IsSensorB = true;
+            motorParam1.IsUseSoftLimit = false;
+            motorParam1.JogHighSpeed = 30000;
+            motorParam1.JogLowSpeed = 1000;
+            motorParam1.LimitX = 0;
+            motorParam1.LimitZ = 0;
+            motorParam1.MNETSpeed = ProVLib.EMNETSPEED.MNET10M;
+            motorParam1.MotionCard = ProVLib.EMOTIONCARD.MCMNET;
+            motorParam1.MotorType = ProVLib.MOTORTYPE.NORMAL;
+            motorParam1.ObjType = 0;
+            motorParam1.Owner = null;
+            motorParam1.PitchCOMEnable = false;
+            motorParam1.PulseCtrlMode = ProVLib.EPULSEMODE.CWCCW_2;
+            motorParam1.ScanByKernal = false;
+            motorParam1.SCurveAccRatio = 50;
+            motorParam1.SCurveDecRatio = 50;
+            motorParam1.SerialPortName = "COM1";
+            motorParam1.ServoAlarmOn = false;
+            motorParam1.ServoOnPolarity = ProVLib.SVONPOLARITY.ACTIVELOW;
+            motorParam1.SlaveIOPort = null;
+            motorParam1.SoftLimitN = -9999999;
+            motorParam1.SoftLimitP = 9999999;
+            motorParam1.Speed = 50000;
+            motorParam1.SpeedPattern = ProVLib.MOVINGPATTERN.T_Curve;
+            motorParam1.StopDeceleration = 100000000;
+            motorParam1.TRGSRC = ProVLib.ETRIGGERSRC.TRGENC;
+            motorParam1.TriggerChannel = ProVLib.ETriggerChannel.CH_1;
+            motorParam1.TriggerPolarity = ProVLib.ETriggerLogic.ActiveLow;
+            motorParam1.UpZ = 0;
+            motorParam1.ZPhaseLogic = ProVLib.ZPHASELOGIC.FALLINGEDGE;
+            this.motor1.MotorParameter = motorParam1;
             this.motor1.MoverSize = ((uint)(0u));
             this.motor1.MsgID = 0;
             this.motor1.Name = "motor1";
@@ -1095,21 +1109,69 @@
             this.motor1.UpZ = 0;
             this.motor1.ZPhaseLogic = ProVLib.ZPHASELOGIC.FALLINGEDGE;
             // 
-            // button1
+            // ib_Safety_Gate
             // 
-            this.button1.Location = new System.Drawing.Point(32, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ib_Safety_Gate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ib_Safety_Gate.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.ib_Safety_Gate.DesignTimeParent = null;
+            this.ib_Safety_Gate.ErrID = 0;
+            this.ib_Safety_Gate.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
+            this.ib_Safety_Gate.InAlarm = false;
+            this.ib_Safety_Gate.IOPort = "010A";
+            this.ib_Safety_Gate.IOType = ProVLib.EIOType.IODMCNET;
+            this.ib_Safety_Gate.Location = new System.Drawing.Point(243, 283);
+            this.ib_Safety_Gate.LockUI = false;
+            this.ib_Safety_Gate.Message = null;
+            this.ib_Safety_Gate.MsgID = 0;
+            this.ib_Safety_Gate.Name = "ib_Safety_Gate";
+            this.ib_Safety_Gate.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.ib_Safety_Gate.Running = false;
+            this.ib_Safety_Gate.Simu_Mode = ProVLib.SIMULATION_MODE.S_RANDOM;
+            this.ib_Safety_Gate.Simu_OnOffCondition = ProVLib.SIMULATION_ONOFFCONDITION.SRR_KEEP;
+            this.ib_Safety_Gate.Simu_OutPort1 = null;
+            this.ib_Safety_Gate.Simu_OutPort2 = null;
+            this.ib_Safety_Gate.Simu_RandomNum = 2;
+            this.ib_Safety_Gate.Simu_RandomTime = 100;
+            this.ib_Safety_Gate.Simu_ReflectDelayTm = 100;
+            this.ib_Safety_Gate.Simu_ReflectRule = ProVLib.SIMULATION_REFLECTRULE.SRR_ON_OFF;
+            this.ib_Safety_Gate.Simu_Reverse = false;
+            this.ib_Safety_Gate.Size = new System.Drawing.Size(200, 30);
+            this.ib_Safety_Gate.Text = "Safety Gate";
+            // 
+            // ib_KeySwitch
+            // 
+            this.ib_KeySwitch.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ib_KeySwitch.CaptionFont = new System.Drawing.Font("微軟正黑體", 10F);
+            this.ib_KeySwitch.DesignTimeParent = null;
+            this.ib_KeySwitch.ErrID = 0;
+            this.ib_KeySwitch.HSLSpeed = ProVLib.EHSLSPEED.HSL6M;
+            this.ib_KeySwitch.InAlarm = false;
+            this.ib_KeySwitch.IOPort = "0105";
+            this.ib_KeySwitch.IOType = ProVLib.EIOType.IODMCNET;
+            this.ib_KeySwitch.Location = new System.Drawing.Point(243, 315);
+            this.ib_KeySwitch.LockUI = false;
+            this.ib_KeySwitch.Message = null;
+            this.ib_KeySwitch.MsgID = 0;
+            this.ib_KeySwitch.Name = "ib_KeySwitch";
+            this.ib_KeySwitch.ObjType = ProVLib.EObjType.VOID_TYPE;
+            this.ib_KeySwitch.Running = false;
+            this.ib_KeySwitch.Simu_Mode = ProVLib.SIMULATION_MODE.S_RANDOM;
+            this.ib_KeySwitch.Simu_OnOffCondition = ProVLib.SIMULATION_ONOFFCONDITION.SRR_KEEP;
+            this.ib_KeySwitch.Simu_OutPort1 = null;
+            this.ib_KeySwitch.Simu_OutPort2 = null;
+            this.ib_KeySwitch.Simu_RandomNum = 2;
+            this.ib_KeySwitch.Simu_RandomTime = 100;
+            this.ib_KeySwitch.Simu_ReflectDelayTm = 100;
+            this.ib_KeySwitch.Simu_ReflectRule = ProVLib.SIMULATION_REFLECTRULE.SRR_ON_OFF;
+            this.ib_KeySwitch.Simu_Reverse = false;
+            this.ib_KeySwitch.Size = new System.Drawing.Size(200, 30);
+            this.ib_KeySwitch.Text = "Key Switch";
             // 
             // MAA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 651);
+            this.ClientSize = new System.Drawing.Size(1028, 651);
             this.Name = "MAA";
             this.Text = "MAA";
             this.tabMain.ResumeLayout(false);
@@ -1166,5 +1228,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private ProVLib.Motor motor1;
         private System.Windows.Forms.Button button1;
+        private ProVLib.InBit ib_Safety_Gate;
+        private ProVLib.InBit ib_KeySwitch;
     }
 }

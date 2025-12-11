@@ -166,13 +166,13 @@ namespace SANWA_Robot
     public enum DefStation
     {
         None,
-        [Description("傳遞盒A")]
+        [Description("FoupA")]
         FoupA = 1,
-        [Description("傳遞盒B")]
+        [Description("FoupB")]
         FoupB = 2,
-        [Description("傳遞盒C")]
+        [Description("FoupC")]
         FoupC = 3,
-        [Description("傳遞盒D")]
+        [Description("FoupD")]
         FoupD = 4,
         [Description("晶舟盒-上")]
         Cassette_Up = 5,

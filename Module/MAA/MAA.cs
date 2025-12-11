@@ -17,6 +17,8 @@ namespace MAA
 {
     public partial class MAA : BaseModuleInterface
     {
+        bool bPassGate = false;
+
         private bool bUseSafeDoor //安全門偵測開關
         {
             get { return SetupReadValue("安全門偵測開關").ToBoolean(); }
@@ -110,6 +112,14 @@ namespace MAA
         bool bStartIsSet = false;
         public override int ScanIO()
         {
+            if (IsSimulation() == 0)
+            {
+                if (ib_Safety_Gate.Value == false && bPassGate == false)
+                {
+                    ShowAlarm("E", 6);
+                }
+            }
+
             OB_StartButton.Value = SysRun;
             OB_StopButton.Value = !SysRun;
             OB_AlarmResetButton.Value = IB_AlarmResetButton.Value;
@@ -139,6 +149,7 @@ namespace MAA
         //歸零初始
         public override void HomeReset()
         {
+            bPassGate = false;
             mLotendOk = true;
             mHomeOk = true;
         }
@@ -304,6 +315,10 @@ namespace MAA
             return lightio;
         }
 
+        public void SwitchGatePass(bool SW)
+        {
+            bPassGate = SW;
+        }
         #endregion
 
         private void button1_Click(object sender, EventArgs e)

@@ -59,6 +59,8 @@ namespace AWEX12000
         {
             public bool DryRun;
             public bool NonStopMode;
+            public int LeftArmMode;
+            public int RightArmMode;
         }
         private OptionValue OValue;
 
@@ -119,7 +121,8 @@ namespace AWEX12000
         private SlotMapping RightLowerArm_Job = new SlotMapping();
         private SlotMapping RightArm_Job = new SlotMapping();   
 
-        private readonly List<WaferTransferJob> _Joblist = new List<WaferTransferJob>();
+        //private readonly List<WaferTransferJob> _Joblist = new List<WaferTransferJob>();
+        private readonly WaferTransferJob _Joblist = new WaferTransferJob();
         private JActionTask Task_WTR_A_SendAction = new JActionTask();
         private JActionTask Task_WTR_B_SendAction = new JActionTask();
         private JActionTask Task_WTR_A_ReceiveAction = new JActionTask();
@@ -536,6 +539,34 @@ namespace AWEX12000
             AlignerB_Job.Reset();
             LeftAligner_Job.Reset();
             RightAligner_Job.Reset();
+
+            //0:雙Arm 1:only upperArm 2:Only LowerArm
+            switch (OValue.LeftArmMode)
+            {
+                case 1:
+                    TrayDataSetting.tdex_LeftLowerArm.SetBin(0, 0, 0, 0, (byte)_BinDefine.Disabled);
+                    LeftLowerArm_Job.State = WaferState.Disable;
+                    break;
+                case 2:
+                    TrayDataSetting.tdex_LeftUpperArm.SetBin(0, 0, 0, 0, (byte)_BinDefine.Disabled);
+                    LeftUpperArm_Job.State = WaferState.Disable;
+                    break;
+                default://0:都用不關
+                    break;
+            }
+            switch (OValue.RightArmMode)
+            {
+                case 1:
+                    TrayDataSetting.tdex_RightLowerArm.SetBin(0, 0, 0, 0, (byte)_BinDefine.Disabled);
+                    RightLowerArm_Job.State = WaferState.Disable;
+                    break;
+                case 2:
+                    TrayDataSetting.tdex_RightUpperArm.SetBin(0, 0, 0, 0, (byte)_BinDefine.Disabled);
+                    RightUpperArm_Job.State = WaferState.Disable;
+                    break;
+                default:
+                    break;
+            }
             #endregion
 
         }
@@ -602,6 +633,8 @@ namespace AWEX12000
         private void LoadOptionData()
         {
             OValue.DryRun = SYSPara.OReadValue("DryRun").ToBoolean();
+            OValue.LeftArmMode = SYSPara.OReadValue("LeftArmMode").ToInt();
+            OValue.RightArmMode = SYSPara.OReadValue("RightArmMode").ToInt();
         }
 
         private void TimerReset()
@@ -901,22 +934,19 @@ namespace AWEX12000
         
         private JobReference FindJobReference(SANWA_Robot.DefStation station, WaferState state)
         {
-            var queryResult = _Joblist
-                .SelectMany(job => job.Mappings.Select(mapping => new { Job = job, Mapping = mapping }))
-                .FirstOrDefault(item =>
-                    item.Mapping.SourceFoup == station &&
-                    item.Mapping.State == state
-                );
+            var targetMapping = _Joblist.Mappings.FirstOrDefault(m => m.SourceFoup == station &&
+                                                                      m.State == state);
 
-            if (queryResult != null)
+            if (targetMapping != null)
             {
                 return new JobReference
                 {
-                    ParentJob = queryResult.Job,
-                    OriginalMapping = queryResult.Mapping,
-                    CloneMapping = queryResult.Mapping.Clone() 
+                    ParentJob = _Joblist,       
+                    OriginalMapping = targetMapping,
+                    CloneMapping = targetMapping.Clone()
                 };
             }
+
             return null;
         }
 
@@ -940,14 +970,23 @@ namespace AWEX12000
                 return false;
             }
 
-            jobRef.ParentJob.Mappings.Remove(jobRef.OriginalMapping);
+            bool removed = _Joblist.Mappings.Remove(jobRef.OriginalMapping);
+            
+            return removed;
+        }
 
-            if (jobRef.ParentJob.Mappings.Count == 0)
+        public bool UpdateJobState(SANWA_Robot.DefStation station, WaferState oldState, WaferState newState)
+        {
+            JobReference jobRef = FindJobReference(station, oldState);
+
+            if (jobRef != null && jobRef.OriginalMapping != null)
             {
-                _Joblist.Remove(jobRef.ParentJob);
+                jobRef.OriginalMapping.State = newState;
+
+                return true;
             }
 
-            return true;
+            return false;
         }
 
         private bool WTR_A_SendAction(SlotMapping ArmMapping)
@@ -1191,10 +1230,15 @@ namespace AWEX12000
             switch (task.Value)
             {
                 case 0://Initial
+                    task.Next(10);
                     break;
                 case 10://Get Wafer From Foup DoIt
                     RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_GET, ArmMapping.SourceFoup, ArmMapping.SourceSlot, ArmMapping.arm, 0, 0);
                     b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
                     break;
                 case 20: //Get Wafer from Foup IsDone
                     b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
@@ -1222,17 +1266,22 @@ namespace AWEX12000
         {
             bool bRet = false;
             bool b1 = false;
-            JActionTask task = Task_WTR_A_LoadAction;
+            JActionTask task = Task_WTR_B_LoadAction;
             switch (task.Value)
             {
                 case 0://Initial
+                    task.Next(10);
                     break;
                 case 10://Get Wafer From Foup DoIt
-                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_GET, ArmMapping.SourceFoup, ArmMapping.SourceSlot, ArmMapping.arm, 0, 0);
-                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    RobotCmd = GetRobotCommand_B(SANWA_Robot.CommDef.CMD_GET, ArmMapping.SourceFoup, ArmMapping.SourceSlot, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "SetCommand", WTR_ActionMode.Get, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
                     break;
                 case 20: //Get Wafer from Foup IsDone
-                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "GetActionResult");
                     if (b1)
                     {
 
@@ -1253,12 +1302,101 @@ namespace AWEX12000
             }
             return bRet;
         }
+        private bool WTR_A_UnloadAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_A_UnloadAction;
+            switch (task.Value)
+            {
+                case 0: //Initial
+                    task.Next(10);
+                    break;
+                case 10:
+                    RobotCmd = GetRobotCommand_A(SANWA_Robot.CommDef.CMD_PUT, ArmMapping.TargetFoup, ArmMapping.TargetSlot, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "SetCommand", WTR_ActionMode.Put, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
+                    break;
+                case 20:
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_A, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30:
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.TargetFoup, ArmMapping.arm, bLeft, ArmMapping.TargetSlot);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99:
+                    bRet = true;
+                    break;
+            }
+            return bRet;
+        }
+        private bool WTR_B_UnloadAction(SlotMapping ArmMapping)
+        {
+            bool bRet = false;
+            bool b1 = false;
+            JActionTask task = Task_WTR_B_UnloadAction;
+            switch (task.Value)
+            {
+                case 0: //Initial
+                    task.Next(10);
+                    break;
+                case 10:
+                    RobotCmd = GetRobotCommand_B(SANWA_Robot.CommDef.CMD_PUT, ArmMapping.TargetFoup, ArmMapping.TargetSlot, ArmMapping.arm, 0, 0);
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "SetCommand", WTR_ActionMode.Put, RobotCmd);
+                    if (b1)
+                    {
+                        task.Next(20);
+                    }
+                    break;
+                case 20:
+                    b1 = (bool)SYSPara.CallProc(ModuleName_WTR_B, "GetActionResult");
+                    if (b1)
+                    {
+
+                        task.Next(30);
+                    }
+                    break;
+                case 30:
+                    bool bLeft = ArmMapping.SourceFoup == (SANWA_Robot.DefStation.FoupA | SANWA_Robot.DefStation.FoupD) ? true : false;
+                    b1 = TrayDataExchange(ArmMapping.TargetFoup, ArmMapping.arm, bLeft, ArmMapping.TargetSlot);
+                    if (b1)
+                    {
+                        task.Next(99);
+                    }
+                    break;
+                case 99:
+                    bRet = true;
+                    break;
+            }
+            return bRet;
+        }
 
         private int GetLeftEmptyCount()
         {
             int iRet = 0;
             if (LeftUpperArm_Job.State == (WaferState.None)) iRet++;
             if (LeftLowerArm_Job.State == (WaferState.None)) iRet++;
+            if (AlignerA_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner1.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
+            if (AlignerB_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner2.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
+            return iRet;
+        }
+        private int GetRightEmptyCount()
+        {
+            int iRet = 0;
+            if (RightUpperArm_Job.State == (WaferState.None)) iRet++;
+            if (RightLowerArm_Job.State == (WaferState.None)) iRet++;
             if (AlignerA_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner1.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
             if (AlignerB_Job.State == (WaferState.None) && TrayDataSetting.tdex_Aligner2.IsEmpty(GlobalBinDefine.BookingBin)) iRet++;
             return iRet;
@@ -1762,13 +1900,14 @@ namespace AWEX12000
             return FlowChart.FCRESULT.NEXT;
         }
 
-        private FlowChart.FCRESULT FC_Auto_LoadPort1_WaitHandOffReadyToReady_Run()
+        private FlowChart.FCRESULT FC_Auto_LoadPort1_WaitHandOffReadyToLoad_Run()
         {
             if (SYSPara.Simulation != 0)
             {
                 if (bManualTest)
                 {
                     bManualTest = false;
+                    FlagDefine.Flag_Port_NotifyMAA_A_LoadGateClose.DoIt();
                     LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
                     TM_Delay_LPA.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -1779,16 +1918,19 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_A_LoadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort1_Start, "NonStopMode");
                 TM_Delay_LPA.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
 
             SYSPara.CallProc(ModuleName_LPA, "ShowModuleAlarm", "W", 25, null);
-            if ((bool)SYSPara.CallProc(ModuleName_LPA, "GetManualButtonSingal"))
+            if ((bool)SYSPara.CallProc(ModuleName_LPA, "GetManualButtonSingal") || bManualTest)
             {
+
                 SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_A_LoadGateClose.DoIt();
                 SYSPara.CallProc(ModuleName_LPA, "ResetManualButtonSingal");
                 LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
                 TM_Delay_LPA.Restart();
@@ -1829,17 +1971,14 @@ namespace AWEX12000
                 return FlowChart.FCRESULT.NEXT;
             }
 
-            if ((bool)SYSPara.CallProc(ModuleName_LPA, "GetManualButtonSingal"))
-            {
-                SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPA, "ResetManualButtonSingal");
-                SYSPara.CallProc(ModuleName_LPA, "SetCanLock", false);
-                LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
-                TM_Delay_LPA.Restart();
-                return FlowChart.FCRESULT.NEXT;
-            }
-            return FlowChart.FCRESULT.IDLE;
+            SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPA, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPA, "ResetManualButtonSingal");
+            SYSPara.CallProc(ModuleName_LPA, "SetCanLock", false);
+            LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
+            TM_Delay_LPA.Restart();
+            return FlowChart.FCRESULT.NEXT;
+            //return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_LoadPort1_CheckPlacement_Run()
@@ -2059,7 +2198,7 @@ namespace AWEX12000
             bool b1 = (bool)SYSPara.CallProc(ModuleName_LPA, "GetActionResult");
             if (b1)
             {
-                FlagDefine.Flag_WTR_Notify_LPA_CloseDoor.Done();
+                FlagDefine.Flag_Port_NotifyMAA_A_UnloadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
                 TM_Delay_LPA.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2109,6 +2248,7 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_LoadPort1_Done_Run()
         {
+            FlagDefine.Flag_Port_NotifyMAA_A_UnloadGateClose.Done();
             FlagDefine.Flag_LPA_Unload_Done.Reset();
             LogFlowChartRunTime(FC_Auto_LoadPort1_Start);
             TM_Delay_LPA.Restart();
@@ -2167,6 +2307,7 @@ namespace AWEX12000
                 if (bManualTest)
                 {
                     bManualTest = false;
+                    FlagDefine.Flag_Port_NotifyMAA_B_LoadGateClose.DoIt();
                     LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
                     TM_Delay_LPB.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -2177,6 +2318,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_B_LoadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort2_Start, "NonStopMode");
                 TM_Delay_LPB.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2187,6 +2329,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_B_LoadGateClose.DoIt();
                 SYSPara.CallProc(ModuleName_LPB, "ResetManualButtonSingal");
                 LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
                 TM_Delay_LPB.Restart();
@@ -2226,17 +2369,13 @@ namespace AWEX12000
                 TM_Delay_LPB.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
-            if ((bool)SYSPara.CallProc(ModuleName_LPB, "GetManualButtonSingal"))
-            {
-                SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPB, "ResetManualButtonSingal");
-                SYSPara.CallProc(ModuleName_LPB, "SetCanLock", false);
-                LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
-                TM_Delay_LPB.Restart();
-                return FlowChart.FCRESULT.NEXT;
-            }
-            return FlowChart.FCRESULT.IDLE;
+            SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPB, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPB, "ResetManualButtonSingal");
+            SYSPara.CallProc(ModuleName_LPB, "SetCanLock", false);
+            LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
+            TM_Delay_LPB.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_LoadPort2_CheckPlacement_Run()
@@ -2454,7 +2593,7 @@ namespace AWEX12000
             bool b1 = (bool)SYSPara.CallProc(ModuleName_LPB, "GetActionResult");
             if (b1)
             {
-                FlagDefine.Flag_WTR_Notify_LPB_CloseDoor.Done();
+                FlagDefine.Flag_Port_NotifyMAA_B_UnloadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
                 TM_Delay_LPB.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2504,6 +2643,7 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_LoadPort2_Done_Run()
         {
+            FlagDefine.Flag_Port_NotifyMAA_B_UnloadGateClose.Done();
             FlagDefine.Flag_LPB_Unload_Done.Reset();
             LogFlowChartRunTime(FC_Auto_LoadPort2_Start);
             TM_Delay_LPB.Restart();
@@ -2563,6 +2703,7 @@ namespace AWEX12000
                 if (bManualTest)
                 {
                     bManualTest = false;
+                    FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.DoIt();
                     LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
                     TM_Delay_LPC.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -2573,6 +2714,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort3_Start, "NonStopMode");
                 TM_Delay_LPC.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2582,6 +2724,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.DoIt();
                 SYSPara.CallProc(ModuleName_LPC, "ResetManualButtonSingal");
                 LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
                 TM_Delay_LPC.Restart();
@@ -2605,6 +2748,7 @@ namespace AWEX12000
                     bManualTest = false;
                     SYSPara.CallProc(ModuleName_LPC, "ResetManualButtonSingal");
                     SYSPara.CallProc(ModuleName_LPC, "SetCanLock", false);
+                    FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.Done();
                     LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
                     TM_Delay_LPC.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -2616,21 +2760,19 @@ namespace AWEX12000
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
                 SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
                 SYSPara.CallProc(ModuleName_LPC, "ResetManualButtonSingal");
+                FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.Done();
                 LogFlowChartRunTime(FC_Auto_LoadPort3_Start, "NonStopMode");
                 TM_Delay_LPC.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
-            if ((bool)SYSPara.CallProc(ModuleName_LPC, "GetManualButtonSingal"))
-            {
-                SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPC, "ResetManualButtonSingal");
-                SYSPara.CallProc(ModuleName_LPC, "SetCanLock", false);
-                LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
-                TM_Delay_LPC.Restart();
-                return FlowChart.FCRESULT.NEXT;
-            }
-            return FlowChart.FCRESULT.IDLE;
+            SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPC, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPC, "ResetManualButtonSingal");
+            SYSPara.CallProc(ModuleName_LPC, "SetCanLock", false);
+            FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.Done();
+            LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
+            TM_Delay_LPC.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_LoadPort3_CheckPlacement_Run()
@@ -2849,7 +2991,7 @@ namespace AWEX12000
             bool b1 = (bool)SYSPara.CallProc(ModuleName_LPC, "GetActionResult");
             if (b1)
             {
-                FlagDefine.Flag_WTR_Notify_LPC_CloseDoor.Done();
+                FlagDefine.Flag_Port_NotifyMAA_C_UnloadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
                 TM_Delay_LPC.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2899,6 +3041,7 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_LoadPort3_Done_Run()
         {
+            FlagDefine.Flag_Port_NotifyMAA_C_UnloadGateClose.Done();
             FlagDefine.Flag_LPC_Unload_Done.Reset();
             LogFlowChartRunTime(FC_Auto_LoadPort3_Start);
             TM_Delay_LPC.Restart();
@@ -2958,6 +3101,7 @@ namespace AWEX12000
                 if (bManualTest)
                 {
                     bManualTest = false;
+                    FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.DoIt();
                     LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
                     TM_Delay_LPD.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -2968,6 +3112,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort4_Start, "NonStopMode");
                 TM_Delay_LPD.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -2977,6 +3122,7 @@ namespace AWEX12000
             {
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Blink);
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Blink);
+                FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.DoIt();
                 SYSPara.CallProc(ModuleName_LPD, "ResetManualButtonSingal");
                 LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
                 TM_Delay_LPD.Restart();
@@ -3000,6 +3146,7 @@ namespace AWEX12000
                     bManualTest = false;
                     SYSPara.CallProc(ModuleName_LPD, "ResetManualButtonSingal");
                     SYSPara.CallProc(ModuleName_LPD, "SetCanLock", false);
+                    FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.Done();
                     LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
                     TM_Delay_LPD.Restart();
                     return FlowChart.FCRESULT.NEXT;
@@ -3011,21 +3158,19 @@ namespace AWEX12000
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
                 SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
                 SYSPara.CallProc(ModuleName_LPD, "ResetManualButtonSingal");
+                FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.Done();
                 LogFlowChartRunTime(FC_Auto_LoadPort4_Start, "NonStopMode");
                 TM_Delay_LPD.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
-            if ((bool)SYSPara.CallProc(ModuleName_LPD, "GetManualButtonSingal"))
-            {
-                SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
-                SYSPara.CallProc(ModuleName_LPD, "ResetManualButtonSingal");
-                SYSPara.CallProc(ModuleName_LPD, "SetCanLock", false);
-                LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
-                TM_Delay_LPD.Restart();
-                return FlowChart.FCRESULT.NEXT;
-            }
-            return FlowChart.FCRESULT.IDLE;
+            SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ReadyToLoad, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPD, "SetLightData", LP_Light.ManualButton, LP_Light_Mode.Off);
+            SYSPara.CallProc(ModuleName_LPD, "ResetManualButtonSingal");
+            SYSPara.CallProc(ModuleName_LPD, "SetCanLock", false);
+            FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.Done();
+            LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
+            TM_Delay_LPD.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_LoadPort4_CheckPlacement_Run()
@@ -3243,7 +3388,7 @@ namespace AWEX12000
             bool b1 = (bool)SYSPara.CallProc(ModuleName_LPD, "GetActionResult");
             if (b1)
             {
-                FlagDefine.Flag_WTR_Notify_LPD_CloseDoor.Done();
+                FlagDefine.Flag_Port_NotifyMAA_D_UnloadGateClose.DoIt();
                 LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
                 TM_Delay_LPD.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -3293,6 +3438,7 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_LoadPort4_Done_Run()
         {
+            FlagDefine.Flag_Port_NotifyMAA_D_UnloadGateClose.Done();
             FlagDefine.Flag_LPD_Unload_Done.Reset();
             LogFlowChartRunTime(FC_Auto_LoadPort4_Start);
             TM_Delay_LPD.Restart();
@@ -3335,6 +3481,7 @@ namespace AWEX12000
             if (mLPA.GetUseModule() == false && mLPB.GetUseModule() == false &&
                 mLPC.GetUseModule() == false && mLPD.GetUseModule() == false)
             {
+                LogFlowChartRunTime(FC_Auto_WTRMain_Start, "LoadPortNoUse");
                 return FlowChart.FCRESULT.NEXT;
             }
 
@@ -3349,7 +3496,12 @@ namespace AWEX12000
                 FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.IsDoIt() ||
                 FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.IsDoIt())
             {
+                FlagDefine.Flag_Port_NotifyMAA_A_LoadGateClose.Doing();
+                FlagDefine.Flag_Port_NotifyMAA_B_LoadGateClose.Doing();
+                FlagDefine.Flag_Port_NotifyMAA_C_LoadGateClose.Doing();
+                FlagDefine.Flag_Port_NotifyMAA_D_LoadGateClose.Doing();
                 SYSPara.CallProc(ModuleName_MAA, "SwitchGatePass", true);
+                LogFlowChartRunTime(FC_Auto_WTRMain_Start);
                 return FlowChart.FCRESULT.NEXT;
             }
             return FlowChart.FCRESULT.IDLE;
@@ -3388,6 +3540,10 @@ namespace AWEX12000
                 FlagDefine.Flag_LPC_Notify_WTR_Lock.IsDone() &&
                 FlagDefine.Flag_LPD_Notify_WTR_Lock.IsDone())
             {
+                FlagDefine.Flag_LPA_Notify_WTR_Lock.Reset();
+                FlagDefine.Flag_LPB_Notify_WTR_Lock.Reset();
+                FlagDefine.Flag_LPC_Notify_WTR_Lock.Reset();
+                FlagDefine.Flag_LPD_Notify_WTR_Lock.Reset();
                 bUpdateDataGridView = true;
                 return FlowChart.FCRESULT.NEXT;
             }
@@ -3469,14 +3625,13 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_WTRMain_WTRWorkDoIt_Run()
         {
-            if (FlagDefine.Flag_WTR_A_Action.IsDoing() == false &&
-                FlagDefine.Flag_WTR_B_Action.IsDoing() == false)
+            if (FlagDefine.Flag_WTR_A_Action.IsDoing() == false && FlagDefine.Flag_WTR_A_Action.IsDoIt() == false &&
+                FlagDefine.Flag_WTR_B_Action.IsDoing() == false && FlagDefine.Flag_WTR_B_Action.IsDoIt() == false)
             {
                 FlagDefine.Flag_WTR_A_Action.DoIt();
                 FlagDefine.Flag_WTR_B_Action.DoIt();
-                return FlowChart.FCRESULT.NEXT;
             }
-            return FlowChart.FCRESULT.CASE1;
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTRMain_Next2_Run()
@@ -3610,7 +3765,7 @@ namespace AWEX12000
         {
             if (SYSPara.Lotend)
             {
-                if (_Joblist.Count == 0)
+                if (_Joblist.Mappings.Count() == 0)
                 {
                     FlagDefine.Flag_WTR_A_Action.Done();
                     return FlowChart.FCRESULT.IDLE;
@@ -3619,6 +3774,7 @@ namespace AWEX12000
 
             if (FlagDefine.Flag_WTR_A_Action.IsDoIt())
             {
+                FlagDefine.Flag_WTR_A_Action.Doing();
                 LogFlowChartRunTime(FC_Auto_WTR_A_Action_Start);
                 TM_Delay_WTR_A.Restart();
                 return FlowChart.FCRESULT.NEXT;
@@ -3850,7 +4006,6 @@ namespace AWEX12000
                         }
                         LeftArm_Job.Reset();
                         return FlowChart.FCRESULT.NEXT;
-                        break;
                     case SANWA_Robot.DefStation.AlignerB:
                         AlignerB_Job.Reset();
                         switch (LeftArm_Job.arm)
@@ -3864,7 +4019,6 @@ namespace AWEX12000
                         }
                         LeftArm_Job.Reset();
                         return FlowChart.FCRESULT.NEXT;
-                        break;
                     default:
                         //TODO:ShowAlarm
                         return FlowChart.FCRESULT.IDLE;
@@ -3886,25 +4040,37 @@ namespace AWEX12000
             int iEmptyCount = GetLeftEmptyCount();
             if (iEmptyCount >= 2)
             {
+                //取料的時候就要先預約哪個Alignement 不然兩邊的Robot會強碰
+
                 //先尋找FoupA有沒有需要作業的，確定沒有再循找FoupD
-                if (LeftUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                if (LeftUpperArm_Job.State == (WaferState.None))
                 {
                     SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupA;
                     LeftUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
-                    if (LeftUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                    if (LeftUpperArm_Job.State == (WaferState.None))
                     {
                         station = SANWA_Robot.DefStation.FoupD;
                         LeftUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
                     }
                     if (LeftUpperArm_Job.State == WaferState.NeedToDo)
                     {
-                        RemoveTransferJob(station, WaferState.NeedToDo);
+                        //做完再刪，先改變狀態
+                        //RemoveTransferJob(station, WaferState.NeedToDo);
+                        UpdateJobState(station, WaferState.NeedToDo, WaferState.Doing);
+                        TrayDataEx tdex = TrayDataSetting.tdex_Foup1;
+                        if (station == SANWA_Robot.DefStation.FoupD)
+                        {
+                            tdex = TrayDataSetting.tdex_Foup4;
+                        }
+                        tdex.SetBin(0, 0, 0, LeftUpperArm_Job.SourceSlotIndex, (byte)_BinDefine.WaferTakeOff);
+                        
+
                         LeftArm_Job = LeftUpperArm_Job.Clone();
                         LeftArm_Job.arm = Arm.U;
                         return FlowChart.FCRESULT.NEXT;
                     }
                 }
-                if (LeftLowerArm_Job.State == (WaferState.None | WaferState.Done))
+                if (LeftLowerArm_Job.State == (WaferState.None))
                 {
                     SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupA;
                     LeftLowerArm_Job = GetTransferJob(station, WaferState.NeedToDo);
@@ -3921,6 +4087,8 @@ namespace AWEX12000
                         return FlowChart.FCRESULT.NEXT;
                     }
                 }
+
+                //都沒預約到 釋放booking
             }
             return FlowChart.FCRESULT.CASE1;
         }
@@ -3938,6 +4106,25 @@ namespace AWEX12000
             if (b1)
             {
                 //資料交換已經在Action做完
+                switch (LeftArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job = LeftArm_Job.Clone();
+                        break;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job = LeftArm_Job.Clone();
+                        break;
+                }
+                switch (LeftArm_Job.arm)
+                {
+                    case Arm.L:
+                        LeftLowerArm_Job.Reset();
+                        break;
+                    case Arm.U:
+                        LeftUpperArm_Job.Reset();
+                        break;
+                }
+                LeftArm_Job.Reset();
                 TM_Delay_WTR_A.Restart();
                 return FlowChart.FCRESULT.NEXT;
             }
@@ -3946,7 +4133,7 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next4_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_IsNeedUnloadToPort_Run()
@@ -3955,11 +4142,13 @@ namespace AWEX12000
             if (LeftUpperArm_Job.State == WaferState.Done)
             {
                 LeftArm_Job = LeftUpperArm_Job.Clone();
+                LeftArm_Job.arm = Arm.U;
                 return FlowChart.FCRESULT.NEXT;
             }
             if (LeftLowerArm_Job.State == WaferState.Done)
             {
                 LeftArm_Job = LeftLowerArm_Job.Clone();
+                LeftArm_Job.arm = Arm.L;
                 return FlowChart.FCRESULT.NEXT;
             }
             return FlowChart.FCRESULT.CASE1;
@@ -3967,138 +4156,433 @@ namespace AWEX12000
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_ResetUnloadAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_A_UnloadAction.Reset();
+            TM_Delay_WTR_A.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_UnloadActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_A_UnloadAction(LeftArm_Job);
+            if (b1)
+            {
+                switch (LeftArm_Job.arm)
+                {
+                    case Arm.L:
+                        LeftLowerArm_Job.Reset();
+                        break;
+                    case Arm.U:
+                        LeftUpperArm_Job.Reset();
+                        break;
+                }
+                LeftArm_Job.Reset();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next3_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next1_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_A_Next2_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
         #endregion
         #region WTR_B_Action
         private FlowChart.FCRESULT FC_Auto_WTR_B_Action_Start_Run()
         {
-            return default(FlowChart.FCRESULT);
+            TM_Delay_WTR_B.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_FlagIsDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            if (SYSPara.Lotend)
+            {
+                if (_Joblist.Mappings.Count() == 0)
+                {
+                    FlagDefine.Flag_WTR_B_Action.Done();
+                    return FlowChart.FCRESULT.IDLE;
+                }
+            }
+
+            if (FlagDefine.Flag_WTR_B_Action.IsDoIt())
+            {
+                LogFlowChartRunTime(FC_Auto_WTR_B_Action_Start);
+                TM_Delay_WTR_B.Restart();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_IsNeedSendToAligner_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = TrayDataSetting.tdex_Aligner1.IsContain(GlobalBinDefine.NoWaferBin) && AlignerA_Job.State == (WaferState.None | WaferState.NoWafer);
+            bool b2 = TrayDataSetting.tdex_Aligner2.IsContain(GlobalBinDefine.NoWaferBin) && AlignerB_Job.State == (WaferState.None | WaferState.NoWafer);
+            if (b1)
+            {
+                if (RightUpperArm_Job != null &&
+                    RightUpperArm_Job.State == WaferState.NeedToDo)
+                {
+                    RightUpperArm_Job.NowStation = SANWA_Robot.DefStation.AlignerA;
+                    RightArm_Job = RightUpperArm_Job;
+                    RightArm_Job.arm = Arm.U;
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                else if (RightLowerArm_Job != null &&
+                    RightLowerArm_Job.State == WaferState.NeedToDo)
+                {
+                    RightLowerArm_Job.NowStation = SANWA_Robot.DefStation.AlignerA;
+                    RightArm_Job = RightLowerArm_Job;
+                    RightArm_Job.arm = Arm.L;
+                    return FlowChart.FCRESULT.NEXT;
+                }
+            }
+            if (b2)
+            {
+                if (RightUpperArm_Job != null &&
+                    RightUpperArm_Job.State == WaferState.NeedToDo)
+                {
+                    RightUpperArm_Job.NowStation = SANWA_Robot.DefStation.AlignerB;
+                    RightArm_Job = RightUpperArm_Job;
+                    RightArm_Job.arm = Arm.U;
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                else if (RightLowerArm_Job != null &&
+                    RightLowerArm_Job.State == WaferState.NeedToDo)
+                {
+                    RightLowerArm_Job.NowStation = SANWA_Robot.DefStation.AlignerB;
+                    RightArm_Job = RightLowerArm_Job;
+                    RightArm_Job.arm = Arm.L;
+                    return FlowChart.FCRESULT.NEXT;
+                }
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_ResetSendAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_B_SendAction.Reset();
+            TM_Delay_WTR_B.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_SendActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_B_SendAction(RightArm_Job);
+            if (b1)
+            {
+                //RightArmJob clone to Aligner
+                switch (RightArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job = RightArm_Job.Clone();
+                        AlignerA_Job.arm = Arm.None;
+                        RightAligner_Job = AlignerA_Job.Clone();
+                        break;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job = RightArm_Job.Clone();
+                        AlignerB_Job.arm = Arm.None;
+                        RightAligner_Job = AlignerB_Job.Clone();
+                        break;
+                    default:
+                        return FlowChart.FCRESULT.IDLE;
+                }
+                RightArm_Job.Reset();
+                TM_Delay_WTR_B.Restart();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_AlignementDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            switch (RightAligner_Job.NowStation)
+            {
+                case SANWA_Robot.DefStation.AlignerA:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_A_Align.IsDoing() == false &&
+                        RightAligner_Job.State == WaferState.NeedToDo)
+                    {
+                        FlagDefine.Flag_WTR_Notify_WAS_A_Align.DoIt();
+                        RightAligner_Job.State = WaferState.Doing;
+                        AlignerA_Job = RightAligner_Job.Clone();
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                    break;
+                case SANWA_Robot.DefStation.AlignerB:
+                    if (FlagDefine.Flag_WTR_Notify_WAS_B_Align.IsDoing() == false &&
+                        RightAligner_Job.State == WaferState.NeedToDo)
+                    {
+                        FlagDefine.Flag_WTR_Notify_WAS_B_Align.DoIt();
+                        RightAligner_Job.State = WaferState.Doing;
+                        AlignerB_Job = RightAligner_Job.Clone();
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next1_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next2_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_IsNeedReceiveFromAligner_Run()
         {
-            return default(FlowChart.FCRESULT);
+            if (AlignerA_Job.State == WaferState.Done &&
+                AlignerA_Job.TargetFoup == (SANWA_Robot.DefStation.FoupB | SANWA_Robot.DefStation.FoupC))
+            {
+                if (RightUpperArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    RightUpperArm_Job = AlignerA_Job.Clone();
+                    RightUpperArm_Job.arm = Arm.U;
+                    RightArm_Job = RightUpperArm_Job.Clone();
+                    AlignerA_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                if (RightLowerArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    RightLowerArm_Job = AlignerA_Job.Clone();
+                    RightLowerArm_Job.arm = Arm.L;
+                    RightArm_Job = RightLowerArm_Job.Clone();
+                    AlignerA_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+            }
+            else if (AlignerB_Job.State == WaferState.Done &&
+                AlignerB_Job.TargetFoup == (SANWA_Robot.DefStation.FoupB | SANWA_Robot.DefStation.FoupC))
+            {
+                if (RightUpperArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    RightUpperArm_Job = AlignerB_Job.Clone();
+                    RightUpperArm_Job.arm = Arm.U;
+                    RightArm_Job = RightUpperArm_Job.Clone();
+                    AlignerB_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+                if (RightLowerArm_Job.State == (WaferState.Done | WaferState.None))
+                {
+                    RightLowerArm_Job = AlignerB_Job.Clone();
+                    RightLowerArm_Job.arm = Arm.L;
+                    RightArm_Job = RightLowerArm_Job.Clone();
+                    AlignerB_Job.Reset();
+                    return FlowChart.FCRESULT.NEXT;
+                }
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_ResetReceiveAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_B_ReceiveAction.Reset();
+            TM_Delay_WTR_B.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_ReceiveActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_B_ReceiveAction(RightArm_Job);
+            if (b1)
+            {
+                switch (RightArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job.Reset();
+                        switch (RightArm_Job.arm)
+                        {
+                            case Arm.U:
+                                RightUpperArm_Job = RightArm_Job.Clone();
+                                break;
+                            case Arm.L:
+                                RightLowerArm_Job = RightArm_Job.Clone();
+                                break;
+                        }
+                        RightArm_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job.Reset();
+                        switch (RightArm_Job.arm)
+                        {
+                            case Arm.U:
+                                RightUpperArm_Job = RightArm_Job.Clone();
+                                break;
+                            case Arm.L:
+                                RightLowerArm_Job = RightArm_Job.Clone();
+                                break;
+                        }
+                        RightArm_Job.Reset();
+                        return FlowChart.FCRESULT.NEXT;
+                    default:
+                        break;
+                }
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next3_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_IsNeedLoadFromPort_Run()
         {
-            return default(FlowChart.FCRESULT);
+            int iEmptyCount = GetRightEmptyCount();
+            if (iEmptyCount >= 2)
+            {
+                if (RightUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                {
+                    SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupB;
+                    RightUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    if (RightUpperArm_Job.State == (WaferState.None | WaferState.Done))
+                    {
+                        station = SANWA_Robot.DefStation.FoupC;
+                        RightUpperArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    }
+                    if (RightUpperArm_Job.State == WaferState.NeedToDo)
+                    {
+                        RemoveTransferJob(station, WaferState.NeedToDo);
+                        RightArm_Job = RightUpperArm_Job.Clone();
+                        RightArm_Job.arm = Arm.U;
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                }
+                if (RightLowerArm_Job.State == (WaferState.None | WaferState.Done))
+                {
+                    SANWA_Robot.DefStation station = SANWA_Robot.DefStation.FoupB;
+                    RightLowerArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    if (RightLowerArm_Job.State == (WaferState.None | WaferState.Done))
+                    {
+                        station = SANWA_Robot.DefStation.FoupC;
+                        RightLowerArm_Job = GetTransferJob(station, WaferState.NeedToDo);
+                    }
+                    if (RightLowerArm_Job.State == WaferState.NeedToDo)
+                    {
+                        RemoveTransferJob(station, WaferState.NeedToDo);
+                        RightArm_Job = RightLowerArm_Job.Clone();
+                        RightArm_Job.arm = Arm.L;
+                        return FlowChart.FCRESULT.NEXT;
+                    }
+                }
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_ResetLoadAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_B_LoadAction.Reset();
+            TM_Delay_WTR_B.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_LoadActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_B_LoadAction(RightArm_Job);
+            if (b1)
+            {
+                //資料交換已經在Action做完
+                switch (RightArm_Job.NowStation)
+                {
+                    case SANWA_Robot.DefStation.AlignerA:
+                        AlignerA_Job = RightArm_Job.Clone();
+                        break;
+                    case SANWA_Robot.DefStation.AlignerB:
+                        AlignerB_Job = RightArm_Job.Clone();
+                        break;
+                }
+                switch (RightArm_Job.arm)
+                {
+                    case Arm.L:
+                        RightLowerArm_Job.Reset();
+                        break;
+                    case Arm.U:
+                        RightUpperArm_Job.Reset();
+                        break;
+                }
+                RightArm_Job.Reset();
+                TM_Delay_WTR_B.Restart();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next4_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_IsNeedUnloadToPort_Run()
         {
-            return default(FlowChart.FCRESULT);
+            if (RightUpperArm_Job.State == WaferState.Done)
+            {
+                RightArm_Job = RightUpperArm_Job.Clone();
+                RightArm_Job.arm = Arm.U;
+                return FlowChart.FCRESULT.NEXT;
+            }
+            if (RightLowerArm_Job.State == WaferState.Done)
+            {
+                RightArm_Job = RightLowerArm_Job.Clone();
+                RightArm_Job.arm = Arm.L;
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.CASE1;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_ResetUnloadAction_Run()
         {
-            return default(FlowChart.FCRESULT);
+            Task_WTR_B_UnloadAction.Reset();
+            TM_Delay_WTR_B.Restart();
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_UnloadActionDoIt_Run()
         {
-            return default(FlowChart.FCRESULT);
+            bool b1 = WTR_B_UnloadAction(RightArm_Job);
+            if (b1)
+            {
+                switch (RightArm_Job.arm)
+                {
+                    case Arm.L:
+                        RightLowerArm_Job.Reset();
+                        break;
+                    case Arm.U:
+                        RightUpperArm_Job.Reset();
+                        break;
+                }
+                RightArm_Job.Reset();
+                return FlowChart.FCRESULT.NEXT;
+            }
+            return FlowChart.FCRESULT.IDLE;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next5_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next6_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
 
         private FlowChart.FCRESULT FC_Auto_WTR_B_Next7_Run()
         {
-            return default(FlowChart.FCRESULT);
+            return FlowChart.FCRESULT.NEXT;
         }
         #endregion
         #endregion
